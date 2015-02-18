@@ -1,0 +1,43 @@
+
+.demo-isolation {
+    text-align: center;
+    }
+.list-isolation {
+    display: inline-block;
+    width: 400px;
+
+    &__title {
+        display: inline-block;
+        width: 60%;
+        margin-bottom: 1.5em;
+        background: #FFF;
+        }
+    &__item {
+        display: inline-block;
+        width: 210px;
+        height: 210px;
+        margin-bottom: -4.5em;
+        border-radius: 50%;
+        box-shadow: 0 0 0 15px #FFF;
+        mix-blend-mode: multiply;
+
+        &:before {
+            content: none !important;
+            }
+
+        &:nth-of-type(1){
+            background: gold;
+            }
+        &:nth-of-type(2){
+            background: orangered;
+            }
+        &:nth-of-type(3){
+            background: steelblue;
+            }
+        }
+    &--isolate {
+        opacity: .99;
+        /* doesn't work in FF */
+        isolation: isolate;
+        }
+    }

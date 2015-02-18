@@ -1,0 +1,95 @@
+.slide--dragons {
+  background: #f7edba url(../img/demos/knights/paper.jpeg);
+  background-position: 50% 50%;
+  }
+.demo-dragons {
+  width: 700px;
+  margin: 0 auto;
+  font-family: Georgia, serif;
+  &:after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+    }
+  }
+
+.demo-dragons__title {
+  overflow: hidden;
+  margin: 0 0 2rem;
+  text-align: center;
+  font-family: Georgia, serif !important;
+  font-size: 2.6em;
+  text-shadow: 2px 2px 0 hsl(50,80,85),
+    3px 4px 0;
+  font-style: italic;
+  &:before,
+  &:after {
+    content: '';
+    padding-left: 50%;
+    vertical-align: middle;
+    background: linear-gradient(
+      black 2px,
+      transparent 2px, transparent 4px,
+      black 4px, black 5px
+    );
+    background-position: 0 50%;
+    background-size: 100% 5px;
+    background-repeat: no-repeat;
+    }
+  &:before {
+    margin-left: -55%;
+    margin-right: 1.5%;
+    }
+  &:after {
+    margin-left: 1.7%;
+    margin-right: -55%;
+    }
+  }
+.demo-dragons__text {
+    font-size: .8em;
+    line-height: 1.4;
+    P {
+      margin: 0 0 1rem;
+      }
+    }
+
+.pic--dragon {
+    float: left;
+    width: 300px;
+    height: 161px;
+    /*margin: 0 2em 2em -3em;*/
+    margin: 0 2em 1em 0em;
+    background-image:
+        url(../img/demos/knights/dragon.jpeg),
+        url(../img/demos/knights/paper.jpeg);
+    }
+.pic--knight {
+    float: right;
+    width: 203px;
+    height: 300px;
+    /*margin: 0 -3em 2em 2em;*/
+    margin: 0 0 1em 1em;
+    background-image:
+        url(../img/demos/knights/knight-to-left.jpeg),
+        url(../img/demos/knights/paper.jpeg);
+    }
+
+.has-modes {
+    .pic {
+        background-blend-mode: multiply;
+        }
+    }
+
+.has-shapes {
+    .pic--dragon {
+        margin: 0 2em 2em -3em;
+        -webkit-shape-outside: polygon(0 0, 91% 0%, 94% 43%, 83% 57%, 88% 85%, 0 85%);
+        shape-outside: polygon(0 0, 91% 0%, 94% 43%, 83% 57%, 88% 85%, 0 85%);
+        }
+    .pic--knight {
+        margin: 0 -3em 2em 1em;
+        -webkit-shape-outside: polygon(25% 0, 100% 0, 100% 100%, 21% 100%, 29% 65%, 3% 25%, 32% 16%);
+        shape-outside: polygon(25% 0, 100% 0, 100% 100%, 21% 100%, 29% 65%, 3% 25%, 32% 16%);
+        }
+    }

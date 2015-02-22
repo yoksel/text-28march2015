@@ -121,17 +121,11 @@ svg {
         }
 }
 .slide--vlm {
-   & > DIV:before {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        /*background: gold;*/
-        }
-    svg, span,
     .slide__content {
-        display: inline-block;
-        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         }
     }
 
@@ -200,6 +194,13 @@ $svg-code-color: hsl(190, 70%, 75%);
         background: $svg-code-color;
     }
 }
+
+.code--smaller {
+    font-size: .75em;
+}
+.code--condensed {
+    line-height: 1.7 !important;
+    }
 
 /* Cover
 ------------------------- */
@@ -334,42 +335,12 @@ $svg-code-color: hsl(190, 70%, 75%);
     margin-right: 2.5em;
     }
 
+@import 'demo-textshadows';
+
 @import '_browsers';
 @import '_js-blendmode';
 
-/*@import '_icons';*/
-@import '_demo-selectmode';
-
 @import '_mixins-gradients';
-@import '_demo-gradient-bluecarbon';
-@import '_demo-gradient-rainbow';
-@import '_demo-gradient-circle';
-@import '_demo-gradient-cicada';
-@import '_demo-colorize';
-@import '_demo-vignette';
-
-@import '_demo-hovercolors';
-@import '_demo-devlogos';
-
-@import '_demo-knight-png';
-@import '_demo-knight-bbm';
-@import '_demo-fire';
-@import '_demo-fireplace';
-@import '_demo-knight-svg';
-@import '_demo-dragons';
-@import '_demo-numbers';
-
-@import '_demo-birthday';
-@import '_demo-bird';
-
-@import '_demo-css-steps';
-
-@import '_demo-color-on-image';
-
-@import '_demo-isolation';
-
-@import '_demo-sea';
-@import '_demo-shadows';
 @import '_demo-dancing-shadows';
 
 /*@import '_print';*/

@@ -22,45 +22,8 @@
     <!-- Расширяем возможности текста  -->
 
     <!-- Slide -->
-    <section class="slide"><div>
-        <h2 class="free-fly">Оформление текста</h2>
-    </div></section>
-
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            (слайд с размерами)
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            (слайд с начертаниями)
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            (слайд с подчеркиванием и пр)
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            (слайд с цветами)
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            (слайд со шрифтом)
-            (подпись о шрифтах с гуглофонтс)
-        </div>
+    <section class="slide bg--dark"><div>
+        <h2 class="free-fly">HTML + CSS</h2>
     </div></section>
 
     <!-- Slide -->
@@ -71,85 +34,90 @@
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
         <div class="slide__content">
-            слайд с text-shadow
+            <div class="demo demo--text demo--shadowstroke">
+                текст
+            </div>
         </div>
+    </div></section>
+
+
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+<pre><code class="code--condensed">text-shadow:
+    -0px -0px 0 green, 0px -0px 0 green,
+    0px 0px 0 green, -0px 0px 0 green,
+    -1px -1px 0 green, 1px -1px 0 green,
+    1px 1px 0 green, -1px 1px 0 green,
+    -2px -2px 0 green, 2px -2px 0 green,
+    2px 2px 0 green, -2px 2px 0 green,
+    -3px -3px 0 green, 3px -3px 0 green,
+    3px 3px 0 green, -3px 3px 0 green,
+    -4px -4px 0 green, 4px -4px 0 green,
+    4px 4px 0 green, -4px 4px 0 green,
+    -5px -5px 0 green, 5px -5px 0 green,
+    5px 5px 0 green, -5px 5px 0 green;
+</code></pre>
     </div></section>
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
+<pre><code class="code--smaller code--condensed">@function shadows($max: 5, $color: white){
+    $out: null;
+
+    @for $i from 0 through $max {
+        $pos: #{$i}px;
+        $pos-n: -$pos;
+        $shadow-t-l: $pos-n $pos-n 0 $color;
+        $out: append( $out, $shadow-t-l, comma );
+        $shadow-t-r: $pos $pos-n 0 $color;
+        $out: append( $out, $shadow-t-r, comma );
+        $shadow-b-r: $pos $pos 0 $color;
+        $out: append( $out, $shadow-b-r, comma );
+        $shadow-b-l: $pos-n $pos 0 $color;
+        $out: append( $out, $shadow-b-l, comma );
+        }
+
+    @return $out;
+    }</code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide bg--dark slide--vlm"><div>
         <div class="slide__content">
-            слайд с text-shadow в разобранном виде
+            <div class="demo demo--text demo--chasing-shadows">
+                текст
+            </div>
         </div>
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide bg--dark slide--vlm"><div>
         <div class="slide__content">
-            слайд с кодом text-shadow
+            <div class="demo demo--text demo--multiple-shadows">
+                текст
+            </div>
         </div>
     </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с миксином text-shadow
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд со сложной двойной рамкой
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с исчезающей тенью
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с длинной цветной тенью
-        </div>
-    </div></section>
-
 
     <!-- Slide -->
     <section class="slide"><div>
-        <h2 class="free-fly">Google.com/fonts</h2>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-        код подключения шрифта и шрифта с эффектами
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-        3-4 примера эффектов
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-        <h2 class="free-fly">text-stroke</h2>
+        <h2 class="free-fly">-webkit-text-stroke</h2>
     </div></section>
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
         <div class="slide__content">
-            демо с text-stroke
+            <div class="demo demo--text demo--text-stroke">
+                текст
+            </div>
         </div>
     </div></section>
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            демо с кодом text-stroke
-        </div>
+<pre><code>.text {
+    -webkit-text-stroke: .05em orangered;
+    }</code></pre>
     </div></section>
 
     <!-- Slide -->
@@ -340,7 +308,7 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide"><div>
+    <section class="slide bg--dark"><div>
         <h2 class="free-fly">SVG mask, clip-path</h2>
     </div></section>
 
@@ -406,13 +374,88 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-        <h2 class="free-fly">Режиимы наложения</h2>
+        <h2 class="free-fly">Режимы наложения</h2>
     </div></section>
 
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд с демо с цветами и режимами
+        </div>
+    </div></section>
 
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд с lighten/darken
+        </div>
+    </div></section>
 
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд с картинкой под текстом
+        </div>
+    </div></section>
 
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд северное сияние
+        </div>
+    </div></section>
 
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд c браузерами, и выше тоже надо сделать
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <h2 class="free-fly">SVG + HTML</h2>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд с самой маской
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд с анимированными тенями
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд с клипом
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд с деревянным фоном вокруг букв
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            слайд с анимированным паттерном
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        ЛОГОТИПЫ!!!!
+    </div></section>
 
 
 <!-- Parts -->

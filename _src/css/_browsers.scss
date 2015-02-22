@@ -13,6 +13,10 @@
   }
 }
 
+.browsers--biglist {
+  text-align: center;
+  }
+
 $browser-size: 64px;
 
 .browser {
@@ -43,6 +47,7 @@ $browser-size: 64px;
     }
   .no-support {
     opacity: .5;
+    filter: grayscale(100%);
     }
 
 .browser-partial {

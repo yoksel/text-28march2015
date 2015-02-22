@@ -336,6 +336,9 @@ $svg-code-color: hsl(190, 70%, 75%);
     }
 
 @import 'demo-textshadows';
+@import 'demo-background-clip';
+
+@import 'demo-svg-stroke';
 
 @import '_browsers';
 @import '_js-blendmode';

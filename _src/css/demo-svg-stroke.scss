@@ -134,7 +134,7 @@ $aunt-walk-stroke-time-step: $aunt-walk-stroke-time / $aunt-walk-max;
   fill: none;
   stroke: white;
   stroke-dasharray: $aunt-walk-stroke-step ($aunt-walk-stroke-step * ($aunt-walk-max - 1) + $aunt-walk-stroke-space * $aunt-walk-max );
-  stroke-width: 5;
+  stroke-width: 7;
   stroke-dashoffset: 0%;
 
   animation: aunt-walk-stroke-offset $aunt-walk-stroke-time infinite linear;

@@ -685,7 +685,7 @@ svg.demo--text {
   fill: none;
   stroke: white;
   stroke-dasharray: 6% 29%;
-  stroke-width: 5;
+  stroke-width: 7;
   stroke-dashoffset: 0%;
   -webkit-animation: aunt-walk-stroke-offset 5s infinite linear;
   animation: aunt-walk-stroke-offset 5s infinite linear;

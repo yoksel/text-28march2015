@@ -216,7 +216,7 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide"><div>
 <pre><code>.text {
     stroke: crimson;
     stroke-width: 3;
@@ -303,36 +303,80 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide"><div>
+<pre><code>&lt;text <mark>fill="url(#gr-blue)"</mark>>текст&lt;/text></code></pre>
+<pre><code>.text {
+    <mark>fill: url(#gr-blue);</mark>
+    }</code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
         <svg viewBox="0 0 1024 680" class="demo demo--text">
+            <defs>
+                <linearGradient id="gr-blue"
+                        x1="0" y1="0" x2="100%" y2="100%"
+                        gradientUnits="objectBoundingBox">
+                    <stop stop-color="hsl(160, 100%, 80%)" offset="10%"/>
+                    <stop stop-color="hsl(250, 100%, 30%)" offset="90%"/>
+                </linearGradient>
+                <pattern id="pt-grass" width="300" height="300"
+                             patternUnits="userSpaceOnUse">
+                    <image xlink:href="./assets/img/parts/grass.jpg" width="300" height="300"/>
+                  </pattern>
+            </defs>
+
             <text x="50%" y="15%" dy=".2em" text-anchor="middle"
                 class="text--fill text--fill-solid">текст</text>
-            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class="text--fill text--fill-gradient">текст</text>
-            <text x="50%" y="85%" dy=".2em" text-anchor="middle"
-                class="text--fill text--fill-pattern">текст</text>
+            <text x="50%" y="47%" dy=".2em" text-anchor="middle"
+                class="text--fill text--fill-gradient"
+                fill="url(#gr-blue)">текст</text>
+            <text x="50%" y="79%" dy=".2em" text-anchor="middle"
+                class="text--fill text--fill-pattern"
+                fill="url(#pt-grass)">текст</text>
         </svg>
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            текст со сплошной заливкой, градиентом, паттерном
-        </div>
+    <section class="slide"><div>
+        <svg viewBox="0 0 1024 680" class="demo demo--text">
+            <defs>
+                <linearGradient id="gr-css-anim"
+                        x1="0" y1="0" x2="100%" y2="100%"
+                        gradientUnits="objectBoundingBox">
+                    <stop class="stop-css-anim stop-css-anim--1" offset="10%"/>
+                    <stop class="stop-css-anim stop-css-anim--2" offset="90%"/>
+                </linearGradient>
+            </defs>
+
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class="text--fill text--fill-gradient"
+                fill="url(#gr-css-anim)">текст</text>
+        </svg>
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с анимированными цветами градиента, CSS
-        </div>
-    </div></section>
+    <section class="slide bg--dark"><div>
+        <svg viewBox="0 0 1024 680" class="demo demo--text">
+            <defs>
+                <radialGradient id="gr-smil-anim"
+                  cx="50%" cy="50%" r="70%">
+                  <animate attributeName="r"
+                           values="0%;150%;130%;0%"
+                           dur="5s" repeatCount="indefinite" />
+                  <stop stop-color="#FFF" offset="0">
+                    <animate attributeName="stop-color"
+                           values="rgba(55,55,55,.5);#FFF;#FFF;rgba(55,55,55,.5)"
+                           dur="5s" repeatCount="indefinite" />
+                  </stop>
+                  <stop stop-color="rgba(55,55,55,0)" offset="100%"/>
+              </radialGradient>
+            </defs>
 
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с исчезающим текстом
-        </div>
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class=""
+                fill="url(#gr-smil-anim)">текст</text>
+        </svg>
     </div></section>
 
     <!-- Slide -->
@@ -364,10 +408,19 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд огонь/вода
-        </div>
+    <section class="slide bg--dark slide--vlm"><div>
+        <svg viewBox="0 0 1024 680" class="demo demo--text">
+            <defs>
+                <pattern id="pt-water" viewBox="0 0 256 256" width="256" height="256" patternUnits="userSpaceOnUse">
+                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/img/parts/water.gif" width="256" height="256"></image>
+                </pattern>
+                <pattern id="pt-fire" viewBox="30 100 186 200" width="216" height="200" patternUnits="userSpaceOnUse" x="-30" y="-10">
+                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/img/parts/fire.gif" width="256" height="300"></image>
+                </pattern>
+            </defs>
+            <text x="50%" y="32%" class="t--water t--anim" fill="url(#pt-water)" text-anchor="middle">Вода</text>
+            <text x="50%" y="84%" class="t--fire t--anim" fill="url(#pt-fire)" text-anchor="middle">Огонь</text>
+      </svg>
     </div></section>
 
     <!-- Slide -->

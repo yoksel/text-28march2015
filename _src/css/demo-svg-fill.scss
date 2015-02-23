@@ -1,0 +1,31 @@
+.text--fill-solid {
+    fill: orangered;
+    }
+
+$stop-css-anim-time: 5s;
+
+:target .stop-css-anim {
+    animation: stop-css-anim $stop-css-anim-time linear infinite;
+    }
+
+.stop-css-anim--1 {
+    stop-color: hsl(200, 100%, 50%);
+    }
+
+.stop-css-anim--2 {
+    stop-color: hsl(300, 100%, 50%);
+    animation-delay: -$stop-css-anim-time*.3;
+    }
+
+@keyframes stop-css-anim {
+
+    30% {
+        stop-color: hsl(20, 100%, 50%);
+        }
+    55% {
+        stop-color: hsl(250, 100%, 50%);
+        }
+    80% {
+        stop-color: hsl(150, 100%, 50%);
+        }
+}

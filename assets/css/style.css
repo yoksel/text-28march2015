@@ -428,6 +428,8 @@ PRE:before {
   margin-right: 2.5em;
 }
 
+/* Demo
+------------------------- */
 .demo--text {
   font: 12em/1 'Russo One', Impact;
   letter-spacing: .05em;
@@ -727,6 +729,48 @@ svg.demo--text {
     stroke-dashoffset: -35%;
   }
 }
+.text--fill-solid {
+  fill: orangered;
+}
+
+:target .stop-css-anim {
+  -webkit-animation: stop-css-anim 5s linear infinite;
+  animation: stop-css-anim 5s linear infinite;
+}
+
+.stop-css-anim--1 {
+  stop-color: #00aaff;
+}
+
+.stop-css-anim--2 {
+  stop-color: magenta;
+  -webkit-animation-delay: -1.5s;
+  animation-delay: -1.5s;
+}
+
+@-webkit-keyframes stop-css-anim {
+  30% {
+    stop-color: #ff5500;
+  }
+  55% {
+    stop-color: #2a00ff;
+  }
+  80% {
+    stop-color: #00ff80;
+  }
+}
+
+@keyframes stop-css-anim {
+  30% {
+    stop-color: #ff5500;
+  }
+  55% {
+    stop-color: #2a00ff;
+  }
+  80% {
+    stop-color: #00ff80;
+  }
+}
 .list--support LI {
   margin-bottom: 2.5em;
 }
@@ -742,7 +786,12 @@ svg.demo--text {
 }
 
 .browsers--biglist {
+  width: 800px;
   text-align: center;
+}
+.browsers--biglist IMG {
+  width: 200px;
+  height: 200px;
 }
 
 .browser {

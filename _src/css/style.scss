@@ -300,6 +300,7 @@ $svg-code-color: hsl(190, 70%, 75%);
             rgba(255,255,255,0) 50%);
     background-size: 2em 100%;
 }
+
 /* Columns
 ------------------------- */
 
@@ -335,10 +336,19 @@ $svg-code-color: hsl(190, 70%, 75%);
     margin-right: 2.5em;
     }
 
+/* Demo
+------------------------- */
+
+.demo--text {
+    font: 12em/1 'Russo One', Impact;
+    letter-spacing: .05em;
+    }
+
 @import 'demo-textshadows';
 @import 'demo-background-clip';
 
 @import 'demo-svg-stroke';
+@import 'demo-svg-fill';
 
 @import '_browsers';
 @import '_js-blendmode';

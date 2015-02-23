@@ -14,7 +14,13 @@
 }
 
 .browsers--biglist {
+  width: 800px;
   text-align: center;
+
+  IMG {
+    width: 200px;
+    height: 200px;
+    }
   }
 
 $browser-size: 64px;

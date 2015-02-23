@@ -122,7 +122,7 @@ $dash: 10;
     }
 }
 
-$colors: #2E0927, #D90000, #FF2D00, #FF8C00, #04756F;
+$aunt-walk-colors: #2E0927, #D90000, #FF2D00, #FF8C00, #04756F;
 
 $aunt-walk-max: 5;
 $aunt-walk-stroke-step: 6%;
@@ -137,10 +137,12 @@ $aunt-walk-stroke-time-step: $aunt-walk-stroke-time / $aunt-walk-max;
   stroke-width: 7;
   stroke-dashoffset: 0%;
 
-  animation: aunt-walk-stroke-offset $aunt-walk-stroke-time infinite linear;
+  :target & {
+    animation: aunt-walk-stroke-offset $aunt-walk-stroke-time infinite linear;
+    }
 
   @for $item from 1 through $aunt-walk-max {
-    $stroke-color: nth($colors, $item);
+    $stroke-color: nth($aunt-walk-colors, $item);
 
     &:nth-child(#{$item}) {
       stroke: $stroke-color;

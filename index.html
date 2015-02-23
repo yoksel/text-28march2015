@@ -374,37 +374,121 @@
             </defs>
 
             <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class=""
-                fill="url(#gr-smil-anim)">текст</text>
+                class="text--fill text--fill-smil-anim-grad"
+                >текст</text>
         </svg>
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с анимированным паттерном
-        </div>
+    <section class="slide bg--dark"><div>
+        <svg viewBox="0 0 1024 680" class="demo demo--text">
+            <defs>
+                <pattern
+                   id="p-anim-cells"
+                   width="101" height="61"
+                   viewBox="0 0 100 60"
+                   patternUnits="userSpaceOnUse">
+
+                    <g class="g-anim-cells">
+                        <rect width="20" height="20"/>
+                        <rect width="20" height="20"
+                              x="20"/>
+                        <rect width="20" height="20"
+                              x="40"/>
+                        <rect width="20" height="20"
+                              x="60"/>
+                        <rect width="20" height="20"
+                              x="80"/>
+
+                        <rect width="20" height="20"
+                              y="20"/>
+                        <rect width="20" height="20"
+                              x="20" y="20"/>
+                        <rect width="20" height="20"
+                              x="40" y="20"/>
+                        <rect width="20" height="20"
+                              x="60" y="20"/>
+                        <rect width="20" height="20"
+                              x="80" y="20"/>
+
+                        <rect width="20" height="20"
+                              y="40"/>
+                        <rect width="20" height="20"
+                              x="20" y="40"/>
+                        <rect width="20" height="20"
+                              x="40" y="40"/>
+                        <rect width="20" height="20"
+                              x="60" y="40"/>
+                        <rect width="20" height="20"
+                              x="80" y="40"/>
+                    </g>
+
+                  </pattern>
+            </defs>
+
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class="text--fill"
+                fill="url(#p-anim-cells)"
+                >текст</text>
+        </svg>
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с пульсирующими сердечками
-        </div>
-    </div></section>
+    <section class="slide bg--dark"><div>
+        <svg viewBox="0 0 1024 680" class="demo demo--text">
+            <defs>
+                <pattern
+                   id="p-anim-spots"
+                   width="120" height="120"
+                   viewBox="0 0 120 120"
+                   patternUnits="userSpaceOnUse">
 
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с расходящимися кружками?
-        </div>
-    </div></section>
+                    <g class="g-anim-spots">
+                        <circle r="5"
+                                cx="15" cy="15"/>
+                        <circle r="5"
+                                cx="45" cy="15"/>
+                        <circle r="5"
+                                cx="75" cy="15"/>
+                        <circle r="5"
+                                cx="105" cy="15"/>
 
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с заливкой с картинкой цветы-закат?
-        </div>
+                        <circle r="5"
+                                cx="15" cy="45"/>
+                        <circle r="5"
+                                cx="45" cy="45"/>
+                        <circle r="5"
+                                cx="75" cy="45"/>
+                        <circle r="5"
+                                cx="105" cy="45"/>
+
+                        <circle r="5"
+                                cx="15" cy="75"/>
+                        <circle r="5"
+                                cx="45" cy="75"/>
+                        <circle r="5"
+                                cx="75" cy="75"/>
+                        <circle r="5"
+                                cx="105" cy="75"/>
+
+                        <circle r="5"
+                                cx="15" cy="105"/>
+                        <circle r="5"
+                                cx="45" cy="105"/>
+                        <circle r="5"
+                                cx="75" cy="105"/>
+                        <circle r="5"
+                                cx="105" cy="105"/>
+                    </g>
+
+                  </pattern>
+            </defs>
+
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class="text--fill text--fill-anim-spots"
+                fill="url(#p-anim-spots)"
+                >текст</text>
+        </svg>
     </div></section>
 
     <!-- Slide -->

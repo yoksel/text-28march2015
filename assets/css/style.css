@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic);
 @font-face {
   font-family: 'Ubuntu Condensed';
   font-style: normal;
@@ -1213,6 +1214,72 @@ svg.demo--text {
 @keyframes anim-spots-stroke {
   50% {
     stroke-width: 18;
+  }
+}
+HTML, BODY {
+  height: 100%;
+}
+
+.demo--dottes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #7dc4e8 linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.4) 50%);
+  -webkit-background-size: .12em 100%;
+  background-size: .12em 100%;
+  font: 25em/1 Lobster, Arial;
+}
+
+.text--line {
+  font-size: .5em;
+}
+
+/*svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  }*/
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-width: 20px;
+}
+
+.text-copy--shadow {
+  fill: rgba(0, 0, 0, 0.25);
+  -webkit-transform: translate(0, 0.065em);
+  -ms-transform: translate(0, 0.065em);
+  transform: translate(0, 0.065em);
+}
+
+.r-fill {
+  fill: url(#p-dottes);
+  -webkit-transform-origin: 400px 300px;
+  -ms-transform-origin: 400px 300px;
+  transform-origin: 400px 300px;
+  -webkit-animation: rotate 10s linear infinite;
+  animation: rotate 10s linear infinite;
+}
+
+/* Fix for firefox */
+.r-fill--color {
+  fill: #ff401a;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .list--support LI {

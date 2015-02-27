@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic);
 @font-face {
   font-family: 'Ubuntu Condensed';
   font-style: normal;
@@ -1269,6 +1268,91 @@ svg.demo--text {
 }
 
 @keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+svg.demo--text-psycho {
+  font: 15em/1 Lobster, Arial;
+}
+svg.demo--text-psycho .text-psycho--line2 {
+  font-size: .7em;
+}
+svg.demo--text-psycho .text-shadow {
+  fill: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate(10px, 15px);
+  -ms-transform: translate(10px, 15px);
+  transform: translate(10px, 15px);
+}
+svg.demo--text-psycho .text-stroke {
+  fill: none;
+  stroke: gold;
+  stroke-width: 2px;
+  stroke-dasharray: 20 50;
+  -webkit-transform: translate(-7px, -7px);
+  -ms-transform: translate(-7px, -7px);
+  transform: translate(-7px, -7px);
+}
+svg.demo--text-psycho .text-stroke-2 {
+  stroke: hotpink;
+  stroke-dashoffset: 24;
+}
+svg.demo--text-psycho .text-stroke-3 {
+  stroke: aqua;
+  stroke-dashoffset: 48;
+}
+svg.demo--text-psycho .animated-circles g:nth-child(odd) .u-circle {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+svg.demo--text-psycho .u-circle {
+  -webkit-transform-origin: 100px 100px;
+  -ms-transform-origin: 100px 100px;
+  transform-origin: 100px 100px;
+}
+:target svg.demo--text-psycho .u-circle {
+  -webkit-animation: rotate-psycho 10s linear infinite;
+  animation: rotate-psycho 10s linear infinite;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(1) {
+  stroke: greenyellow;
+  stroke-dashoffset: 0;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(2) {
+  stroke: fuchsia;
+  stroke-dashoffset: 5.2;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(3) {
+  stroke: deepskyblue;
+  stroke-dashoffset: 10.4;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(4) {
+  stroke: orange;
+  stroke-dashoffset: 15.6;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(5) {
+  stroke: springgreen;
+  stroke-dashoffset: 20.8;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(6) {
+  stroke: hotpink;
+  stroke-dashoffset: 26;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(7) {
+  stroke: yellow;
+  stroke-dashoffset: 31.2;
+}
+
+@-webkit-keyframes rotate-psycho {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-psycho {
   100% {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);

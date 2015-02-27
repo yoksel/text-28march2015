@@ -549,6 +549,173 @@
     </div></section>
 
     <!-- Slide -->
+    <section class="slide bg--dark slide--imgfull"><div>
+        <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-psycho">
+          <symbol id="s-circle">
+            <g fill="none" stroke-width="100"
+               stroke-dasharray="5.5 30" class="g-circles">
+              <circle r="50" cx="100" cy="100"
+              ></circle>
+              <circle r="50" cx="100" cy="100"
+              ></circle>
+              <circle r="50" cx="100" cy="100"
+              ></circle>
+              <circle r="50" cx="100" cy="100"
+              ></circle>
+              <circle r="50" cx="100" cy="100"
+              ></circle>
+              <circle r="50" cx="100" cy="100"
+              ></circle>
+              <circle r="50" cx="100" cy="100"
+              ></circle>
+            </g>
+          </symbol>
+
+          <symbol id="s-text-psycho">
+            <text text-anchor="middle"
+                  x="50%"
+                  y="52%"
+                  class="text-psycho--line"
+                  >
+              Good
+            </text>
+            <text text-anchor="middle"
+                  x="64%"
+                  y="80%"
+                  class="text-psycho--line2"
+                  >
+               trip
+            </text>
+          </symbol>
+
+          <mask id="mask-text-psycho"
+            maskunits="userSpaceOnUse"
+            maskcontentunits="userSpaceOnUse">
+                <use xlink:href="#s-text-psycho" fill="#FFF"/>
+          </mask>
+
+          <use xlink:href="#s-text-psycho" class="text-shadow"></use>
+
+          <g
+            mask="url(#mask-text-psycho)"
+            class="animated-circles">
+            <g transform="translate(137, 0)">
+                <g transform="translate(-105, 105) scale(2.5)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(-10, 10) scale(1.5)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(80, 20) scale(1)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(220, 160) scale(1.2)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(470, 50) scale(1.9)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(470, 340) scale(1.5)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(255, -10) scale(1.2)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(400, 200) scale(.75)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(410, 140) scale(.8)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(275, 395) scale(1.15)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(415, 320) scale(.7)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(513, 310) scale(.3)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(320, 325) scale(.5)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(155, 90) scale(.4)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(335, 170) scale(.4)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(503, 175) scale(.35)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g></g>
+                <g transform="translate(630, 195) scale(.4)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+                <g transform="translate(485, 510) scale(.6)">
+                  <use xlink:href="#s-circle" class="u-circle"></use>
+                </g>
+            </g>
+          </g>
+
+          <use xlink:href="#s-text-psycho" class="text-stroke"></use>
+          <use xlink:href="#s-text-psycho" class="text-stroke text-stroke-2"></use>
+          <use xlink:href="#s-text-psycho" class="text-stroke text-stroke-3"></use>
+        </svg>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <h2 class="free-fly">Выделяемый текст</h2>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>.text {
+    fill: none;
+    }</code></pre>
+<pre class="next"><code><span class="comment">// прозрачный текст, который можно выделить</span>
+.text {
+    fill: <mark>transparent</mark>;
+    }</code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <h2 class="free-fly">Mask или Clippath?</h2>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>&lt;symbol id="<mark>s-text</mark>">
+    &lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
+        текст
+    &lt;/text>
+&lt;/symbol></code></pre>
+
+<pre class="next"><code>&lt;mask id="mask-text"
+    maskunits="userSpaceOnUse"
+    maskcontentunits="userSpaceOnUse">
+        &lt;use xlink:href="<mark>#s-text</mark>" fill="#FFF"/>
+&lt;/mask></code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>&lt;pattern id="<mark>pt-circle</mark>"
+    width="300" height="300"
+    patternUnits="userSpaceOnUse">
+        &lt;circle r="150" cx="150" cy="150" fill="yellowgreen"/>
+&lt;/pattern></code></pre>
+
+
+<pre class="next"><code>&lt;g mask="url(<mark>#mask-text</mark>)">
+    &lt;rect fill="url(<mark>#pt-circle</mark>)" width="100%" height="100%"/>
+&lt;/g></code></pre>
+    </div></section>
+
+
+    <!-- Slide -->
     <section class="slide slide--imgfull"><div>
         <svg viewBox="0 0 1024 640" class="demo demo--dottes">
           <symbol id="s-text-dottes">
@@ -613,69 +780,8 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с жалюзи
-        </div>
-    </div></section>
-
-    <!-- Slide -->
     <section class="slide"><div>
-<pre><code>.text {
-    fill: none;
-    }</code></pre>
-<pre class="next"><code><span class="comment">// прозрачный текст, который можно выделить</span>
-.text {
-    fill: <mark>transparent</mark>;
-    }</code></pre>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-        <h2 class="free-fly">Mask или Clippath?</h2>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-<pre><code>&lt;symbol id="<mark>s-text</mark>">
-    &lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
-        текст
-    &lt;/text>
-&lt;/symbol></code></pre>
-
-<pre class="next"><code>&lt;mask id="mask-text"
-    maskunits="userSpaceOnUse"
-    maskcontentunits="userSpaceOnUse">
-        &lt;use xlink:href="<mark>#s-text</mark>" fill="#FFF"/>
-&lt;/mask></code></pre>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-<pre><code>&lt;pattern id="<mark>pt-circle</mark>"
-    width="300" height="300"
-    patternUnits="userSpaceOnUse">
-        &lt;circle r="150" cx="150" cy="150" fill="yellowgreen"/>
-&lt;/pattern></code></pre>
-
-
-<pre class="next"><code>&lt;g mask="url(<mark>#mask-text</mark>)">
-    &lt;rect fill="url(<mark>#pt-circle</mark>)" width="100%" height="100%"/>
-&lt;/g></code></pre>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            коды для символа, маски и копии
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд со сложной конструкцией из слоев
-        </div>
+        <h2 class="free-fly">Проблемы текста в SVG</h2>
     </div></section>
 
     <!-- Slide -->
@@ -706,14 +812,7 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с текстом с переносами
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
+    <section class="slide bg--dark"><div>
         <h2 class="free-fly">Режимы наложения</h2>
     </div></section>
 
@@ -805,8 +904,28 @@
     </div></section>
 
     <!-- Slide -->
+    <section class="slide bg--dark"><div>
+        <h2 class="free-fly">А смысл?</h2>
+    </div></section>
+
+    <!-- Slide -->
     <section class="slide"><div>
         ЛОГОТИПЫ!!!!
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        Логотип-прелоадер: текст заливается постепенно
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        Логотип-прелоадер: переливающийся текст по мере загрузки светлее и ярче
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        Логотип-прелоадер: контуры рисуются ниткой и заливаются
     </div></section>
 
 
@@ -840,48 +959,6 @@
                 </li>
             </ul>
         </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-        <div class="slide__content">
-            (демо текст размер)
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            <h2>background-blend-mode</h2>
-            <h2 class="next">mix-blend-mode</h2>
-        </div>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm slide--horcenter"><div>
-
-    <div class="slide__content modes-wrapper">
-        <ol class="column column--left">
-            <li>normal</li>
-            <li>multiply</li>
-            <li>screen</li>
-            <li>overlay</li>
-            <li>darken</li>
-            <li>lighten</li>
-            <li>color-dodge</li>
-            <li>color-burn</li>
-        </ol>
-        <ol class="column column--right">
-            <li>hard-light</li>
-            <li>soft-light</li>
-            <li>difference</li>
-            <li>exclusion</li>
-            <li>hue</li>
-            <li>saturation</li>
-            <li>color</li>
-            <li>luminosity</li>
-        </ol>
-    </div>
     </div></section>
 
     <!-- Slide -->

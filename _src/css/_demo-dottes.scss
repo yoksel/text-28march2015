@@ -1,31 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic);
-HTML, BODY {
-  height: 100%;
-  }
+
 
 .demo--dottes {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background: hsl(200,70,70)
     linear-gradient( 90deg,
       rgba(255,255,255,0) 50%,
       rgba(255,255,255,.4) 50%);
   background-size: .12em 100%;
-  font: 25em/1 Lobster, Arial;
+  font: 19em/1 Lobster, Arial;
 }
 
 .text--line {
   font-size: .5em;
   }
-
-/*svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  }*/
 
 .text-copy {
   fill: none;
@@ -38,14 +30,16 @@ HTML, BODY {
   }
 .r-fill {
   fill: url(#p-dottes);
-  transform-origin: 400px 300px;
-  animation: rotate 10s linear infinite;
+  transform-origin: 512px 320px;
+  :target & {
+    animation: rotate 10s linear infinite;
+    }
   }
 
 /* Fix for firefox */
 .r-fill--color {
   fill: hsl(10,100%,55%);
-}
+  }
 
 @keyframes rotate {
   100% {

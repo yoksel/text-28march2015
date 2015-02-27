@@ -521,16 +521,37 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с вращающейся заливкой
-        </div>
+    <section class="slide"><div>
+        <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-masks">
+          <symbol id="s-text">
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class=""
+                >текст</text>
+          </symbol>
+
+          <mask id="mask-text"
+            maskunits="userSpaceOnUse"
+            maskcontentunits="userSpaceOnUse">
+                <use xlink:href="#s-text" fill="#FFF"/>
+          </mask>
+
+          <pattern id="pt-wood" width="300" height="300"
+             patternUnits="userSpaceOnUse">
+            <image xlink:href="./assets/img/parts/wood.jpg" width="300" height="300"/>
+          </pattern>
+
+
+          <g mask="url(#mask-text)">
+            <rect fill="url(#pt-wood)" width="100%" height="100%"/>
+          </g>
+        </svg>
+
     </div></section>
 
     <!-- Slide -->
-    <section class="slide"><div>
-        <svg viewBox="0 0 1024 680" class="demo demo--text">
-          <symbol id="s-text">
+    <section class="slide slide--imgfull"><div>
+        <svg viewBox="0 0 1024 640" class="demo demo--dottes">
+          <symbol id="s-text-dottes">
             <text text-anchor="middle"
                   x="64%" y="35%"
                   class="text--line"
@@ -545,31 +566,22 @@
             </text>
 
           </symbol>
-          <clippath id="cp-text">
-            <text text-anchor="middle"
-                  x="64%" y="35%"
-                  class="text--line"
-                  >
-              Dizzy
-            </text>
-            <text text-anchor="middle"
-                  x="50%" y="86.7%"
-                  class="text--line2"
-                  >
-              Dots
-            </text>
-          </clippath>
+
+          <mask id="mask-text-dottes"
+            maskunits="userSpaceOnUse"
+            maskcontentunits="userSpaceOnUse">
+                <use xlink:href="#s-text-dottes" fill="#FFF"/>
+          </mask>
 
           <pattern
                    id="p-dottes"
                    width="50" height="50"
                    viewBox="0 0 100 100"
-                  patternUnits="userSpaceOnUse"
+                   patternUnits="userSpaceOnUse"
                    >
             <rect
                   width="100%" height="100%"
                   fill="hsl(10,100%,55%)"></rect>
-
             <g fill="#FFF">
               <circle r="15" cx="20" cy="20"></circle>
               <circle r="22" cx="70" cy="70"></circle>
@@ -578,21 +590,21 @@
           </pattern>
 
 
-          <use xlink:href="#s-text"
+          <use xlink:href="#s-text-dottes"
               class="text-copy--shadow"></use>
 
-          <use xlink:href="#s-text"
+          <use xlink:href="#s-text-dottes"
               class="text-copy"></use>
 
-          <g clip-path="url(#cp-text)">
-            <circle r="450"
-                cx="400"
-                cy="300"
+          <g mask="url(#mask-text-dottes)">
+            <circle r="540"
+                cx="512"
+                cy="320"
               class="r-fill--color"
             ></circle>
-            <circle r="420"
-                cx="400"
-                cy="300"
+            <circle r="520"
+                cx="512"
+                cy="320"
               class="r-fill"
             ></circle>
           </g>
@@ -624,6 +636,35 @@
     </div></section>
 
     <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>&lt;symbol id="<mark>s-text</mark>">
+    &lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
+        текст
+    &lt;/text>
+&lt;/symbol></code></pre>
+
+<pre class="next"><code>&lt;mask id="mask-text"
+    maskunits="userSpaceOnUse"
+    maskcontentunits="userSpaceOnUse">
+        &lt;use xlink:href="<mark>#s-text</mark>" fill="#FFF"/>
+&lt;/mask></code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>&lt;pattern id="<mark>pt-circle</mark>"
+    width="300" height="300"
+    patternUnits="userSpaceOnUse">
+        &lt;circle r="150" cx="150" cy="150" fill="yellowgreen"/>
+&lt;/pattern></code></pre>
+
+
+<pre class="next"><code>&lt;g mask="url(<mark>#mask-text</mark>)">
+    &lt;rect fill="url(<mark>#pt-circle</mark>)" width="100%" height="100%"/>
+&lt;/g></code></pre>
+    </div></section>
+
+    <!-- Slide -->
     <section class="slide slide--vlm"><div>
         <div class="slide__content">
             коды для символа, маски и копии
@@ -638,10 +679,30 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            демо с текстом уехавшим за край
-        </div>
+    <section class="slide"><div>
+        <svg viewBox="0 0 1024 640" class="demo demo--longtext">
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+            >текст, уехавший за край</text>
+        </svg>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <svg viewBox="0 0 1024 640" class="demo demo--longtext">
+            <defs>
+                <path d="M
+                0,100 1024,100
+                M0,250 1024,250
+                M0,400 1024,400
+                M0,550 1024,550" id="tp-multylines"/>
+            </defs>
+            <use xlink:href="#tp-multylines" stroke="orangered" stroke-width="10"/>
+            <text x="0" y="50%" dy=".2em">
+                <textPath xlink:href="#tp-multylines">
+                    Однажды в студеную зимнюю пору я из лесу вышел, по-моему, зря.
+                </textPath>
+            </text>
+        </svg>
     </div></section>
 
     <!-- Slide -->

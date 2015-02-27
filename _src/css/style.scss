@@ -343,6 +343,10 @@ $svg-code-color: hsl(190, 70%, 75%);
     font: 12em/1 'Russo One', Impact;
     letter-spacing: .05em;
     }
+    svg.demo--text {
+        font-size: 14em;
+        }
+
 
 @import 'demo-textshadows';
 @import 'demo-background-clip';
@@ -350,6 +354,8 @@ $svg-code-color: hsl(190, 70%, 75%);
 @import 'demo-svg-stroke';
 @import 'demo-svg-fill';
 @import '_demo-dottes';
+
+@import '_demo-svgmask';
 
 @import '_browsers';
 @import '_js-blendmode';

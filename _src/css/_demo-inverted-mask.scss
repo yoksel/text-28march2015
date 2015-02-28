@@ -4,8 +4,18 @@ svg.demo--inverted-mask {
     font-size: 12em;
     }
 
+.text--invmask-multytext {
+    font-size: 1.8em;
+    font-family: Impact;
+    }
+
 .u-text--transp {
     fill: transparent;
+    }
+.u-text--stroke {
+    fill: transparent;
+    stroke: rgba(0,0,0,.5);
+    stroke-width: 20;
     }
 
 $shadow-size: .8vmax;
@@ -60,7 +70,7 @@ if we need quantity of colors more than colors in array  */
 .demo--round-shadows {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 48%;
   width: $shadow-size/2;
   height: $shadow-size/2;
   background: gold;
@@ -82,5 +92,37 @@ if we need quantity of colors more than colors in array  */
   }
   75% {
     box-shadow: shadow-outlines($colors-in-step);
+  }
+}
+
+.text-fill-video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+
+$light-max: 5;
+$light-time: 3s;
+$light-step: $light-time / $light-max;
+
+.light-circle {
+    opacity: 0;
+
+    :target & {
+        animation: light-opacity $light-time infinite linear;
+        }
+
+    @for $item from 1 through $light-max{
+        &:nth-child(#{$light-max}n + #{$item}) {
+            animation-delay: - $light-step*($light-max - $item);
+            }
+        }
+    }
+
+@keyframes light-opacity {
+  50% {
+    opacity: 1;
   }
 }

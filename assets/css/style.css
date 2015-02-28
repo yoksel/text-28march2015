@@ -1465,8 +1465,19 @@ svg.demo--inverted-mask {
   font-size: 12em;
 }
 
+.text--invmask-multytext {
+  font-size: 1.8em;
+  font-family: Impact;
+}
+
 .u-text--transp {
   fill: transparent;
+}
+
+.u-text--stroke {
+  fill: transparent;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-width: 20;
 }
 
 /* Function for getting colors from list
@@ -1476,7 +1487,7 @@ if we need quantity of colors more than colors in array  */
 .demo--round-shadows {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 48%;
   width: 0.4vmax;
   height: 0.4vmax;
   background: gold;
@@ -1516,6 +1527,54 @@ if we need quantity of colors more than colors in array  */
   75% {
     -webkit-box-shadow: 0 0 0 0.8vmax orangered, 0 0 0 1.6vmax tomato, 0 0 0 2.4vmax gold, 0 0 0 3.2vmax yellow, 0 0 0 4vmax yellowgreen, 0 0 0 4.8vmax turquoise, 0 0 0 5.6vmax royalblue, 0 0 0 6.4vmax mediumslateblue, 0 0 0 7.2vmax mediumorchid, 0 0 0 8vmax purple, 0 0 0 8.8vmax crimson, 0 0 0 9.6vmax red, 0 0 0 10.4vmax orangered, 0 0 0 11.2vmax tomato, 0 0 0 12vmax gold, 0 0 0 12.8vmax yellow, 0 0 0 13.6vmax yellowgreen, 0 0 0 14.4vmax turquoise, 0 0 0 15.2vmax royalblue, 0 0 0 16vmax mediumslateblue, 0 0 0 16.8vmax mediumorchid, 0 0 0 17.6vmax darkviolet, 0 0 0 18.4vmax purple, 0 0 0 19.2vmax crimson, 0 0 0 20vmax red, 0 0 0 20.8vmax orangered, 0 0 0 21.6vmax tomato, 0 0 0 22.4vmax gold, 0 0 0 23.2vmax yellow, 0 0 0 24vmax yellowgreen, 0 0 0 24.8vmax turquoise, 0 0 0 25.6vmax royalblue, 0 0 0 26.4vmax mediumslateblue, 0 0 0 27.2vmax mediumorchid, 0 0 0 28vmax darkviolet, 0 0 0 28.8vmax purple, 0 0 0 29.6vmax crimson, 0 0 0 30.4vmax red, 0 0 0 31.2vmax orangered, 0 0 0 32vmax tomato, 0 0 0 32.8vmax gold, 0 0 0 33.6vmax yellow, 0 0 0 34.4vmax yellowgreen, 0 0 0 35.2vmax turquoise, 0 0 0 36vmax royalblue;
     box-shadow: 0 0 0 0.8vmax orangered, 0 0 0 1.6vmax tomato, 0 0 0 2.4vmax gold, 0 0 0 3.2vmax yellow, 0 0 0 4vmax yellowgreen, 0 0 0 4.8vmax turquoise, 0 0 0 5.6vmax royalblue, 0 0 0 6.4vmax mediumslateblue, 0 0 0 7.2vmax mediumorchid, 0 0 0 8vmax purple, 0 0 0 8.8vmax crimson, 0 0 0 9.6vmax red, 0 0 0 10.4vmax orangered, 0 0 0 11.2vmax tomato, 0 0 0 12vmax gold, 0 0 0 12.8vmax yellow, 0 0 0 13.6vmax yellowgreen, 0 0 0 14.4vmax turquoise, 0 0 0 15.2vmax royalblue, 0 0 0 16vmax mediumslateblue, 0 0 0 16.8vmax mediumorchid, 0 0 0 17.6vmax darkviolet, 0 0 0 18.4vmax purple, 0 0 0 19.2vmax crimson, 0 0 0 20vmax red, 0 0 0 20.8vmax orangered, 0 0 0 21.6vmax tomato, 0 0 0 22.4vmax gold, 0 0 0 23.2vmax yellow, 0 0 0 24vmax yellowgreen, 0 0 0 24.8vmax turquoise, 0 0 0 25.6vmax royalblue, 0 0 0 26.4vmax mediumslateblue, 0 0 0 27.2vmax mediumorchid, 0 0 0 28vmax darkviolet, 0 0 0 28.8vmax purple, 0 0 0 29.6vmax crimson, 0 0 0 30.4vmax red, 0 0 0 31.2vmax orangered, 0 0 0 32vmax tomato, 0 0 0 32.8vmax gold, 0 0 0 33.6vmax yellow, 0 0 0 34.4vmax yellowgreen, 0 0 0 35.2vmax turquoise, 0 0 0 36vmax royalblue;
+  }
+}
+.text-fill-video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.light-circle {
+  opacity: 0;
+}
+:target .light-circle {
+  -webkit-animation: light-opacity 3s infinite linear;
+  animation: light-opacity 3s infinite linear;
+}
+.light-circle:nth-child(5n + 1) {
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.light-circle:nth-child(5n + 2) {
+  -webkit-animation-delay: -1.8s;
+  animation-delay: -1.8s;
+}
+.light-circle:nth-child(5n + 3) {
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.light-circle:nth-child(5n + 4) {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.light-circle:nth-child(5n + 5) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes light-opacity {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes light-opacity {
+  50% {
+    opacity: 1;
   }
 }
 .demo--longtext {

@@ -346,6 +346,21 @@ $svg-code-color: hsl(190, 70%, 75%);
         font-size: 14em;
         }
 
+.demo-border {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        border: 5px solid #000;
+    }
+}
+
 
 @import 'demo-textshadows';
 @import 'demo-background-clip';

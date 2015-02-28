@@ -524,9 +524,8 @@
     <section class="slide"><div>
         <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-masks">
           <symbol id="s-text">
-            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class=""
-                >текст</text>
+            <text x="50%" y="50%" dy=".2em"
+                text-anchor="middle">текст</text>
           </symbol>
 
           <mask id="mask-text"
@@ -840,7 +839,7 @@
     <!-- Slide -->
     <section class="slide slide--imgfull bg--stripes"><div>
         <div class="slide__content">
-            <div class="demo--bbmode">
+            <div class="demo--bbmode-pair">
                 <div class="item-bbmode item-bbmode--darken">
                 </div><!--
                  --><div class="item-bbmode item-bbmode--lighten">
@@ -852,11 +851,12 @@
     </div></section>
 
 
-
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
         <div class="slide__content">
-            слайд с картинкой под текстом
+            <div class="demo demo--text demo--bbmode-text">
+                <div class="text">текст</div>
+            </div>
         </div>
     </div></section>
 
@@ -879,6 +879,7 @@
     <section class="slide slide--vlm"><div>
         <div class="browsers--biglist">
             <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
+            <sup>41+</sup>
             <img src="./assets/img/browsers/safari.png" alt="Safari"/>
             <img src="./assets/img/browsers/opera.png" alt="Opera"/>
             <img src="./assets/img/browsers/ie.png" class="no-support" alt="IE"/>
@@ -892,10 +893,30 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
-        <div class="slide__content">
-            слайд с самой маской
-        </div>
+    <section class="slide slide--imgfull bg--ps-cells"><div>
+        <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">
+            <rect width="100%" height="100%" fill="#FFF"/>
+            <text x="50%" y="50%" dy=".2em"
+                text-anchor="middle">текст</text>
+        </svg>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--imgfull bg--ps-cells"><div>
+        <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">
+            <mask id="mask-text-revert"
+            maskunits="userSpaceOnUse"
+            maskcontentunits="userSpaceOnUse">
+                <rect width="100%" height="100%" fill="#FFF"/>
+                <text x="50%" y="50%" dy=".2em"
+                    text-anchor="middle">текст</text>
+            </mask>
+
+            <rect mask="url(#mask-text-revert)"
+                width="100%" height="100%"
+                fill="#000"/>
+
+        </svg>
     </div></section>
 
     <!-- Slide -->

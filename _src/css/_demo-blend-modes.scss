@@ -38,7 +38,7 @@
         }
     }
 
-.demo--bbmode {
+.demo--bbmode-pair {
     position: absolute;
     top: 0;
     right: 0;
@@ -77,3 +77,11 @@
             color: #000;
             }
         }
+
+.demo--bbmode-text {
+    background: url(https://img-fotki.yandex.ru/get/5604/yoksel.60/0_4f376_c12baf67_orig) 50% 50%/cover;
+    .text {
+        background: #FFF;
+        mix-blend-mode: lighten;
+        }
+    }

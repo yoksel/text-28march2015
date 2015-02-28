@@ -390,6 +390,10 @@ PRE:before {
   background-size: 2em 100%;
 }
 
+.bg--ps-cells {
+  background: url(../img/parts/ps-bg.png);
+}
+
 /* Columns
 ------------------------- */
 .column {
@@ -1395,7 +1399,7 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
   box-shadow: 5px 0 0px #000;
 }
 
-.demo--bbmode {
+.demo--bbmode-pair {
   position: absolute;
   top: 0;
   right: 0;
@@ -1407,17 +1411,17 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
       yellowgreen, steelblue, navy
       );*/
 }
-.demo--bbmode .item-bbmode {
+.demo--bbmode-pair .item-bbmode {
   position: relative;
   display: inline-block;
   width: 50%;
   height: 640px;
   background: #000 url(../img/parts/bird-invert.gif) no-repeat 50% 50%;
 }
-.demo--bbmode .item-bbmode--darken {
+.demo--bbmode-pair .item-bbmode--darken {
   mix-blend-mode: darken;
 }
-.demo--bbmode .item-bbmode--lighten {
+.demo--bbmode-pair .item-bbmode--lighten {
   mix-blend-mode: lighten;
 }
 
@@ -1431,6 +1435,18 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 .item-bbmode-title:nth-child(even) {
   right: 0;
   color: #000;
+}
+
+.demo--bbmode-text {
+  background: url(https://img-fotki.yandex.ru/get/5604/yoksel.60/0_4f376_c12baf67_orig) 50% 50%/cover;
+}
+.demo--bbmode-text .text {
+  background: #FFF;
+  mix-blend-mode: lighten;
+}
+
+svg.demo--inverted-mask {
+  font-size: 12em;
 }
 
 .demo--longtext {
@@ -1453,12 +1469,20 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 }
 
 .browsers--biglist {
-  width: 800px;
+  position: relative;
+  width: 850px;
   text-align: center;
 }
 .browsers--biglist IMG {
   width: 200px;
   height: 200px;
+  margin: 0 1em;
+}
+.browsers--biglist SUP {
+  position: absolute;
+  top: 10px;
+  margin-left: -60px;
+  font-size: 1.2em;
 }
 
 .browser {

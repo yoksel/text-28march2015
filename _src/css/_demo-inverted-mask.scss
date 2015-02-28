@@ -1,7 +1,6 @@
 svg.demo--inverted-mask {
     position: relative;
     z-index: 1;
-    font-size: 12em;
     }
 
 .text--invmask-multytext {
@@ -16,6 +15,11 @@ svg.demo--inverted-mask {
     fill: transparent;
     stroke: rgba(0,0,0,.5);
     stroke-width: 20;
+
+    .demo--intro & {
+        stroke: rgba(255,255,255,.5);
+        stroke-width: 6;
+        }
     }
 
 $shadow-size: .8vmax;

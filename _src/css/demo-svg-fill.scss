@@ -155,3 +155,10 @@ $anim-spots-step: $anim-spots-time/$anim-spots-max;
     stroke-width: 18;
   }
 }
+
+.text--fill--spots {
+    stroke: #000;
+    stroke-width: 3;
+    stroke-dasharray: 35 30;
+    font-size: 1.5em;
+    }

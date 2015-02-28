@@ -441,6 +441,7 @@ svg.demo--text {
 
 .demo-border {
   position: relative;
+  /*pointer-events: none;*/
 }
 .demo-border:after {
   content: "";
@@ -451,6 +452,15 @@ svg.demo--text {
   bottom: -1px;
   left: -1px;
   border: 5px solid #000;
+  pointer-events: none;
+}
+
+svg.demo--inverted-mask {
+  font-size: 12em;
+}
+
+svg.demo--intro {
+  font: 7em/1 'Russo One', Impact;
 }
 
 .demo--shadowstroke {
@@ -1229,6 +1239,13 @@ svg.demo--text {
     stroke-width: 18;
   }
 }
+.text--fill--spots {
+  stroke: #000;
+  stroke-width: 3;
+  stroke-dasharray: 35 30;
+  font-size: 1.5em;
+}
+
 .demo--dottes {
   position: absolute;
   left: 0;
@@ -1462,7 +1479,6 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 svg.demo--inverted-mask {
   position: relative;
   z-index: 1;
-  font-size: 12em;
 }
 
 .text--invmask-multytext {
@@ -1478,6 +1494,10 @@ svg.demo--inverted-mask {
   fill: transparent;
   stroke: rgba(0, 0, 0, 0.5);
   stroke-width: 20;
+}
+.demo--intro .u-text--stroke {
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 6;
 }
 
 /* Function for getting colors from list

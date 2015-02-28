@@ -787,7 +787,7 @@
     <!-- Slide -->
     <section class="slide"><div>
         <svg viewBox="0 0 1024 640" class="demo demo--longtext">
-            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+            <text x="0%" y="50%" dy=".2em"
             >текст, уехавший за край</text>
         </svg>
     </div></section>
@@ -803,7 +803,7 @@
                 M0,550 1024,550" id="tp-multylines"/>
             </defs>
             <use xlink:href="#tp-multylines" stroke="orangered" stroke-width="10"/>
-            <text x="0" y="50%" dy=".2em">
+            <text x="0" y="50%">
                 <textPath xlink:href="#tp-multylines">
                     Однажды в студеную зимнюю пору я из лесу вышел, по-моему, зря.
                 </textPath>
@@ -817,18 +817,41 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide slide--vlm bg--stripes"><div>
         <div class="slide__content">
-            слайд с демо с цветами и режимами
+            <img src="../assets/img/parts/bird-invert.gif" alt="Bird"/>
         </div>
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide slide--imgfull bg--stripes"><div>
         <div class="slide__content">
-            слайд с lighten/darken
+            <div class="demo--bbmode-list">
+                    <div class="item-bbmode"></div><!--
+                 --><div class="item-bbmode"></div><!--
+                 --><div class="item-bbmode"></div><!--
+                 --><div class="item-bbmode"></div><!--
+                 --><div class="item-bbmode"></div><!--
+                 --><div class="item-bbmode"></div>
+            </div>
         </div>
     </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--imgfull bg--stripes"><div>
+        <div class="slide__content">
+            <div class="demo--bbmode">
+                <div class="item-bbmode item-bbmode--darken">
+                </div><!--
+                 --><div class="item-bbmode item-bbmode--lighten">
+                </div>
+                <div class="item-bbmode-title">darken</div>
+                <div class="item-bbmode-title">lighten</div>
+            </div>
+        </div>
+    </div></section>
+
+
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>

@@ -79,11 +79,6 @@ svg {
         margin-bottom: 2em;
         }
     }
-    .slide--tlen {
-        &>DIV {
-            padding: 30px 80px;
-            }
-        }
 
 .slide--imgcenter {
     & > DIV {
@@ -355,6 +350,7 @@ $svg-code-color: hsl(190, 70%, 75%);
 @import 'demo-svg-fill';
 @import '_demo-dottes';
 @import '_demo-psycho';
+@import '_demo-blend-modes';
 
 
 @import '_demo-svgmask';

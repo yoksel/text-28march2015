@@ -180,10 +180,6 @@ svg {
   margin-bottom: 2em;
 }
 
-.slide--tlen > DIV {
-  padding: 30px 80px;
-}
-
 .slide--imgcenter > DIV {
   padding: 0;
   text-align: center;
@@ -1359,8 +1355,86 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
     transform: rotate(360deg);
   }
 }
+.demo--bbmode-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 0px solid red;
+}
+.demo--bbmode-list .item-bbmode {
+  float: left;
+  width: 33.331%;
+  height: 320px;
+  line-height: 0;
+  background: #000 url(../img/parts/bird-invert.gif) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.demo--bbmode-list .item-bbmode:nth-child(1) {
+  mix-blend-mode: multiply;
+}
+.demo--bbmode-list .item-bbmode:nth-child(2) {
+  mix-blend-mode: screen;
+}
+.demo--bbmode-list .item-bbmode:nth-child(3) {
+  mix-blend-mode: luminosity;
+  -webkit-box-shadow: 5px 0 0px #000;
+  box-shadow: 5px 0 0px #000;
+}
+.demo--bbmode-list .item-bbmode:nth-child(4) {
+  mix-blend-mode: difference;
+}
+.demo--bbmode-list .item-bbmode:nth-child(5) {
+  mix-blend-mode: color-burn;
+}
+.demo--bbmode-list .item-bbmode:nth-child(6) {
+  mix-blend-mode: overlay;
+  -webkit-box-shadow: 5px 0 0px #000;
+  box-shadow: 5px 0 0px #000;
+}
+
+.demo--bbmode {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*background:
+      linear-gradient(to bottom,
+      crimson, orangered,gold,
+      yellowgreen, steelblue, navy
+      );*/
+}
+.demo--bbmode .item-bbmode {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 640px;
+  background: #000 url(../img/parts/bird-invert.gif) no-repeat 50% 50%;
+}
+.demo--bbmode .item-bbmode--darken {
+  mix-blend-mode: darken;
+}
+.demo--bbmode .item-bbmode--lighten {
+  mix-blend-mode: lighten;
+}
+
+.item-bbmode-title {
+  position: absolute;
+  width: 50%;
+  top: 0%;
+  font-size: 2em;
+  color: #FFF;
+}
+.item-bbmode-title:nth-child(even) {
+  right: 0;
+  color: #000;
+}
+
 .demo--longtext {
-  font: 3.9em/1 'Russo One', Impact;
+  font: 4em/1 Arial, sans-serif;
   letter-spacing: .05em;
 }
 

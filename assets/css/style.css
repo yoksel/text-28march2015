@@ -1922,6 +1922,37 @@ if we need quantity of colors more than colors in array  */
     stop-color: green;
   }
 }
+svg {
+  overflow: visible;
+}
+
+.anim-multystrokes__item {
+  /*fill: red;*/
+}
+
+.anim-multystrokes__item:nth-child(6) {
+  stroke-width: 3;
+  stroke: yellow;
+}
+
+/*.anim-multystrokes__item:nth-child(5) {
+  stroke-width: $stroke-width-step*2;
+  stroke: orange;
+  }
+.anim-multystrokes__item:nth-child(4) {
+  stroke-width: $stroke-width-step*3;
+  stroke: red;
+  }*/
+.anim-multystrokes__item:nth-child(3) {
+  stroke-width: 15;
+  stroke: darkred;
+}
+
+.anim-multystrokes__item:nth-child(2) {
+  stroke-width: 21;
+  stroke: purple;
+}
+
 .list--support LI {
   margin-bottom: 2.5em;
 }

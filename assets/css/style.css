@@ -180,10 +180,6 @@ svg {
   margin-bottom: 2em;
 }
 
-.slide--tlen > DIV {
-  padding: 30px 80px;
-}
-
 .slide--imgcenter > DIV {
   padding: 0;
   text-align: center;
@@ -394,6 +390,15 @@ PRE:before {
   background-size: 2em 100%;
 }
 
+.bg--ps-cells {
+  background: url(../img/parts/ps-bg.png);
+}
+
+.bg--blue-grad {
+  background: -webkit-radial-gradient(#0088cc, #0c052e);
+  background: radial-gradient(#0088cc, #0c052e);
+}
+
 /* Columns
 ------------------------- */
 .column {
@@ -433,6 +438,34 @@ PRE:before {
 .demo--text {
   font: 12em/1 'Russo One', Impact;
   letter-spacing: .05em;
+}
+
+svg.demo--text {
+  font-size: 14em;
+}
+
+.demo-border {
+  position: relative;
+  /*pointer-events: none;*/
+}
+.demo-border:after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border: 5px solid #000;
+  pointer-events: none;
+}
+
+svg.demo--inverted-mask {
+  font-size: 12em;
+}
+
+svg.demo--intro {
+  font: 7em/1 'Russo One', Impact;
 }
 
 .demo--shadowstroke {
@@ -528,10 +561,6 @@ PRE:before {
     background-position: 50% -0.2em;
   }
 }
-svg.demo--text {
-  font-size: 14em;
-}
-
 .text--stroke {
   fill: none;
 }
@@ -1215,6 +1244,717 @@ svg.demo--text {
     stroke-width: 18;
   }
 }
+.text--fill--spots {
+  stroke: #000;
+  stroke-width: 3;
+  stroke-dasharray: 35 30;
+  font-size: 1.5em;
+}
+
+.demo--dottes {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #7dc4e8 linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.4) 50%);
+  -webkit-background-size: .12em 100%;
+  background-size: .12em 100%;
+  font: 19em/1 Lobster, Arial;
+}
+
+.text--line {
+  font-size: .5em;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-width: 20px;
+}
+
+.text-copy--shadow {
+  fill: rgba(0, 0, 0, 0.25);
+  -webkit-transform: translate(0, 0.065em);
+  -ms-transform: translate(0, 0.065em);
+  transform: translate(0, 0.065em);
+}
+
+.r-fill {
+  fill: url(#p-dottes);
+  -webkit-transform-origin: 512px 320px;
+  -ms-transform-origin: 512px 320px;
+  transform-origin: 512px 320px;
+}
+:target .r-fill {
+  -webkit-animation: rotate 10s linear infinite;
+  animation: rotate 10s linear infinite;
+}
+
+/* Fix for firefox */
+.r-fill--color {
+  fill: #ff401a;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+svg.demo--text-psycho {
+  font: 15em/1 Lobster, Arial;
+}
+svg.demo--text-psycho .text-psycho--line2 {
+  font-size: .7em;
+}
+svg.demo--text-psycho .text-shadow {
+  fill: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate(10px, 15px);
+  -ms-transform: translate(10px, 15px);
+  transform: translate(10px, 15px);
+}
+svg.demo--text-psycho .text-stroke {
+  fill: none;
+  stroke: gold;
+  stroke-width: 2px;
+  stroke-dasharray: 20 50;
+  -webkit-transform: translate(-7px, -7px);
+  -ms-transform: translate(-7px, -7px);
+  transform: translate(-7px, -7px);
+}
+svg.demo--text-psycho .text-stroke-2 {
+  stroke: hotpink;
+  stroke-dashoffset: 24;
+}
+svg.demo--text-psycho .text-stroke-3 {
+  stroke: aqua;
+  stroke-dashoffset: 48;
+}
+svg.demo--text-psycho .animated-circles g:nth-child(odd) .u-circle {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+svg.demo--text-psycho .u-circle {
+  -webkit-transform-origin: 100px 100px;
+  -ms-transform-origin: 100px 100px;
+  transform-origin: 100px 100px;
+}
+:target svg.demo--text-psycho .u-circle {
+  -webkit-animation: rotate-psycho 10s linear infinite;
+  animation: rotate-psycho 10s linear infinite;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(1) {
+  stroke: greenyellow;
+  stroke-dashoffset: 0;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(2) {
+  stroke: fuchsia;
+  stroke-dashoffset: 5.2;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(3) {
+  stroke: deepskyblue;
+  stroke-dashoffset: 10.4;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(4) {
+  stroke: orange;
+  stroke-dashoffset: 15.6;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(5) {
+  stroke: springgreen;
+  stroke-dashoffset: 20.8;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(6) {
+  stroke: hotpink;
+  stroke-dashoffset: 26;
+}
+svg.demo--text-psycho .g-circles circle:nth-child(7) {
+  stroke: yellow;
+  stroke-dashoffset: 31.2;
+}
+
+@-webkit-keyframes rotate-psycho {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-psycho {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.demo--bbmode-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 0px solid red;
+}
+.demo--bbmode-list .item-bbmode {
+  float: left;
+  width: 33.331%;
+  height: 320px;
+  line-height: 0;
+  background: #000 url(../img/parts/bird-invert.gif) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.demo--bbmode-list .item-bbmode:nth-child(1) {
+  mix-blend-mode: multiply;
+}
+.demo--bbmode-list .item-bbmode:nth-child(2) {
+  mix-blend-mode: screen;
+}
+.demo--bbmode-list .item-bbmode:nth-child(3) {
+  mix-blend-mode: luminosity;
+  -webkit-box-shadow: 5px 0 0px #000;
+  box-shadow: 5px 0 0px #000;
+}
+.demo--bbmode-list .item-bbmode:nth-child(4) {
+  mix-blend-mode: difference;
+}
+.demo--bbmode-list .item-bbmode:nth-child(5) {
+  mix-blend-mode: color-burn;
+}
+.demo--bbmode-list .item-bbmode:nth-child(6) {
+  mix-blend-mode: overlay;
+  -webkit-box-shadow: 5px 0 0px #000;
+  box-shadow: 5px 0 0px #000;
+}
+
+.demo--bbmode-pair {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*background:
+      linear-gradient(to bottom,
+      crimson, orangered,gold,
+      yellowgreen, steelblue, navy
+      );*/
+}
+.demo--bbmode-pair .item-bbmode {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 640px;
+  background: #000 url(../img/parts/bird-invert.gif) no-repeat 50% 50%;
+}
+.demo--bbmode-pair .item-bbmode--darken {
+  mix-blend-mode: darken;
+}
+.demo--bbmode-pair .item-bbmode--lighten {
+  mix-blend-mode: lighten;
+}
+
+.item-bbmode-title {
+  position: absolute;
+  width: 50%;
+  top: 0%;
+  font-size: 2em;
+  color: #FFF;
+}
+.item-bbmode-title:nth-child(even) {
+  right: 0;
+  color: #000;
+}
+
+.demo--bbmode-text {
+  background: url(https://img-fotki.yandex.ru/get/5604/yoksel.60/0_4f376_c12baf67_orig) 50% 50%/cover;
+}
+.demo--bbmode-text .text {
+  background: #FFF;
+  mix-blend-mode: lighten;
+}
+
+svg.demo--inverted-mask {
+  position: relative;
+  z-index: 1;
+}
+
+.text--invmask-multytext {
+  font-size: 1.8em;
+  font-family: Impact;
+}
+
+.u-text--transp {
+  fill: transparent;
+}
+
+.u-text--stroke {
+  fill: transparent;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-width: 20;
+}
+.demo--intro .u-text--stroke {
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 6;
+}
+
+/* Function for getting colors from list
+if we need quantity of colors more than colors in array  */
+/* Function for creating multiple box-shadow */
+/* Element with animated shadows */
+.demo--round-shadows {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: 0.4vmax;
+  height: 0.4vmax;
+  background: gold;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 0.8vmax purple, 0 0 0 1.6vmax crimson, 0 0 0 2.4vmax red, 0 0 0 3.2vmax orangered, 0 0 0 4vmax tomato, 0 0 0 4.8vmax gold, 0 0 0 5.6vmax yellow, 0 0 0 6.4vmax yellowgreen, 0 0 0 7.2vmax turquoise, 0 0 0 8vmax royalblue, 0 0 0 8.8vmax mediumslateblue, 0 0 0 9.6vmax mediumorchid, 0 0 0 10.4vmax purple, 0 0 0 11.2vmax crimson, 0 0 0 12vmax red, 0 0 0 12.8vmax orangered, 0 0 0 13.6vmax tomato, 0 0 0 14.4vmax gold, 0 0 0 15.2vmax yellow, 0 0 0 16vmax yellowgreen, 0 0 0 16.8vmax turquoise, 0 0 0 17.6vmax royalblue, 0 0 0 18.4vmax mediumslateblue, 0 0 0 19.2vmax mediumorchid, 0 0 0 20vmax darkviolet, 0 0 0 20.8vmax purple, 0 0 0 21.6vmax crimson, 0 0 0 22.4vmax red, 0 0 0 23.2vmax orangered, 0 0 0 24vmax tomato, 0 0 0 24.8vmax gold, 0 0 0 25.6vmax yellow, 0 0 0 26.4vmax yellowgreen, 0 0 0 27.2vmax turquoise, 0 0 0 28vmax royalblue, 0 0 0 28.8vmax mediumslateblue, 0 0 0 29.6vmax mediumorchid, 0 0 0 30.4vmax darkviolet, 0 0 0 31.2vmax purple, 0 0 0 32vmax crimson, 0 0 0 32.8vmax red, 0 0 0 33.6vmax orangered, 0 0 0 34.4vmax tomato, 0 0 0 35.2vmax gold, 0 0 0 36vmax yellow;
+  box-shadow: 0 0 0 0.8vmax purple, 0 0 0 1.6vmax crimson, 0 0 0 2.4vmax red, 0 0 0 3.2vmax orangered, 0 0 0 4vmax tomato, 0 0 0 4.8vmax gold, 0 0 0 5.6vmax yellow, 0 0 0 6.4vmax yellowgreen, 0 0 0 7.2vmax turquoise, 0 0 0 8vmax royalblue, 0 0 0 8.8vmax mediumslateblue, 0 0 0 9.6vmax mediumorchid, 0 0 0 10.4vmax purple, 0 0 0 11.2vmax crimson, 0 0 0 12vmax red, 0 0 0 12.8vmax orangered, 0 0 0 13.6vmax tomato, 0 0 0 14.4vmax gold, 0 0 0 15.2vmax yellow, 0 0 0 16vmax yellowgreen, 0 0 0 16.8vmax turquoise, 0 0 0 17.6vmax royalblue, 0 0 0 18.4vmax mediumslateblue, 0 0 0 19.2vmax mediumorchid, 0 0 0 20vmax darkviolet, 0 0 0 20.8vmax purple, 0 0 0 21.6vmax crimson, 0 0 0 22.4vmax red, 0 0 0 23.2vmax orangered, 0 0 0 24vmax tomato, 0 0 0 24.8vmax gold, 0 0 0 25.6vmax yellow, 0 0 0 26.4vmax yellowgreen, 0 0 0 27.2vmax turquoise, 0 0 0 28vmax royalblue, 0 0 0 28.8vmax mediumslateblue, 0 0 0 29.6vmax mediumorchid, 0 0 0 30.4vmax darkviolet, 0 0 0 31.2vmax purple, 0 0 0 32vmax crimson, 0 0 0 32.8vmax red, 0 0 0 33.6vmax orangered, 0 0 0 34.4vmax tomato, 0 0 0 35.2vmax gold, 0 0 0 36vmax yellow;
+}
+:target .demo--round-shadows {
+  -webkit-animation: shadows-move 4s linear infinite;
+  animation: shadows-move 4s linear infinite;
+}
+
+@-webkit-keyframes shadows-move {
+  25% {
+    -webkit-box-shadow: 0 0 0 0.8vmax royalblue, 0 0 0 1.6vmax mediumslateblue, 0 0 0 2.4vmax mediumorchid, 0 0 0 3.2vmax purple, 0 0 0 4vmax crimson, 0 0 0 4.8vmax red, 0 0 0 5.6vmax orangered, 0 0 0 6.4vmax tomato, 0 0 0 7.2vmax gold, 0 0 0 8vmax yellow, 0 0 0 8.8vmax yellowgreen, 0 0 0 9.6vmax turquoise, 0 0 0 10.4vmax royalblue, 0 0 0 11.2vmax mediumslateblue, 0 0 0 12vmax mediumorchid, 0 0 0 12.8vmax darkviolet, 0 0 0 13.6vmax purple, 0 0 0 14.4vmax crimson, 0 0 0 15.2vmax red, 0 0 0 16vmax orangered, 0 0 0 16.8vmax tomato, 0 0 0 17.6vmax gold, 0 0 0 18.4vmax yellow, 0 0 0 19.2vmax yellowgreen, 0 0 0 20vmax turquoise, 0 0 0 20.8vmax royalblue, 0 0 0 21.6vmax mediumslateblue, 0 0 0 22.4vmax mediumorchid, 0 0 0 23.2vmax darkviolet, 0 0 0 24vmax purple, 0 0 0 24.8vmax crimson, 0 0 0 25.6vmax red, 0 0 0 26.4vmax orangered, 0 0 0 27.2vmax tomato, 0 0 0 28vmax gold, 0 0 0 28.8vmax yellow, 0 0 0 29.6vmax yellowgreen, 0 0 0 30.4vmax turquoise, 0 0 0 31.2vmax royalblue, 0 0 0 32vmax mediumslateblue, 0 0 0 32.8vmax mediumorchid, 0 0 0 33.6vmax darkviolet, 0 0 0 34.4vmax purple, 0 0 0 35.2vmax crimson, 0 0 0 36vmax red;
+    box-shadow: 0 0 0 0.8vmax royalblue, 0 0 0 1.6vmax mediumslateblue, 0 0 0 2.4vmax mediumorchid, 0 0 0 3.2vmax purple, 0 0 0 4vmax crimson, 0 0 0 4.8vmax red, 0 0 0 5.6vmax orangered, 0 0 0 6.4vmax tomato, 0 0 0 7.2vmax gold, 0 0 0 8vmax yellow, 0 0 0 8.8vmax yellowgreen, 0 0 0 9.6vmax turquoise, 0 0 0 10.4vmax royalblue, 0 0 0 11.2vmax mediumslateblue, 0 0 0 12vmax mediumorchid, 0 0 0 12.8vmax darkviolet, 0 0 0 13.6vmax purple, 0 0 0 14.4vmax crimson, 0 0 0 15.2vmax red, 0 0 0 16vmax orangered, 0 0 0 16.8vmax tomato, 0 0 0 17.6vmax gold, 0 0 0 18.4vmax yellow, 0 0 0 19.2vmax yellowgreen, 0 0 0 20vmax turquoise, 0 0 0 20.8vmax royalblue, 0 0 0 21.6vmax mediumslateblue, 0 0 0 22.4vmax mediumorchid, 0 0 0 23.2vmax darkviolet, 0 0 0 24vmax purple, 0 0 0 24.8vmax crimson, 0 0 0 25.6vmax red, 0 0 0 26.4vmax orangered, 0 0 0 27.2vmax tomato, 0 0 0 28vmax gold, 0 0 0 28.8vmax yellow, 0 0 0 29.6vmax yellowgreen, 0 0 0 30.4vmax turquoise, 0 0 0 31.2vmax royalblue, 0 0 0 32vmax mediumslateblue, 0 0 0 32.8vmax mediumorchid, 0 0 0 33.6vmax darkviolet, 0 0 0 34.4vmax purple, 0 0 0 35.2vmax crimson, 0 0 0 36vmax red;
+  }
+  45% {
+    -webkit-box-shadow: 0 0 0 0.8vmax yellow, 0 0 0 1.6vmax yellowgreen, 0 0 0 2.4vmax turquoise, 0 0 0 3.2vmax royalblue, 0 0 0 4vmax mediumslateblue, 0 0 0 4.8vmax mediumorchid, 0 0 0 5.6vmax purple, 0 0 0 6.4vmax crimson, 0 0 0 7.2vmax red, 0 0 0 8vmax orangered, 0 0 0 8.8vmax tomato, 0 0 0 9.6vmax gold, 0 0 0 10.4vmax yellow, 0 0 0 11.2vmax yellowgreen, 0 0 0 12vmax turquoise, 0 0 0 12.8vmax royalblue, 0 0 0 13.6vmax mediumslateblue, 0 0 0 14.4vmax mediumorchid, 0 0 0 15.2vmax darkviolet, 0 0 0 16vmax purple, 0 0 0 16.8vmax crimson, 0 0 0 17.6vmax red, 0 0 0 18.4vmax orangered, 0 0 0 19.2vmax tomato, 0 0 0 20vmax gold, 0 0 0 20.8vmax yellow, 0 0 0 21.6vmax yellowgreen, 0 0 0 22.4vmax turquoise, 0 0 0 23.2vmax royalblue, 0 0 0 24vmax mediumslateblue, 0 0 0 24.8vmax mediumorchid, 0 0 0 25.6vmax darkviolet, 0 0 0 26.4vmax purple, 0 0 0 27.2vmax crimson, 0 0 0 28vmax red, 0 0 0 28.8vmax orangered, 0 0 0 29.6vmax tomato, 0 0 0 30.4vmax gold, 0 0 0 31.2vmax yellow, 0 0 0 32vmax yellowgreen, 0 0 0 32.8vmax turquoise, 0 0 0 33.6vmax royalblue, 0 0 0 34.4vmax mediumslateblue, 0 0 0 35.2vmax mediumorchid, 0 0 0 36vmax darkviolet;
+    box-shadow: 0 0 0 0.8vmax yellow, 0 0 0 1.6vmax yellowgreen, 0 0 0 2.4vmax turquoise, 0 0 0 3.2vmax royalblue, 0 0 0 4vmax mediumslateblue, 0 0 0 4.8vmax mediumorchid, 0 0 0 5.6vmax purple, 0 0 0 6.4vmax crimson, 0 0 0 7.2vmax red, 0 0 0 8vmax orangered, 0 0 0 8.8vmax tomato, 0 0 0 9.6vmax gold, 0 0 0 10.4vmax yellow, 0 0 0 11.2vmax yellowgreen, 0 0 0 12vmax turquoise, 0 0 0 12.8vmax royalblue, 0 0 0 13.6vmax mediumslateblue, 0 0 0 14.4vmax mediumorchid, 0 0 0 15.2vmax darkviolet, 0 0 0 16vmax purple, 0 0 0 16.8vmax crimson, 0 0 0 17.6vmax red, 0 0 0 18.4vmax orangered, 0 0 0 19.2vmax tomato, 0 0 0 20vmax gold, 0 0 0 20.8vmax yellow, 0 0 0 21.6vmax yellowgreen, 0 0 0 22.4vmax turquoise, 0 0 0 23.2vmax royalblue, 0 0 0 24vmax mediumslateblue, 0 0 0 24.8vmax mediumorchid, 0 0 0 25.6vmax darkviolet, 0 0 0 26.4vmax purple, 0 0 0 27.2vmax crimson, 0 0 0 28vmax red, 0 0 0 28.8vmax orangered, 0 0 0 29.6vmax tomato, 0 0 0 30.4vmax gold, 0 0 0 31.2vmax yellow, 0 0 0 32vmax yellowgreen, 0 0 0 32.8vmax turquoise, 0 0 0 33.6vmax royalblue, 0 0 0 34.4vmax mediumslateblue, 0 0 0 35.2vmax mediumorchid, 0 0 0 36vmax darkviolet;
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 0.8vmax orangered, 0 0 0 1.6vmax tomato, 0 0 0 2.4vmax gold, 0 0 0 3.2vmax yellow, 0 0 0 4vmax yellowgreen, 0 0 0 4.8vmax turquoise, 0 0 0 5.6vmax royalblue, 0 0 0 6.4vmax mediumslateblue, 0 0 0 7.2vmax mediumorchid, 0 0 0 8vmax purple, 0 0 0 8.8vmax crimson, 0 0 0 9.6vmax red, 0 0 0 10.4vmax orangered, 0 0 0 11.2vmax tomato, 0 0 0 12vmax gold, 0 0 0 12.8vmax yellow, 0 0 0 13.6vmax yellowgreen, 0 0 0 14.4vmax turquoise, 0 0 0 15.2vmax royalblue, 0 0 0 16vmax mediumslateblue, 0 0 0 16.8vmax mediumorchid, 0 0 0 17.6vmax darkviolet, 0 0 0 18.4vmax purple, 0 0 0 19.2vmax crimson, 0 0 0 20vmax red, 0 0 0 20.8vmax orangered, 0 0 0 21.6vmax tomato, 0 0 0 22.4vmax gold, 0 0 0 23.2vmax yellow, 0 0 0 24vmax yellowgreen, 0 0 0 24.8vmax turquoise, 0 0 0 25.6vmax royalblue, 0 0 0 26.4vmax mediumslateblue, 0 0 0 27.2vmax mediumorchid, 0 0 0 28vmax darkviolet, 0 0 0 28.8vmax purple, 0 0 0 29.6vmax crimson, 0 0 0 30.4vmax red, 0 0 0 31.2vmax orangered, 0 0 0 32vmax tomato, 0 0 0 32.8vmax gold, 0 0 0 33.6vmax yellow, 0 0 0 34.4vmax yellowgreen, 0 0 0 35.2vmax turquoise, 0 0 0 36vmax royalblue;
+    box-shadow: 0 0 0 0.8vmax orangered, 0 0 0 1.6vmax tomato, 0 0 0 2.4vmax gold, 0 0 0 3.2vmax yellow, 0 0 0 4vmax yellowgreen, 0 0 0 4.8vmax turquoise, 0 0 0 5.6vmax royalblue, 0 0 0 6.4vmax mediumslateblue, 0 0 0 7.2vmax mediumorchid, 0 0 0 8vmax purple, 0 0 0 8.8vmax crimson, 0 0 0 9.6vmax red, 0 0 0 10.4vmax orangered, 0 0 0 11.2vmax tomato, 0 0 0 12vmax gold, 0 0 0 12.8vmax yellow, 0 0 0 13.6vmax yellowgreen, 0 0 0 14.4vmax turquoise, 0 0 0 15.2vmax royalblue, 0 0 0 16vmax mediumslateblue, 0 0 0 16.8vmax mediumorchid, 0 0 0 17.6vmax darkviolet, 0 0 0 18.4vmax purple, 0 0 0 19.2vmax crimson, 0 0 0 20vmax red, 0 0 0 20.8vmax orangered, 0 0 0 21.6vmax tomato, 0 0 0 22.4vmax gold, 0 0 0 23.2vmax yellow, 0 0 0 24vmax yellowgreen, 0 0 0 24.8vmax turquoise, 0 0 0 25.6vmax royalblue, 0 0 0 26.4vmax mediumslateblue, 0 0 0 27.2vmax mediumorchid, 0 0 0 28vmax darkviolet, 0 0 0 28.8vmax purple, 0 0 0 29.6vmax crimson, 0 0 0 30.4vmax red, 0 0 0 31.2vmax orangered, 0 0 0 32vmax tomato, 0 0 0 32.8vmax gold, 0 0 0 33.6vmax yellow, 0 0 0 34.4vmax yellowgreen, 0 0 0 35.2vmax turquoise, 0 0 0 36vmax royalblue;
+  }
+}
+
+@keyframes shadows-move {
+  25% {
+    -webkit-box-shadow: 0 0 0 0.8vmax royalblue, 0 0 0 1.6vmax mediumslateblue, 0 0 0 2.4vmax mediumorchid, 0 0 0 3.2vmax purple, 0 0 0 4vmax crimson, 0 0 0 4.8vmax red, 0 0 0 5.6vmax orangered, 0 0 0 6.4vmax tomato, 0 0 0 7.2vmax gold, 0 0 0 8vmax yellow, 0 0 0 8.8vmax yellowgreen, 0 0 0 9.6vmax turquoise, 0 0 0 10.4vmax royalblue, 0 0 0 11.2vmax mediumslateblue, 0 0 0 12vmax mediumorchid, 0 0 0 12.8vmax darkviolet, 0 0 0 13.6vmax purple, 0 0 0 14.4vmax crimson, 0 0 0 15.2vmax red, 0 0 0 16vmax orangered, 0 0 0 16.8vmax tomato, 0 0 0 17.6vmax gold, 0 0 0 18.4vmax yellow, 0 0 0 19.2vmax yellowgreen, 0 0 0 20vmax turquoise, 0 0 0 20.8vmax royalblue, 0 0 0 21.6vmax mediumslateblue, 0 0 0 22.4vmax mediumorchid, 0 0 0 23.2vmax darkviolet, 0 0 0 24vmax purple, 0 0 0 24.8vmax crimson, 0 0 0 25.6vmax red, 0 0 0 26.4vmax orangered, 0 0 0 27.2vmax tomato, 0 0 0 28vmax gold, 0 0 0 28.8vmax yellow, 0 0 0 29.6vmax yellowgreen, 0 0 0 30.4vmax turquoise, 0 0 0 31.2vmax royalblue, 0 0 0 32vmax mediumslateblue, 0 0 0 32.8vmax mediumorchid, 0 0 0 33.6vmax darkviolet, 0 0 0 34.4vmax purple, 0 0 0 35.2vmax crimson, 0 0 0 36vmax red;
+    box-shadow: 0 0 0 0.8vmax royalblue, 0 0 0 1.6vmax mediumslateblue, 0 0 0 2.4vmax mediumorchid, 0 0 0 3.2vmax purple, 0 0 0 4vmax crimson, 0 0 0 4.8vmax red, 0 0 0 5.6vmax orangered, 0 0 0 6.4vmax tomato, 0 0 0 7.2vmax gold, 0 0 0 8vmax yellow, 0 0 0 8.8vmax yellowgreen, 0 0 0 9.6vmax turquoise, 0 0 0 10.4vmax royalblue, 0 0 0 11.2vmax mediumslateblue, 0 0 0 12vmax mediumorchid, 0 0 0 12.8vmax darkviolet, 0 0 0 13.6vmax purple, 0 0 0 14.4vmax crimson, 0 0 0 15.2vmax red, 0 0 0 16vmax orangered, 0 0 0 16.8vmax tomato, 0 0 0 17.6vmax gold, 0 0 0 18.4vmax yellow, 0 0 0 19.2vmax yellowgreen, 0 0 0 20vmax turquoise, 0 0 0 20.8vmax royalblue, 0 0 0 21.6vmax mediumslateblue, 0 0 0 22.4vmax mediumorchid, 0 0 0 23.2vmax darkviolet, 0 0 0 24vmax purple, 0 0 0 24.8vmax crimson, 0 0 0 25.6vmax red, 0 0 0 26.4vmax orangered, 0 0 0 27.2vmax tomato, 0 0 0 28vmax gold, 0 0 0 28.8vmax yellow, 0 0 0 29.6vmax yellowgreen, 0 0 0 30.4vmax turquoise, 0 0 0 31.2vmax royalblue, 0 0 0 32vmax mediumslateblue, 0 0 0 32.8vmax mediumorchid, 0 0 0 33.6vmax darkviolet, 0 0 0 34.4vmax purple, 0 0 0 35.2vmax crimson, 0 0 0 36vmax red;
+  }
+  45% {
+    -webkit-box-shadow: 0 0 0 0.8vmax yellow, 0 0 0 1.6vmax yellowgreen, 0 0 0 2.4vmax turquoise, 0 0 0 3.2vmax royalblue, 0 0 0 4vmax mediumslateblue, 0 0 0 4.8vmax mediumorchid, 0 0 0 5.6vmax purple, 0 0 0 6.4vmax crimson, 0 0 0 7.2vmax red, 0 0 0 8vmax orangered, 0 0 0 8.8vmax tomato, 0 0 0 9.6vmax gold, 0 0 0 10.4vmax yellow, 0 0 0 11.2vmax yellowgreen, 0 0 0 12vmax turquoise, 0 0 0 12.8vmax royalblue, 0 0 0 13.6vmax mediumslateblue, 0 0 0 14.4vmax mediumorchid, 0 0 0 15.2vmax darkviolet, 0 0 0 16vmax purple, 0 0 0 16.8vmax crimson, 0 0 0 17.6vmax red, 0 0 0 18.4vmax orangered, 0 0 0 19.2vmax tomato, 0 0 0 20vmax gold, 0 0 0 20.8vmax yellow, 0 0 0 21.6vmax yellowgreen, 0 0 0 22.4vmax turquoise, 0 0 0 23.2vmax royalblue, 0 0 0 24vmax mediumslateblue, 0 0 0 24.8vmax mediumorchid, 0 0 0 25.6vmax darkviolet, 0 0 0 26.4vmax purple, 0 0 0 27.2vmax crimson, 0 0 0 28vmax red, 0 0 0 28.8vmax orangered, 0 0 0 29.6vmax tomato, 0 0 0 30.4vmax gold, 0 0 0 31.2vmax yellow, 0 0 0 32vmax yellowgreen, 0 0 0 32.8vmax turquoise, 0 0 0 33.6vmax royalblue, 0 0 0 34.4vmax mediumslateblue, 0 0 0 35.2vmax mediumorchid, 0 0 0 36vmax darkviolet;
+    box-shadow: 0 0 0 0.8vmax yellow, 0 0 0 1.6vmax yellowgreen, 0 0 0 2.4vmax turquoise, 0 0 0 3.2vmax royalblue, 0 0 0 4vmax mediumslateblue, 0 0 0 4.8vmax mediumorchid, 0 0 0 5.6vmax purple, 0 0 0 6.4vmax crimson, 0 0 0 7.2vmax red, 0 0 0 8vmax orangered, 0 0 0 8.8vmax tomato, 0 0 0 9.6vmax gold, 0 0 0 10.4vmax yellow, 0 0 0 11.2vmax yellowgreen, 0 0 0 12vmax turquoise, 0 0 0 12.8vmax royalblue, 0 0 0 13.6vmax mediumslateblue, 0 0 0 14.4vmax mediumorchid, 0 0 0 15.2vmax darkviolet, 0 0 0 16vmax purple, 0 0 0 16.8vmax crimson, 0 0 0 17.6vmax red, 0 0 0 18.4vmax orangered, 0 0 0 19.2vmax tomato, 0 0 0 20vmax gold, 0 0 0 20.8vmax yellow, 0 0 0 21.6vmax yellowgreen, 0 0 0 22.4vmax turquoise, 0 0 0 23.2vmax royalblue, 0 0 0 24vmax mediumslateblue, 0 0 0 24.8vmax mediumorchid, 0 0 0 25.6vmax darkviolet, 0 0 0 26.4vmax purple, 0 0 0 27.2vmax crimson, 0 0 0 28vmax red, 0 0 0 28.8vmax orangered, 0 0 0 29.6vmax tomato, 0 0 0 30.4vmax gold, 0 0 0 31.2vmax yellow, 0 0 0 32vmax yellowgreen, 0 0 0 32.8vmax turquoise, 0 0 0 33.6vmax royalblue, 0 0 0 34.4vmax mediumslateblue, 0 0 0 35.2vmax mediumorchid, 0 0 0 36vmax darkviolet;
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 0.8vmax orangered, 0 0 0 1.6vmax tomato, 0 0 0 2.4vmax gold, 0 0 0 3.2vmax yellow, 0 0 0 4vmax yellowgreen, 0 0 0 4.8vmax turquoise, 0 0 0 5.6vmax royalblue, 0 0 0 6.4vmax mediumslateblue, 0 0 0 7.2vmax mediumorchid, 0 0 0 8vmax purple, 0 0 0 8.8vmax crimson, 0 0 0 9.6vmax red, 0 0 0 10.4vmax orangered, 0 0 0 11.2vmax tomato, 0 0 0 12vmax gold, 0 0 0 12.8vmax yellow, 0 0 0 13.6vmax yellowgreen, 0 0 0 14.4vmax turquoise, 0 0 0 15.2vmax royalblue, 0 0 0 16vmax mediumslateblue, 0 0 0 16.8vmax mediumorchid, 0 0 0 17.6vmax darkviolet, 0 0 0 18.4vmax purple, 0 0 0 19.2vmax crimson, 0 0 0 20vmax red, 0 0 0 20.8vmax orangered, 0 0 0 21.6vmax tomato, 0 0 0 22.4vmax gold, 0 0 0 23.2vmax yellow, 0 0 0 24vmax yellowgreen, 0 0 0 24.8vmax turquoise, 0 0 0 25.6vmax royalblue, 0 0 0 26.4vmax mediumslateblue, 0 0 0 27.2vmax mediumorchid, 0 0 0 28vmax darkviolet, 0 0 0 28.8vmax purple, 0 0 0 29.6vmax crimson, 0 0 0 30.4vmax red, 0 0 0 31.2vmax orangered, 0 0 0 32vmax tomato, 0 0 0 32.8vmax gold, 0 0 0 33.6vmax yellow, 0 0 0 34.4vmax yellowgreen, 0 0 0 35.2vmax turquoise, 0 0 0 36vmax royalblue;
+    box-shadow: 0 0 0 0.8vmax orangered, 0 0 0 1.6vmax tomato, 0 0 0 2.4vmax gold, 0 0 0 3.2vmax yellow, 0 0 0 4vmax yellowgreen, 0 0 0 4.8vmax turquoise, 0 0 0 5.6vmax royalblue, 0 0 0 6.4vmax mediumslateblue, 0 0 0 7.2vmax mediumorchid, 0 0 0 8vmax purple, 0 0 0 8.8vmax crimson, 0 0 0 9.6vmax red, 0 0 0 10.4vmax orangered, 0 0 0 11.2vmax tomato, 0 0 0 12vmax gold, 0 0 0 12.8vmax yellow, 0 0 0 13.6vmax yellowgreen, 0 0 0 14.4vmax turquoise, 0 0 0 15.2vmax royalblue, 0 0 0 16vmax mediumslateblue, 0 0 0 16.8vmax mediumorchid, 0 0 0 17.6vmax darkviolet, 0 0 0 18.4vmax purple, 0 0 0 19.2vmax crimson, 0 0 0 20vmax red, 0 0 0 20.8vmax orangered, 0 0 0 21.6vmax tomato, 0 0 0 22.4vmax gold, 0 0 0 23.2vmax yellow, 0 0 0 24vmax yellowgreen, 0 0 0 24.8vmax turquoise, 0 0 0 25.6vmax royalblue, 0 0 0 26.4vmax mediumslateblue, 0 0 0 27.2vmax mediumorchid, 0 0 0 28vmax darkviolet, 0 0 0 28.8vmax purple, 0 0 0 29.6vmax crimson, 0 0 0 30.4vmax red, 0 0 0 31.2vmax orangered, 0 0 0 32vmax tomato, 0 0 0 32.8vmax gold, 0 0 0 33.6vmax yellow, 0 0 0 34.4vmax yellowgreen, 0 0 0 35.2vmax turquoise, 0 0 0 36vmax royalblue;
+  }
+}
+.text-fill-video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.light-circle {
+  opacity: 0;
+}
+:target .light-circle {
+  -webkit-animation: light-opacity 3s infinite linear;
+  animation: light-opacity 3s infinite linear;
+}
+.light-circle:nth-child(5n + 1) {
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.light-circle:nth-child(5n + 2) {
+  -webkit-animation-delay: -1.8s;
+  animation-delay: -1.8s;
+}
+.light-circle:nth-child(5n + 3) {
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.light-circle:nth-child(5n + 4) {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.light-circle:nth-child(5n + 5) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes light-opacity {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes light-opacity {
+  50% {
+    opacity: 1;
+  }
+}
+.demo--longtext {
+  font: 4em/1 Arial, sans-serif;
+  letter-spacing: .05em;
+}
+
+.demo--logo-disappear {
+  position: absolute;
+  width: 870px;
+  height: 160px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+:target .demo--logo-disappear {
+  -webkit-animation: svg-sizes 3s infinite linear alternate;
+  animation: svg-sizes 3s infinite linear alternate;
+}
+.demo--logo-disappear .demo--logo {
+  position: absolute;
+  width: 870px;
+  height: 160px;
+}
+:target .demo--logo-disappear .demo--logo {
+  -webkit-animation: logo-move 3s infinite linear alternate;
+  animation: logo-move 3s infinite linear alternate;
+}
+
+@-webkit-keyframes svg-sizes {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  10% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  35% {
+    opacity: .2;
+    width: 870px;
+    height: 1%;
+  }
+  50% {
+    opacity: 1;
+    width: 870px;
+    height: 160px;
+  }
+}
+
+@keyframes svg-sizes {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  10% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  35% {
+    opacity: .2;
+    width: 870px;
+    height: 1%;
+  }
+  50% {
+    opacity: 1;
+    width: 870px;
+    height: 160px;
+  }
+}
+@-webkit-keyframes logo-move {
+  0% {
+    top: -80px;
+    left: -435px;
+  }
+  10% {
+    top: -80px;
+    left: -435px;
+  }
+  35% {
+    top: -80px;
+    left: 0;
+  }
+  50% {
+    top: 0;
+    left: 0;
+  }
+}
+@keyframes logo-move {
+  0% {
+    top: -80px;
+    left: -435px;
+  }
+  10% {
+    top: -80px;
+    left: -435px;
+  }
+  35% {
+    top: -80px;
+    left: 0;
+  }
+  50% {
+    top: 0;
+    left: 0;
+  }
+}
+.stroke-appear-anim {
+  fill: none;
+  stroke: #FFF;
+  stroke-width: 3;
+  stroke-dasharray: 0 500;
+}
+:target .stroke-appear-anim {
+  -webkit-animation: stroke-logo-appear 4s infinite linear alternate;
+  animation: stroke-logo-appear 4s infinite linear alternate;
+}
+
+@-webkit-keyframes stroke-logo-appear {
+  20% {
+    stroke-dasharray: 0 500;
+    stroke-width: 3;
+  }
+  80% {
+    stroke-dasharray: 500 500;
+    stroke-width: 0;
+  }
+  100% {
+    stroke-dasharray: 500 500;
+    stroke-width: 0;
+  }
+}
+
+@keyframes stroke-logo-appear {
+  20% {
+    stroke-dasharray: 0 500;
+    stroke-width: 3;
+  }
+  80% {
+    stroke-dasharray: 500 500;
+    stroke-width: 0;
+  }
+  100% {
+    stroke-dasharray: 500 500;
+    stroke-width: 0;
+  }
+}
+.mask-logo-appear-rect {
+  stroke: white;
+  stroke-width: 0;
+}
+:target .mask-logo-appear-rect {
+  -webkit-animation: mask-logo-appear 4s infinite linear alternate;
+  animation: mask-logo-appear 4s infinite linear alternate;
+}
+
+@-webkit-keyframes mask-logo-appear {
+  20% {
+    stroke-width: 0;
+  }
+  80% {
+    stroke-width: 500;
+  }
+  100% {
+    stroke-width: 500;
+  }
+}
+
+@keyframes mask-logo-appear {
+  20% {
+    stroke-width: 0;
+  }
+  80% {
+    stroke-width: 500;
+  }
+  100% {
+    stroke-width: 500;
+  }
+}
+.aurora-stop-color-1 {
+  stop-color: #009999;
+}
+:target .aurora-stop-color-1 {
+  -webkit-animation: aurora-stop-colors 7s linear infinite alternate;
+  animation: aurora-stop-colors 7s linear infinite alternate;
+}
+
+.gr-aurora-1 .aurora-stop-color-1 {
+  -webkit-animation-delay: -1.4s;
+  animation-delay: -1.4s;
+  /*stop-color: red;*/
+}
+
+.gr-aurora-2 .aurora-stop-color-1 {
+  -webkit-animation-delay: -2.8s;
+  animation-delay: -2.8s;
+  /*stop-color: orange;*/
+}
+
+.gr-aurora-3 .aurora-stop-color-1 {
+  -webkit-animation-delay: -4.2s;
+  animation-delay: -4.2s;
+  /*stop-color: gold;*/
+}
+
+.gr-aurora-4 .aurora-stop-color-1 {
+  -webkit-animation-delay: -5.6s;
+  animation-delay: -5.6s;
+  /*stop-color: green;*/
+}
+
+.gr-aurora-5 .aurora-stop-color-1 {
+  -webkit-animation-delay: -7s;
+  animation-delay: -7s;
+  /*stop-color: blue;*/
+}
+
+.aurora-stop-color-2 {
+  stop-color: transparent;
+}
+
+@-webkit-keyframes aurora-stop-colors {
+  6.66667% {
+    stop-color: red;
+  }
+  13.33333% {
+    stop-color: #009999;
+  }
+  20% {
+    stop-color: #00cc99;
+  }
+  26.66667% {
+    stop-color: #00ff95;
+  }
+  33.33333% {
+    stop-color: #c2d65c;
+  }
+  40% {
+    stop-color: #d8f0a8;
+  }
+  46.66667% {
+    stop-color: #ffbb33;
+  }
+  53.33333% {
+    stop-color: #ff7733;
+  }
+  60% {
+    stop-color: #ff002b;
+  }
+  66.66667% {
+    stop-color: #b814b8;
+  }
+  73.33333% {
+    stop-color: #6614b8;
+  }
+  80% {
+    stop-color: #144bb8;
+  }
+  86.66667% {
+    stop-color: #0a85c2;
+  }
+  93.33333% {
+    stop-color: #009999;
+  }
+  100% {
+    stop-color: green;
+  }
+}
+
+@keyframes aurora-stop-colors {
+  6.66667% {
+    stop-color: red;
+  }
+  13.33333% {
+    stop-color: #009999;
+  }
+  20% {
+    stop-color: #00cc99;
+  }
+  26.66667% {
+    stop-color: #00ff95;
+  }
+  33.33333% {
+    stop-color: #c2d65c;
+  }
+  40% {
+    stop-color: #d8f0a8;
+  }
+  46.66667% {
+    stop-color: #ffbb33;
+  }
+  53.33333% {
+    stop-color: #ff7733;
+  }
+  60% {
+    stop-color: #ff002b;
+  }
+  66.66667% {
+    stop-color: #b814b8;
+  }
+  73.33333% {
+    stop-color: #6614b8;
+  }
+  80% {
+    stop-color: #144bb8;
+  }
+  86.66667% {
+    stop-color: #0a85c2;
+  }
+  93.33333% {
+    stop-color: #009999;
+  }
+  100% {
+    stop-color: green;
+  }
+}
+svg {
+  overflow: visible;
+}
+
+.anim-multystrokes__item {
+  /*fill: red;*/
+}
+
+.anim-multystrokes__item:nth-child(6) {
+  stroke-width: 3;
+  stroke: yellow;
+}
+
+.anim-multystrokes__item:nth-child(5) {
+  stroke-width: 6;
+  stroke: orange;
+}
+
+.anim-multystrokes__item:nth-child(4) {
+  stroke-width: 9;
+  stroke: red;
+}
+
+.anim-multystrokes__item:nth-child(3) {
+  stroke-width: 15;
+  stroke: darkred;
+}
+
+.anim-multystrokes__item:nth-child(2) {
+  stroke-width: 21;
+  stroke: purple;
+}
+
 .list--support LI {
   margin-bottom: 2.5em;
 }
@@ -1230,12 +1970,20 @@ svg.demo--text {
 }
 
 .browsers--biglist {
-  width: 800px;
+  position: relative;
+  width: 850px;
   text-align: center;
 }
 .browsers--biglist IMG {
   width: 200px;
   height: 200px;
+  margin: 0 1em;
+}
+.browsers--biglist SUP {
+  position: absolute;
+  top: 10px;
+  margin-left: -60px;
+  font-size: 1.2em;
 }
 
 .browser {

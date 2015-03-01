@@ -67,20 +67,20 @@ $logo-time: 3s;
 .stroke-appear-anim {
   fill: none;
   stroke: #FFF;
-  stroke-width: 1;
-  stroke-dasharray: 0 100;
+  stroke-width: 2;
+  stroke-dasharray: 0 500;
   animation: stroke-logo-appear 3s infinite linear alternate;
 }
 
 @keyframes stroke-logo-appear {
 
   20% {
-    stroke-dasharray: 0 100;
+    stroke-dasharray: 0 500;
   }
   70% {
-    stroke-dasharray: 100 100;
+    stroke-dasharray: 500 500;
   }
   100% {
-    stroke-dasharray: 100 100;
+    stroke-dasharray: 500 500;
   }
 }

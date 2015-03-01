@@ -1237,20 +1237,31 @@
                     <path d="M833.770955,105.698817 L833.770955,35.4686996 L821.762103,35.4686996 L821.762103,115.580842 L856.882143,115.580842 L856.882143,105.688855 L833.770955,105.698817 Z"></path>
                 </symbol>
 
-            <mask id="mask-logo"
+            <mask id="mask-logo-appear-up"
                     maskunits="userSpaceOnUse"
                     maskcontentunits="userSpaceOnUse">
-                        <use xlink:href="#logo-lj"/>
+                    <rect width="100%" height=".1"
+                    y="70%" fill="green" class="mask-logo-appear-rect"/>
             </mask>
 
-            <g mask="url(#mask-logo)">
-                <!-- <rect width="100%" height="100%" fill="white"/> -->
+            <g mask="url(#mask-logo-appear-up)">
+                <use xlink:href="#logo-lj"/>
             </g>
             <use xlink:href="#logo-lj-transp" class="stroke-appear-anim"/>
         </svg>
 
     </div></section>
 
+    <!-- Slide -->
+    <section class="slide bg--dark"><div>
+        <svg viewBox="0 0 1024 640" class="demo demo--logo">
+
+
+            <use xlink:href="#logo-lj-transp" _class="stroke-appear-anim"
+            fill="url(#p-anim-cells)"/>
+        </svg>
+
+    </div></section>
 
 
     <!-- Slide -->

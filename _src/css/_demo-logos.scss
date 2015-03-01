@@ -64,23 +64,49 @@ $logo-time: 3s;
   }
 }
 
+$mask-logo-appear-time: 5s;
+
 .stroke-appear-anim {
   fill: none;
   stroke: #FFF;
-  stroke-width: 2;
+  stroke-width: 3;
   stroke-dasharray: 0 500;
-  animation: stroke-logo-appear 3s infinite linear alternate;
+  animation: stroke-logo-appear $mask-logo-appear-time infinite linear alternate;
 }
 
 @keyframes stroke-logo-appear {
 
   20% {
     stroke-dasharray: 0 500;
+    stroke-width: 3;
   }
   70% {
     stroke-dasharray: 500 500;
+    stroke-width: 0;
   }
   100% {
     stroke-dasharray: 500 500;
+    stroke-width: 0;
+  }
+}
+
+
+
+.mask-logo-appear-rect {
+  stroke: white;
+  stroke-width: 0;
+  animation: mask-logo-appear $mask-logo-appear-time infinite linear alternate;
+}
+
+@keyframes mask-logo-appear {
+
+  20% {
+    stroke-width: 0;
+  }
+  70% {
+    stroke-width: 500;
+  }
+  100% {
+    stroke-width: 500;
   }
 }

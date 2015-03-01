@@ -1712,33 +1712,69 @@ if we need quantity of colors more than colors in array  */
 .stroke-appear-anim {
   fill: none;
   stroke: #FFF;
-  stroke-width: 2;
+  stroke-width: 3;
   stroke-dasharray: 0 500;
-  -webkit-animation: stroke-logo-appear 3s infinite linear alternate;
-  animation: stroke-logo-appear 3s infinite linear alternate;
+  -webkit-animation: stroke-logo-appear 5s infinite linear alternate;
+  animation: stroke-logo-appear 5s infinite linear alternate;
 }
 
 @-webkit-keyframes stroke-logo-appear {
   20% {
     stroke-dasharray: 0 500;
+    stroke-width: 3;
   }
   70% {
     stroke-dasharray: 500 500;
+    stroke-width: 0;
   }
   100% {
     stroke-dasharray: 500 500;
+    stroke-width: 0;
   }
 }
 
 @keyframes stroke-logo-appear {
   20% {
     stroke-dasharray: 0 500;
+    stroke-width: 3;
   }
   70% {
     stroke-dasharray: 500 500;
+    stroke-width: 0;
   }
   100% {
     stroke-dasharray: 500 500;
+    stroke-width: 0;
+  }
+}
+.mask-logo-appear-rect {
+  stroke: white;
+  stroke-width: 0;
+  -webkit-animation: mask-logo-appear 5s infinite linear alternate;
+  animation: mask-logo-appear 5s infinite linear alternate;
+}
+
+@-webkit-keyframes mask-logo-appear {
+  20% {
+    stroke-width: 0;
+  }
+  70% {
+    stroke-width: 500;
+  }
+  100% {
+    stroke-width: 500;
+  }
+}
+
+@keyframes mask-logo-appear {
+  20% {
+    stroke-width: 0;
+  }
+  70% {
+    stroke-width: 500;
+  }
+  100% {
+    stroke-width: 500;
   }
 }
 .list--support LI {

@@ -1,0 +1,86 @@
+$koeff: 5;
+$svg-height: 32px * $koeff;
+$svg-width: 174px * $koeff;
+$logo-time: 3s;
+
+.demo--logo-disappear {
+  position: absolute;
+  width: $svg-width;
+  height: $svg-height;
+  overflow: hidden;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: svg-sizes $logo-time infinite linear alternate;
+
+  .demo--logo {
+    position: absolute;
+    width: $svg-width;
+    height: $svg-height;
+    animation: logo-move $logo-time infinite linear alternate;
+    }
+  }
+
+@keyframes svg-sizes {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  10% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  35% {
+    opacity: .2;
+    width: $svg-width;
+    height: 1%;
+  }
+  50% {
+    opacity: 1;
+    width: $svg-width;
+    height: $svg-height;
+  }
+}
+
+@keyframes logo-move {
+  0% {
+    top: -$svg-height/2;
+    left: -$svg-width/2;
+  }
+  10% {
+    top: -$svg-height/2;
+    left: -$svg-width/2;
+  }
+  35% {
+    top: -$svg-height/2;
+    left: 0;
+    }
+  50% {
+    top: 0;
+    left: 0;
+  }
+}
+
+.stroke-appear-anim {
+  fill: none;
+  stroke: #FFF;
+  stroke-width: 1;
+  stroke-dasharray: 0 100;
+  animation: stroke-logo-appear 3s infinite linear alternate;
+}
+
+@keyframes stroke-logo-appear {
+
+  20% {
+    stroke-dasharray: 0 100;
+  }
+  70% {
+    stroke-dasharray: 100 100;
+  }
+  100% {
+    stroke-dasharray: 100 100;
+  }
+}

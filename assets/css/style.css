@@ -394,6 +394,11 @@ PRE:before {
   background: url(../img/parts/ps-bg.png);
 }
 
+.bg--blue-grad {
+  background: -webkit-radial-gradient(#0088cc, #0c052e);
+  background: radial-gradient(#0088cc, #0c052e);
+}
+
 /* Columns
 ------------------------- */
 .column {

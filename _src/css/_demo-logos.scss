@@ -70,7 +70,7 @@ $logo-time: 3s;
   }
 }
 
-$mask-logo-appear-time: 5s;
+$mask-logo-appear-time: 4s;
 
 .stroke-appear-anim {
   fill: none;
@@ -89,7 +89,7 @@ $mask-logo-appear-time: 5s;
     stroke-dasharray: 0 500;
     stroke-width: 3;
   }
-  70% {
+  80% {
     stroke-dasharray: 500 500;
     stroke-width: 0;
   }
@@ -114,7 +114,7 @@ $mask-logo-appear-time: 5s;
   20% {
     stroke-width: 0;
   }
-  70% {
+  80% {
     stroke-width: 500;
   }
   100% {
@@ -201,14 +201,14 @@ $stroke-width-step: 3;
   stroke-width: $stroke-width-step;
   stroke: yellow;
   }
-/*.anim-multystrokes__item:nth-child(5) {
+.anim-multystrokes__item:nth-child(5) {
   stroke-width: $stroke-width-step*2;
   stroke: orange;
   }
 .anim-multystrokes__item:nth-child(4) {
   stroke-width: $stroke-width-step*3;
   stroke: red;
-  }*/
+  }
 .anim-multystrokes__item:nth-child(3) {
   stroke-width: $stroke-width-step*5;
   stroke: darkred;

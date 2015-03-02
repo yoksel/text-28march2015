@@ -117,8 +117,8 @@ $anim-spots-step: $anim-spots-time/$anim-spots-max;
 
     fill: chartreuse;
     stroke: chartreuse;
-    stroke-width: 0;
-    stroke-dasharray: 0;
+    stroke-width: 1;
+    stroke-dasharray: 1000;
 
     :target & {
         animation: anim-spots $anim-spots-time infinite linear;

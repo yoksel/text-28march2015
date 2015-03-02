@@ -993,8 +993,8 @@ svg.demo--intro {
 .g-anim-spots circle {
   fill: chartreuse;
   stroke: chartreuse;
-  stroke-width: 0;
-  stroke-dasharray: 0;
+  stroke-width: 1;
+  stroke-dasharray: 1000;
 }
 :target .g-anim-spots circle {
   -webkit-animation: anim-spots 20s infinite linear;

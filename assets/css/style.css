@@ -993,8 +993,8 @@ svg.demo--intro {
 .g-anim-spots circle {
   fill: chartreuse;
   stroke: chartreuse;
-  stroke-width: 0;
-  stroke-dasharray: 0;
+  stroke-width: 1;
+  stroke-dasharray: 1000;
 }
 :target .g-anim-spots circle {
   -webkit-animation: anim-spots 20s infinite linear;
@@ -1603,8 +1603,12 @@ if we need quantity of colors more than colors in array  */
   }
 }
 .demo--longtext {
-  font: 4em/1 Arial, sans-serif;
-  letter-spacing: .05em;
+  font: 3.9em/1 Arial, sans-serif;
+  /*letter-spacing: .05em;*/
+}
+
+.demo--longtext-multylines {
+  font-size: 4.4em;
 }
 
 .demo--logo-disappear {

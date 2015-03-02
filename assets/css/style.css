@@ -803,7 +803,7 @@ svg.demo--intro {
   }
 }
 :target .text--fill-smil-anim-grad {
-  fill: url(#gr-smil-anim);
+  /*fill: url(#gr-smil-anim);*/
 }
 
 .g-anim-cells rect {
@@ -1281,7 +1281,6 @@ svg.demo--intro {
 }
 
 .r-fill {
-  fill: url(#p-dottes);
   -webkit-transform-origin: 512px 320px;
   -ms-transform-origin: 512px 320px;
   transform-origin: 512px 320px;

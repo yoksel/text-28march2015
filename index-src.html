@@ -742,7 +742,12 @@
     <!-- Slide -->
     <section class="slide slide--imgfull"><div>
         <div class="slide__content">
-            <svg viewBox="0 0 1024 620" class="demo demo--text demo--text-showmask">
+            <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-showmask">
+                <symbol id="s-text">
+                    <text x="50%" y="50%" dy=".2em"
+                        text-anchor="middle">текст</text>
+                </symbol>
+
                 <rect fill="#000" width="100%" height="100%"/>
                 <use xlink:href="#s-text" fill="#FFF"/>
             </svg>
@@ -775,10 +780,6 @@
 &lt;/g></code></pre>
 
     <svg viewBox="0 0 1024 320" class="demo demo--text">
-        <symbol id="s-text">
-            <text x="50%" y="50%" dy=".2em"
-                text-anchor="middle">текст</text>
-        </symbol>
         <mask id="mask-text"
             maskunits="userSpaceOnUse"
             maskcontentunits="userSpaceOnUse">

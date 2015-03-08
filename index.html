@@ -189,7 +189,7 @@ svg {
   margin-bottom: 2em;
 }
 .slide svg {
-  border: 2px solid green;
+  /*border: 2px solid green;*/
   width: 100%;
 }
 
@@ -1953,6 +1953,9 @@ svg.demo--text-showmask {
     stroke-width: 500;
   }
 }
+/* ,
+
+*/
 .aurora-stop-color-1 {
   stop-color: #009999;
 }
@@ -1992,50 +1995,48 @@ svg.demo--text-showmask {
 }
 
 .aurora-stop-color-2 {
-  stop-color: transparent;
+  stop-color: black;
+  stop-opacity: 0;
 }
 
 @-webkit-keyframes aurora-stop-colors {
-  6.66667% {
-    stop-color: red;
-  }
-  13.33333% {
+  7.14286% {
     stop-color: #009999;
   }
-  20% {
+  14.28571% {
     stop-color: #00cc99;
   }
-  26.66667% {
+  21.42857% {
     stop-color: #00ff95;
   }
-  33.33333% {
+  28.57143% {
     stop-color: #c2d65c;
   }
-  40% {
+  35.71429% {
     stop-color: #d8f0a8;
   }
-  46.66667% {
+  42.85714% {
     stop-color: #ffbb33;
   }
-  53.33333% {
+  50% {
     stop-color: #ff7733;
   }
-  60% {
+  57.14286% {
     stop-color: #ff002b;
   }
-  66.66667% {
+  64.28571% {
     stop-color: #b814b8;
   }
-  73.33333% {
+  71.42857% {
     stop-color: #6614b8;
   }
-  80% {
+  78.57143% {
     stop-color: #144bb8;
   }
-  86.66667% {
+  85.71429% {
     stop-color: #0a85c2;
   }
-  93.33333% {
+  92.85714% {
     stop-color: #009999;
   }
   100% {
@@ -2044,46 +2045,43 @@ svg.demo--text-showmask {
 }
 
 @keyframes aurora-stop-colors {
-  6.66667% {
-    stop-color: red;
-  }
-  13.33333% {
+  7.14286% {
     stop-color: #009999;
   }
-  20% {
+  14.28571% {
     stop-color: #00cc99;
   }
-  26.66667% {
+  21.42857% {
     stop-color: #00ff95;
   }
-  33.33333% {
+  28.57143% {
     stop-color: #c2d65c;
   }
-  40% {
+  35.71429% {
     stop-color: #d8f0a8;
   }
-  46.66667% {
+  42.85714% {
     stop-color: #ffbb33;
   }
-  53.33333% {
+  50% {
     stop-color: #ff7733;
   }
-  60% {
+  57.14286% {
     stop-color: #ff002b;
   }
-  66.66667% {
+  64.28571% {
     stop-color: #b814b8;
   }
-  73.33333% {
+  71.42857% {
     stop-color: #6614b8;
   }
-  80% {
+  78.57143% {
     stop-color: #144bb8;
   }
-  86.66667% {
+  85.71429% {
     stop-color: #0a85c2;
   }
-  93.33333% {
+  92.85714% {
     stop-color: #009999;
   }
   100% {
@@ -3130,7 +3128,12 @@ svg {
     <!-- Slide -->
     <section class="slide slide--imgfull"><div>
         <div class="slide__content">
-            <svg viewBox="0 0 1024 620" class="demo demo--text demo--text-showmask">
+            <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-showmask">
+                <symbol id="s-text">
+                    <text x="50%" y="50%" dy=".2em"
+                        text-anchor="middle">текст</text>
+                </symbol>
+
                 <rect fill="#000" width="100%" height="100%"/>
                 <use xlink:href="#s-text" fill="#FFF"/>
             </svg>
@@ -3163,10 +3166,6 @@ svg {
 &lt;/g></code></pre>
 
     <svg viewBox="0 0 1024 320" class="demo demo--text">
-        <symbol id="s-text">
-            <text x="50%" y="50%" dy=".2em"
-                text-anchor="middle">текст</text>
-        </symbol>
         <mask id="mask-text"
             maskunits="userSpaceOnUse"
             maskcontentunits="userSpaceOnUse">

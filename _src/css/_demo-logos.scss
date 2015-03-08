@@ -131,7 +131,6 @@ $aurora-stop-time: 7s;
 $aurora-step: $aurora-stop-time / 5;
 
 $aurora-stop-colors:
-red,
   hsl(180,100,30),
   hsl(165,100,40),
   hsl(155,100,50),
@@ -147,6 +146,10 @@ red,
   hsl(180,100,30),
   green
   ;
+
+/* ,
+
+*/
 
 $aurora-stop-colors-max: length($aurora-stop-colors);
 
@@ -180,7 +183,8 @@ $aurora-stop-colors-max: length($aurora-stop-colors);
   }
 
 .aurora-stop-color-2 {
-  stop-color: transparent;
+  stop-color: black;
+  stop-opacity: 0;
   }
 
 @keyframes aurora-stop-colors {

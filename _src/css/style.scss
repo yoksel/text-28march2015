@@ -78,6 +78,10 @@ svg {
      .list--morespaces LI {
         margin-bottom: 2em;
         }
+    svg {
+        border: 2px solid green;
+        width: 100%;
+        }
     }
 
 .slide--imgcenter {
@@ -112,7 +116,11 @@ svg {
         color: #000;
         &:hover {
             text-decoration: none;
+            }
         }
+
+    svg.demo--text {
+        /*font-size: 12em;*/
         }
 }
 .slide--vlm {

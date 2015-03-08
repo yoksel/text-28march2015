@@ -179,6 +179,10 @@ svg {
 .slide .list--morespaces LI {
   margin-bottom: 2em;
 }
+.slide svg {
+  border: 2px solid green;
+  width: 100%;
+}
 
 .slide--imgcenter > DIV {
   padding: 0;
@@ -211,6 +215,9 @@ svg {
 }
 .slide--imgfull .abs-link:hover {
   text-decoration: none;
+}
+.slide--imgfull svg.demo--text {
+  /*font-size: 12em;*/
 }
 
 .slide--vlm .slide__content {

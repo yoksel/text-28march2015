@@ -1742,6 +1742,10 @@ if we need quantity of colors more than colors in array  */
   font-size: 4.4em;
 }
 
+svg.demo--text-showmask {
+  font-size: 12em;
+}
+
 .demo--logo-disappear {
   position: absolute;
   width: 870px;

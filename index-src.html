@@ -21,7 +21,8 @@
         <div class="demo-border">
             <div class="text-fill-video">
                 <video class="video" autoplay loop
-                       src="./assets/video/leaves.mp4">
+                       preload="none"
+                       src="./assets/video/leaves.mp4?1">
                 </video>
               </div>
             <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--intro">
@@ -509,8 +510,6 @@
     </svg>
     </div></section>
 
-
-
     <!-- Slide -->
     <section class="slide"><div>
         <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-masks">
@@ -523,7 +522,6 @@
           <text x="50%" y="50%" dy=".25em" text-anchor="middle"
                 fill="url(#pt-spots)" class="text--fill--spots"
                 >АБВ</text>
-
         </svg>
 
     </div></section>
@@ -693,36 +691,56 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide"><div>
-<pre class="next"><code>&lt;g mask="url(<mark>#mask-text</mark>)">
-    &lt;rect fill="url(<mark>#pt-circle</mark>)" width="100%" height="100%"/>
-&lt;/g></code></pre>
+    <section class="slide slide--imgfull"><div>
+        <div class="slide__content">
+            <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-showmask">
+                <rect fill="#000" width="100%" height="100%"/>
+                <use xlink:href="#s-text" fill="#FFF"/>
+            </svg>
+        </div>
     </div></section>
 
     <!-- Slide -->
     <section class="slide"><div>
-        <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-masks">
+<pre><code>&lt;g>
+    &lt;rect fill="url(<mark>#pt-wood</mark>)" width="100%" height="100%"/>
+&lt;/g></code></pre>
 
-          <symbol id="s-text">
-            <text x="50%" y="50%" dy=".2em"
-                text-anchor="middle">текст</text>
-          </symbol>
-
-          <mask id="mask-text"
-            maskunits="userSpaceOnUse"
-            maskcontentunits="userSpaceOnUse">
-                <use xlink:href="#s-text" fill="#FFF"/>
-          </mask>
-
-          <pattern id="pt-wood" width="300" height="300"
+    <svg viewBox="0 0 1024 320" class="demo demo--text">
+        <pattern id="pt-wood" width="300" height="300"
              patternUnits="userSpaceOnUse">
             <image xlink:href="./assets/img/parts/wood.jpg" width="300" height="300"/>
-          </pattern>
+        </pattern>
 
-          <g mask="url(#mask-text)">
+        <g>
             <rect fill="url(#pt-wood)" width="100%" height="100%"/>
-          </g>
-        </svg>
+        </g>
+    </svg>
+
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>&lt;g mask="url(<mark>#mask-text</mark>)">
+    &lt;rect fill="url(<mark>#pt-wood</mark>)" width="100%" height="100%"/>
+&lt;/g></code></pre>
+
+    <svg viewBox="0 0 1024 320" class="demo demo--text">
+        <symbol id="s-text">
+            <text x="50%" y="50%" dy=".2em"
+                text-anchor="middle">текст</text>
+        </symbol>
+        <mask id="mask-text"
+            maskunits="userSpaceOnUse"
+            maskcontentunits="userSpaceOnUse">
+            <use xlink:href="#s-text" fill="#FFF"/>
+        </mask>
+
+
+        <g mask="url(#mask-text)">
+            <rect fill="url(#pt-wood)" width="100%" height="100%"/>
+        </g>
+    </svg>
 
     </div></section>
 
@@ -881,7 +899,7 @@
                 <g transform="translate(415, 320) scale(.7)">
                   <use xlink:href="#s-circle" class="u-circle"></use>
                 </g>
-                <g transform="translate(513, 310) scale(.3)">
+                <g transform="translate(530, 320) scale(.3)">
                   <use xlink:href="#s-circle" class="u-circle"></use>
                 </g>
                 <g transform="translate(320, 325) scale(.5)">
@@ -890,10 +908,10 @@
                 <g transform="translate(155, 90) scale(.4)">
                   <use xlink:href="#s-circle" class="u-circle"></use>
                 </g>
-                <g transform="translate(335, 170) scale(.4)">
+                <g transform="translate(315, 165) scale(.4)">
                   <use xlink:href="#s-circle" class="u-circle"></use>
                 </g>
-                <g transform="translate(503, 175) scale(.35)">
+                <g transform="translate(493, 170) scale(.35)">
                   <use xlink:href="#s-circle" class="u-circle"></use>
                 </g>
                 <g></g>
@@ -1120,7 +1138,8 @@
         <div class="demo-border">
             <div class="text-fill-video">
                 <video class="video" autoplay loop
-                       src="./assets/video/leaves.mp4">
+                       preload="none"
+                       src="./assets/video/leaves.mp4?12">
                 </video>
               </div>
             <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">
@@ -1153,7 +1172,8 @@
         <div class="demo-border">
             <div class="text-fill-video">
                 <video class="video" autoplay loop
-                       src="./assets/video/leaves.mp4">
+                       preload="none"
+                       src="./assets/video/leaves.mp4?123">
                 </video>
               </div>
             <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">
@@ -1173,7 +1193,8 @@
         <div class="demo-border">
             <div class="text-fill-video">
                 <video class="video" autoplay loop
-                       src="./assets/video/leaves.mp4">
+                       preload="none"
+                       src="./assets/video/leaves.mp4?1234">
                 </video>
               </div>
             <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">

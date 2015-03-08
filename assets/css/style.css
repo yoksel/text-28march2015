@@ -528,6 +528,20 @@ svg.demo--intro {
   color: #FFF;
 }
 
+.demo--background-clip-fade {
+  width: 800px;
+  background: -webkit-linear-gradient(black, royalblue, yellow, red, darkviolet, black) no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 100% 90%;
+  background-size: 100% 90%;
+  font-size: 5em;
+  line-height: 1;
+  text-align: center;
+  color: #FFF;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
 .demo--background-clip-animation {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(70, 130, 180, 0.7))), linear-gradient(90deg, rgba(255, 255, 255, 0) 60%, rgba(70, 130, 180, 0.7) 60%);
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(70, 130, 180, 0.7) 60%), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 60%, rgba(70, 130, 180, 0.7) 60%);

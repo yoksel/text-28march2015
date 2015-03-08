@@ -41,30 +41,30 @@ svg.demo--inverted-mask {
         }
     }
 
-$shadow-size: .8vmax;
+$round-shadow-size: 1.5vmax;
 
-$shadow-colors: purple, crimson, red, orangered, tomato, gold, yellow, yellowgreen, turquoise, royalblue, mediumslateblue, mediumorchid, darkviolet;
+$round-shadow-colors: purple, crimson, red, orangered, tomato, gold, yellow, yellowgreen, turquoise, royalblue, mediumslateblue, mediumorchid, darkviolet;
 
-$colors-max: length($shadow-colors);
+$colors-max: length($round-shadow-colors);
 
 $matrix-max: 45;
 
-$shadows-steps: 4;
-$colors-in-step: round($colors-max/$shadows-steps);
+$round-shadows-steps: 4;
+$colors-in-step: round($colors-max/$round-shadows-steps);
 
 $dur: 4s;
 
 /* Function for getting colors from list
 if we need quantity of colors more than colors in array  */
 @function get_color($position){
-  $color: nth($shadow-colors, 1);
+  $color: nth($round-shadow-colors, 1);
 
   @if ($position < $colors-max) {
-    $color: nth($shadow-colors, $position);
+    $color: nth($round-shadow-colors, $position);
   }
   @else {
     $fixed-position: $position % $colors-max + 1;
-    $color: nth($shadow-colors, $fixed-position);
+    $color: nth($round-shadow-colors, $fixed-position);
   }
 
   @return $color;
@@ -77,7 +77,7 @@ if we need quantity of colors more than colors in array  */
 
     @for $item from 1 through $matrix-max {
       $color: get_color($cell-counter + $color-offset);
-      $current-size: $shadow-size * $item;
+      $current-size: $round-shadow-size * $item;
 
       $out: append($out, 0 0 0 $current-size $color, comma);
 
@@ -94,8 +94,8 @@ if we need quantity of colors more than colors in array  */
   position: absolute;
   left: 50%;
   top: 48%;
-  width: $shadow-size/2;
-  height: $shadow-size/2;
+  width: $round-shadow-size/2;
+  height: $round-shadow-size/2;
   background: gold;
   border-radius: 50%;
   box-shadow: shadow-outlines();

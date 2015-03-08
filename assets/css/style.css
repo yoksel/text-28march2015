@@ -1579,6 +1579,29 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
     box-shadow: 0vh 0vh 13.5vh 13.5vh coral, 20.25vh 0vh 13.5vh 13.5vh skyblue, 40.5vh 0vh 13.5vh 13.5vh darkviolet, 60.75vh 0vh 13.5vh 13.5vh gold, 81vh 0vh 13.5vh 13.5vh purple, 0vh 20.25vh 13.5vh 13.5vh violet, 20.25vh 20.25vh 13.5vh 13.5vh teal, 40.5vh 20.25vh 13.5vh 13.5vh orangered, 60.75vh 20.25vh 13.5vh 13.5vh yellow, 81vh 20.25vh 13.5vh 13.5vh crimson, 0vh 40.5vh 13.5vh 13.5vh yellowgreen, 20.25vh 40.5vh 13.5vh 13.5vh orange, 40.5vh 40.5vh 13.5vh 13.5vh darkturquoise, 60.75vh 40.5vh 13.5vh 13.5vh pink, 81vh 40.5vh 13.5vh 13.5vh steelblue, 0vh 60.75vh 13.5vh 13.5vh turquoise, 20.25vh 60.75vh 13.5vh 13.5vh coral, 40.5vh 60.75vh 13.5vh 13.5vh skyblue, 60.75vh 60.75vh 13.5vh 13.5vh darkviolet, 81vh 60.75vh 13.5vh 13.5vh gold;
   }
 }
+.text-fill-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: url(../../assets/img/parts/leaves.png) 50% 50%/cover;
+}
+
+.video {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+:target .video {
+  display: block;
+}
+
 svg.demo--inverted-mask {
   position: relative;
   z-index: 1;
@@ -1652,15 +1675,6 @@ if we need quantity of colors more than colors in array  */
     box-shadow: 0 0 0 0.8vmax orangered, 0 0 0 1.6vmax tomato, 0 0 0 2.4vmax gold, 0 0 0 3.2vmax yellow, 0 0 0 4vmax yellowgreen, 0 0 0 4.8vmax turquoise, 0 0 0 5.6vmax royalblue, 0 0 0 6.4vmax mediumslateblue, 0 0 0 7.2vmax mediumorchid, 0 0 0 8vmax purple, 0 0 0 8.8vmax crimson, 0 0 0 9.6vmax red, 0 0 0 10.4vmax orangered, 0 0 0 11.2vmax tomato, 0 0 0 12vmax gold, 0 0 0 12.8vmax yellow, 0 0 0 13.6vmax yellowgreen, 0 0 0 14.4vmax turquoise, 0 0 0 15.2vmax royalblue, 0 0 0 16vmax mediumslateblue, 0 0 0 16.8vmax mediumorchid, 0 0 0 17.6vmax darkviolet, 0 0 0 18.4vmax purple, 0 0 0 19.2vmax crimson, 0 0 0 20vmax red, 0 0 0 20.8vmax orangered, 0 0 0 21.6vmax tomato, 0 0 0 22.4vmax gold, 0 0 0 23.2vmax yellow, 0 0 0 24vmax yellowgreen, 0 0 0 24.8vmax turquoise, 0 0 0 25.6vmax royalblue, 0 0 0 26.4vmax mediumslateblue, 0 0 0 27.2vmax mediumorchid, 0 0 0 28vmax darkviolet, 0 0 0 28.8vmax purple, 0 0 0 29.6vmax crimson, 0 0 0 30.4vmax red, 0 0 0 31.2vmax orangered, 0 0 0 32vmax tomato, 0 0 0 32.8vmax gold, 0 0 0 33.6vmax yellow, 0 0 0 34.4vmax yellowgreen, 0 0 0 35.2vmax turquoise, 0 0 0 36vmax royalblue;
   }
 }
-.text-fill-video {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
 .light-circle {
   opacity: 0;
 }

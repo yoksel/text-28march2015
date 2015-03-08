@@ -1,3 +1,22 @@
+.text-fill-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: url(../../assets/img/parts/leaves.png) 50% 50%/cover;
+    }
+    .video {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      }
+    :target .video {
+      display: block;
+      }
+
 svg.demo--inverted-mask {
     position: relative;
     z-index: 1;
@@ -99,12 +118,6 @@ if we need quantity of colors more than colors in array  */
   }
 }
 
-.text-fill-video {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    }
 
 
 $light-max: 5;

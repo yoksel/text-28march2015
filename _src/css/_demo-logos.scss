@@ -70,6 +70,10 @@ $logo-time: 3s;
   }
 }
 
+:target .mask-rect-gr-opacity {
+  fill: url(#gr-mask-opacity);
+  }
+
 $mask-logo-appear-time: 4s;
 
 .stroke-appear-anim {

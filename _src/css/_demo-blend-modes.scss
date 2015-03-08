@@ -12,7 +12,7 @@
         width: 33.331%;
         height: 320px;
         line-height: 0;
-        background: #000 url(../img/parts/bird-invert.gif) no-repeat 50% 50%;
+        background: #000 url(../../assets/img/parts/bird-invert.gif) no-repeat 50% 50%;
         background-size: cover;
 
         &:nth-child(1) {
@@ -55,7 +55,7 @@
         display: inline-block;
         width: 50%;
         height: 640px;
-        background: #000 url(../img/parts/bird-invert.gif) no-repeat 50% 50%;
+        background: #000 url(../../assets/img/parts/bird-invert.gif) no-repeat 50% 50%;
 
         &--darken {
             mix-blend-mode: darken;
@@ -79,9 +79,19 @@
         }
 
 .demo--bbmode-text {
-    background: url(https://img-fotki.yandex.ru/get/5604/yoksel.60/0_4f376_c12baf67_orig) 50% 50%/cover;
+    background: url(../../assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;
     .text {
         background: #FFF;
         mix-blend-mode: lighten;
+        }
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 3px solid #FFF;
         }
     }

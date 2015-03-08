@@ -89,13 +89,20 @@ module.exports = function(grunt) {
             },
         },
 
-        svgstore: {
-            options: {},
+        /**
+         * https://github.com/alanshaw/grunt-include-replace
+         * Include files for build version
+         */
+        includereplace: {
             default: {
-                files: {
-                    'assets/img/svg/svg-lib.svg': ['_src/img/svg-lib/*.svg'],
+                options: {
+                    // Task-specific options go here.
                 },
-            },
+                // Files to perform replacements and includes with
+                src: 'index-src.html',
+                // Destination directory to copy files to
+                dest: 'index.html'
+            }
         },
 
         svgmin: {
@@ -144,7 +151,17 @@ module.exports = function(grunt) {
         watch: {
             css: {
                 files: '<%= project.css_src %>{,*/}*.{scss,sass}',
-                tasks: ['sass:dev', 'autoprefixer'],
+                tasks: [
+                    'sass:dev',
+                    'autoprefixer',
+                    'includereplace:default'],
+                options: {
+                    livereload: 35731,
+                },
+            },
+            html: {
+                files: 'index-src.html',
+                tasks: ['includereplace:default'],
                 options: {
                     livereload: 35731,
                 },
@@ -268,6 +285,10 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'connect:server:open',
         'watch'
+    ]);
+
+    grunt.registerTask('increplace', [
+        'includereplace:default'
     ]);
 
     grunt.registerTask('svg', [

@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/shower-bright/styles/screen.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/flipping.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/flipping.css"> -->
+    <style>
+        @@include('./assets/css/style.css')
+    </style>
 </head>
 <body class="list" spellcheck="false">
     <header class="caption">
@@ -136,12 +139,14 @@
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
-        <div class="browsers--biglist">
-            <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
-            <img src="./assets/img/browsers/safari.png" alt="Safari"/>
-            <img src="./assets/img/browsers/opera.png" alt="Opera"/>
-            <img src="./assets/img/browsers/ie.png" alt="IE"/>
-            <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
+        <div class="slide__content">
+            <div class="browsers--biglist">
+                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
+                <img src="./assets/img/browsers/safari.png" alt="Safari"/>
+                <img src="./assets/img/browsers/opera.png" alt="Opera"/>
+                <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
+                <img src="./assets/img/browsers/ie.png" alt="IE"/>
+            </div>
         </div>
     </div></section>
 
@@ -168,12 +173,17 @@
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
-        <div class="browsers--biglist">
-            <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
-            <img src="./assets/img/browsers/safari.png" alt="Safari"/>
-            <img src="./assets/img/browsers/opera.png" alt="Opera"/>
-            <img src="./assets/img/browsers/ie.png" alt="IE" class="no-support"/>
-            <img src="./assets/img/browsers/firefox.png" alt="Firefox" class="no-support"/>
+        <div class="slide__content">
+            <div class="browsers--biglist">
+                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
+                <sup>-webkit-</sup>
+                <img src="./assets/img/browsers/safari.png" alt="Safari"/>
+                <sup>-webkit-</sup>
+                <img src="./assets/img/browsers/opera.png" alt="Opera"/>
+                <sup>-webkit-</sup>
+                <img src="./assets/img/browsers/firefox.png" alt="Firefox" class="no-support"/>
+                <img src="./assets/img/browsers/ie.png" alt="IE" class="no-support"/>
+            </div>
         </div>
     </div></section>
 
@@ -215,12 +225,17 @@
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
-        <div class="browsers--biglist">
-            <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
-            <img src="./assets/img/browsers/safari.png" alt="Safari"/>
-            <img src="./assets/img/browsers/opera.png" alt="Opera"/>
-            <img src="./assets/img/browsers/ie.png" alt="IE" class="no-support"/>
-            <img src="./assets/img/browsers/firefox.png" alt="Firefox" class="no-support"/>
+        <div class="slide__content">
+            <div class="browsers--biglist">
+                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
+                <sup>-webkit-</sup>
+                <img src="./assets/img/browsers/safari.png" alt="Safari"/>
+                <sup>-webkit-</sup>
+                <img src="./assets/img/browsers/opera.png" alt="Opera"/>
+                <sup>-webkit-</sup>
+                <img src="./assets/img/browsers/firefox.png" alt="Firefox" class="no-support"/>
+                <img src="./assets/img/browsers/ie.png" alt="IE" class="no-support"/>
+            </div>
         </div>
     </div></section>
 
@@ -430,7 +445,6 @@
 
             <text x="50%" y="50%" dy=".2em" text-anchor="middle"
                 class="text--fill text--fill-smil-anim-grad"
-                fill="url(#gr-smil-anim)"
                 >текст</text>
         </svg>
     </div></section>
@@ -567,10 +581,37 @@
 
     <!-- Slide -->
     <section class="slide bg--dark"><div>
-        <h2 class="free-fly">SVG mask, clip-path</h2>
+        <h2 class="free-fly">SVG mask</h2>
     </div></section>
 
    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>&lt;symbol id="<mark>s-text</mark>">
+    &lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
+        текст
+    &lt;/text>
+&lt;/symbol></code></pre>
+
+<pre class="next"><code>&lt;mask id="mask-text"
+    maskunits="userSpaceOnUse"
+    maskcontentunits="userSpaceOnUse">
+        &lt;use xlink:href="<mark>#s-text</mark>" fill="#FFF"/>
+&lt;/mask></code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>&lt;pattern id="<mark>pt-circle</mark>"
+    width="300" height="300"
+    patternUnits="userSpaceOnUse">
+        &lt;circle r="150" cx="150" cy="150" fill="yellowgreen"/>
+&lt;/pattern></code></pre>
+
+
+<pre class="next"><code>&lt;g mask="url(<mark>#mask-text</mark>)">
+    &lt;rect fill="url(<mark>#pt-circle</mark>)" width="100%" height="100%"/>
+&lt;/g></code></pre>
+    </div></section>
 
     <!-- Slide -->
     <section class="slide"><div>
@@ -732,41 +773,6 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide"><div>
-        <h2 class="free-fly">Mask или Clippath?</h2>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-<pre><code>&lt;symbol id="<mark>s-text</mark>">
-    &lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
-        текст
-    &lt;/text>
-&lt;/symbol></code></pre>
-
-<pre class="next"><code>&lt;mask id="mask-text"
-    maskunits="userSpaceOnUse"
-    maskcontentunits="userSpaceOnUse">
-        &lt;use xlink:href="<mark>#s-text</mark>" fill="#FFF"/>
-&lt;/mask></code></pre>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-<pre><code>&lt;pattern id="<mark>pt-circle</mark>"
-    width="300" height="300"
-    patternUnits="userSpaceOnUse">
-        &lt;circle r="150" cx="150" cy="150" fill="yellowgreen"/>
-&lt;/pattern></code></pre>
-
-
-<pre class="next"><code>&lt;g mask="url(<mark>#mask-text</mark>)">
-    &lt;rect fill="url(<mark>#pt-circle</mark>)" width="100%" height="100%"/>
-&lt;/g></code></pre>
-    </div></section>
-
-
-    <!-- Slide -->
     <section class="slide slide--imgfull"><div>
         <svg viewBox="0 0 1024 640" class="demo demo--dottes">
           <symbol id="s-text-dottes">
@@ -864,6 +870,19 @@
     </div></section>
 
     <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            <div class="browsers--biglist">
+                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
+                <img src="./assets/img/browsers/safari.png" alt="Safari"/>
+                <img src="./assets/img/browsers/opera.png" alt="Opera"/>
+                <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
+                <img src="./assets/img/browsers/ie.png" alt="IE"/>
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
     <section class="slide bg--dark"><div>
         <h2 class="free-fly">Режимы наложения</h2>
     </div></section>
@@ -930,13 +949,15 @@
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
-        <div class="browsers--biglist">
-            <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
-            <sup>41+</sup>
-            <img src="./assets/img/browsers/safari.png" alt="Safari"/>
-            <img src="./assets/img/browsers/opera.png" alt="Opera"/>
-            <img src="./assets/img/browsers/ie.png" class="no-support" alt="IE"/>
-            <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
+        <div class="slide__content">
+            <div class="browsers--biglist">
+                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
+                <sup>41+</sup>
+                <img src="./assets/img/browsers/safari.png" alt="Safari"/>
+                <img src="./assets/img/browsers/opera.png" alt="Opera"/>
+                <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
+                <img src="./assets/img/browsers/ie.png" class="no-support" alt="IE"/>
+            </div>
         </div>
     </div></section>
 
@@ -1152,6 +1173,19 @@
     </div></section>
 
     <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <div class="slide__content">
+            <div class="browsers--biglist">
+                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
+                <img src="./assets/img/browsers/safari.png" alt="Safari"/>
+                <img src="./assets/img/browsers/opera.png" alt="Opera"/>
+                <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
+                <img src="./assets/img/browsers/ie.png"/>
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
     <section class="slide bg--dark"><div>
         <h2 class="free-fly">А смысл?</h2>
     </div></section>
@@ -1197,7 +1231,8 @@
             <mask id="mask-text-appear"
                     maskunits="userSpaceOnUse"
                     maskcontentunits="userSpaceOnUse">
-                        <rect width="100%" height="100%" fill="url(#gr-mask-opacity)"/>
+                        <rect width="100%" height="100%"
+                        class="mask-rect-gr-opacity"/>
             </mask>
 
             <g mask="url(#mask-text-appear)">

@@ -202,19 +202,6 @@ $svg-code-color: hsl(190, 70%, 75%);
 
 #Cover {
     text-align: center;
-    background-image:
-        url(../../assets/img/demos/kitten-635.jpeg),
-        radial-gradient(
-          orangered,
-          gold,
-          yellowgreen,
-          skyblue,
-          blue,
-          violet,
-          crimson);
-      background-color: white;
-      background-blend-mode:hard-light, normal;
-      background-size: cover;
     }
   #Cover h2 {
     position: absolute;
@@ -297,7 +284,7 @@ $svg-code-color: hsl(190, 70%, 75%);
     }
 
 .bg--ps-cells {
-    background: url(../img/parts/ps-bg.png);
+    background: url(../../assets/img/parts/ps-bg.png);
     }
 
 .bg--blue-grad {
@@ -376,14 +363,15 @@ svg.demo--intro {
     font: 7em/1 'Russo One', Impact;
     }
 
-@import 'demo-textshadows';
-@import 'demo-background-clip';
+@import '_demo-textshadows';
+@import '_demo-background-clip';
 
-@import 'demo-svg-stroke';
-@import 'demo-svg-fill';
+@import '_demo-svg-stroke';
+@import '_demo-svg-fill';
 @import '_demo-dottes';
 @import '_demo-psycho';
 @import '_demo-blend-modes';
+@import '_demo-dancing-shadows';
 @import '_demo-inverted-mask';
 @import '_demo-svgmask';
 @import '_demo-logos';
@@ -394,6 +382,5 @@ svg.demo--intro {
 @import '_js-blendmode';
 
 @import '_mixins-gradients';
-@import '_demo-dancing-shadows';
 
 /*@import '_print';*/

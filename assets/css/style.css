@@ -392,7 +392,7 @@ PRE:before {
 }
 
 .bg--ps-cells {
-  background: url(../../assets/img/parts/ps-bg.png);
+  background: url(./assets/img/parts/ps-bg.png);
 }
 
 .bg--blue-grad {
@@ -524,14 +524,14 @@ svg.demo--intro {
 }
 
 .demo--background-clip {
-  background: url(../../assets/img/parts/tulips.jpeg) 50% 50%;
+  background: url(./assets/img/parts/tulips.jpeg) 50% 50%;
   color: #FFF;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .demo--background-clip-no-support {
-  background: url(../../assets/img/parts/tulips.jpeg) 50% 50%;
+  background: url(./assets/img/parts/tulips.jpeg) 50% 50%;
   color: #FFF;
 }
 
@@ -1436,7 +1436,7 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
   width: 33.331%;
   height: 320px;
   line-height: 0;
-  background: #000 url(../../assets/img/parts/bird-invert.gif) no-repeat 50% 50%;
+  background: #000 url(./assets/img/parts/bird-invert.gif) no-repeat 50% 50%;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -1480,7 +1480,7 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
   display: inline-block;
   width: 50%;
   height: 640px;
-  background: #000 url(../../assets/img/parts/bird-invert.gif) no-repeat 50% 50%;
+  background: #000 url(./assets/img/parts/bird-invert.gif) no-repeat 50% 50%;
 }
 .demo--bbmode-pair .item-bbmode--darken {
   mix-blend-mode: darken;
@@ -1502,7 +1502,7 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 }
 
 .demo--bbmode-text {
-  background: url(../../assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;
+  background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;
 }
 .demo--bbmode-text .text {
   background: #FFF;
@@ -1620,7 +1620,7 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
   right: 0;
   left: 0;
   bottom: 0;
-  background: url(../../assets/img/parts/leaves.jpg) 50% 50%/cover;
+  background: url(./assets/img/parts/leaves.jpg) 50% 50%/cover;
 }
 
 .video {
@@ -2147,7 +2147,7 @@ svg {
   width: 64px !important;
   height: 64px !important;
   margin-right: 20px;
-  background: url(../../assets/img/parts/sprite-browsers-64.png) 0 0 no-repeat;
+  background: url(./assets/img/parts/sprite-browsers-64.png) 0 0 no-repeat;
   vertical-align: middle;
   text-indent: 0;
 }

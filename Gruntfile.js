@@ -183,7 +183,8 @@ module.exports = function(grunt) {
                         '!Readme.md',
                         '!bower.json',
                         '!package.json',
-                        '!map.txt'
+                        '!map.txt',
+                        '!index-src.html'
                     ],
                     dest: 'temp/pres/'
                 },{

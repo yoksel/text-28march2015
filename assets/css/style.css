@@ -535,7 +535,7 @@ svg.demo--intro {
   -webkit-background-size: 100% 90%;
   background-size: 100% 90%;
   font-size: 5em;
-  line-height: 1;
+  line-height: .9;
   text-align: center;
   color: #FFF;
   -webkit-text-fill-color: transparent;
@@ -581,6 +581,12 @@ svg.demo--intro {
 .text--stroke-thin {
   stroke: royalblue;
   stroke-width: 15;
+}
+
+.text--stroke-dasharray {
+  stroke: orangered;
+  stroke-width: 3;
+  stroke-dasharray: 20 10;
 }
 
 .text--stroke-pulse {
@@ -677,25 +683,25 @@ svg.demo--intro {
 }
 
 @-webkit-keyframes stroke-appear {
-  10% {
+  7% {
     stroke-dasharray: 0 1500;
   }
   50% {
     stroke-dasharray: 1500 0;
   }
-  90% {
+  93% {
     stroke-dasharray: 0 1500;
   }
 }
 
 @keyframes stroke-appear {
-  10% {
+  7% {
     stroke-dasharray: 0 1500;
   }
   50% {
     stroke-dasharray: 1500 0;
   }
-  90% {
+  93% {
     stroke-dasharray: 0 1500;
   }
 }
@@ -782,18 +788,21 @@ svg.demo--intro {
   animation: stop-css-anim 5s linear infinite;
 }
 
+:target .stop-css-anim--2 {
+  -webkit-animation-delay: -2.5s;
+  animation-delay: -2.5s;
+}
+
 .stop-css-anim--1 {
   stop-color: #00aaff;
 }
 
 .stop-css-anim--2 {
   stop-color: magenta;
-  -webkit-animation-delay: -1.5s;
-  animation-delay: -1.5s;
 }
 
 @-webkit-keyframes stop-css-anim {
-  30% {
+  20% {
     stop-color: #ff5500;
   }
   55% {
@@ -805,7 +814,7 @@ svg.demo--intro {
 }
 
 @keyframes stop-css-anim {
-  30% {
+  20% {
     stop-color: #ff5500;
   }
   55% {

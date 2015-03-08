@@ -13,6 +13,12 @@
     stroke-width: 15;
     }
 
+.text--stroke-dasharray {
+  stroke: orangered;
+  stroke-width: 3;
+  stroke-dasharray: 20 10;
+  }
+
 .text--stroke-pulse {
     stroke: yellowgreen;
     stroke-width: 2;
@@ -89,13 +95,13 @@ $stroke-appear-time: 7s;
 
 
 @keyframes stroke-appear {
-  10% {
+  7% {
     stroke-dasharray: 0 1500;
     }
   50% {
     stroke-dasharray: 1500 0;
     }
-  90% {
+  93% {
     stroke-dasharray: 0 1500;
     }
 }

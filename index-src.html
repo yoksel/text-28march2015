@@ -55,6 +55,27 @@
 
     <!-- Slide -->
     <section class="slide"><div>
+        <div class="slide__content">
+            <h4>Презентация в лучшем виде:</h4>
+            <ul class="list--glasses">
+                <li>
+                    <span class="browser chrome"></span> <span class="list--glasses__sign">+</span> флаг: <i>chrome://flags/#enable-experimental-web-platform-features</i>
+                </li>
+                <li>
+                    <span class="browser opera"></span> <span class="list--glasses__sign">+</span> флаг: <i>opera://flags/#enable-experimental-web-platform-features</i>
+                </li>
+            </ul>
+            <p class="tooltip--glasses">Скопируйте ссылку на флаг в адресную строку браузера, включите флаг и&nbsp;перезапустите браузер.</p>
+            <h4>Так себе вид:</h4>
+            <ul class="list--glasses">
+                <li><span class="browser safari"></span> <span class="list--glasses__sign">и</span> <span class="browser firefox"></span>
+                </li>
+            </ul>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
         <h4>Краткое содержание</h4>
         <ol>
             <li>HTML + CSS</li>
@@ -209,6 +230,15 @@
     </div></section>
 
     <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>.text {
+  background: url(АДРЕС КАРТИНКИ) 50% 50%;
+  <span class="next">-webkit-text-fill-color: transparent;</span>
+  <span class="next">-webkit-background-clip: text;
+  }</span></code></pre>
+    </div></section>
+
+    <!-- Slide -->
     <section class="slide bg--dark slide--vlm"><div>
         <div class="slide__content">
             <div class="demo demo--text demo--background-clip">
@@ -273,18 +303,18 @@
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
-        <svg viewBox="0 0 1024 680" class="demo demo--text">
-            <text x="50%" y="50%" dy=".2em" text-anchor="middle">текст</text>
-        </svg>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide slide--vlm"><div>
 <pre><code>&lt;svg viewBox="0 0 1024 680">
     &lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
         <mark>текст</mark>
     &lt;/text>
 &lt;/svg></code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--vlm"><div>
+        <svg viewBox="0 0 1024 680" class="demo demo--text">
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle">текст</text>
+        </svg>
     </div></section>
 
     <!-- Slide -->
@@ -294,10 +324,10 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-    <h3>Атрибуты:</h3>
+    <h3>Через атрибуты:</h3>
 <pre><code>&lt;text <mark>stroke="crimson"</mark> <mark>width="3"</mark>>текст&lt;/text></code></pre>
 
-    <h3>или CSS:</h3>
+    <h3>или в CSS:</h3>
 
 <pre><code>.text {
     stroke: crimson;
@@ -324,6 +354,25 @@
     </div></section>
 
     <!-- Slide -->
+    <section class="slide"><div>
+        <h2 class="free-fly">stroke-dasharray</h2>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>.text {
+    stroke: orangered;
+    stroke-width: 3;
+    <mark>stroke-dasharray: 20 10;</mark>
+    }</code></pre>
+
+    <svg viewBox="0 0 1024 320" class="demo demo--text">
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class="text--stroke text--stroke-dasharray">текст</text>
+        </svg>
+    </div></section>
+
+    <!-- Slide -->
     <section class="slide bg--dark slide--vlm"><div>
         <svg viewBox="0 0 1024 680" class="demo demo--text">
             <text x="50%" y="50%" dy=".2em" text-anchor="middle"
@@ -335,15 +384,7 @@
     <section class="slide slide--vlm"><div>
         <svg viewBox="0 0 1024 680" class="demo demo--text">
             <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class="text--stroke text--stroke-aunt-walk">текст</text>
-            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class="text--stroke text--stroke-aunt-walk">текст</text>
-            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class="text--stroke text--stroke-aunt-walk">текст</text>
-            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class="text--stroke text--stroke-aunt-walk">текст</text>
-            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class="text--stroke text--stroke-aunt-walk">текст</text>
+                class="text--stroke text--stroke-appear">текст</text>
         </svg>
     </div></section>
 
@@ -351,7 +392,15 @@
     <section class="slide slide--vlm"><div>
         <svg viewBox="0 0 1024 680" class="demo demo--text">
             <text x="50%" y="50%" dy=".2em" text-anchor="middle"
-                class="text--stroke text--stroke-appear">текст</text>
+                class="text--stroke text--stroke-aunt-walk">текст</text>
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class="text--stroke text--stroke-aunt-walk">текст</text>
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class="text--stroke text--stroke-aunt-walk">текст</text>
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class="text--stroke text--stroke-aunt-walk">текст</text>
+            <text x="50%" y="50%" dy=".2em" text-anchor="middle"
+                class="text--stroke text--stroke-aunt-walk">текст</text>
         </svg>
     </div></section>
 
@@ -386,10 +435,10 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-    <h3>Атрибут:</h3>
+    <h3>Через атрибут:</h3>
 <pre><code>&lt;text <mark>fill="url(#gr-blue)"</mark>>текст&lt;/text></code></pre>
 
-    <h3>или CSS:</h3>
+    <h3>или в CSS:</h3>
 <pre><code>.text {
     <mark>fill: url(#gr-blue);</mark>
     }</code></pre>
@@ -427,7 +476,11 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-        <h4>Градиент</h4>
+        <h2 class="free-fly">Градиенты</h2>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
 
 <pre><code>&lt;linearGradient id="gr-blue"
         x1="0" y1="0" x2="100%" y2="100%">
@@ -480,7 +533,11 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-        <h4>Паттерн</h4>
+        <h2 class="free-fly">Паттерны</h2>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
 <pre><code>&lt;pattern id="pt-circle" width="30" height="30"
     viewBox="0 0 30 30" patternUnits="userSpaceOnUse">
         &lt;<mark>circle</mark> r="15" cx="15" cy="15" fill="yellowgreen"/>
@@ -497,7 +554,6 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-        <h4>Паттерн</h4>
 
 <pre><code>&lt;pattern id="pt-wood" width="300" height="300"
      patternUnits="userSpaceOnUse">
@@ -659,15 +715,6 @@
             <text x="50%" y="32%" class="t--water t--anim" fill="url(#pt-water)" text-anchor="middle">Вода</text>
             <text x="50%" y="84%" class="t--fire t--anim" fill="url(#pt-fire)" text-anchor="middle">Огонь</text>
       </svg>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide"><div>
-        <h4>Недостатки</h4>
-        <ul>
-            <li>проблемы с поддержкой повторящихся градиентов в разных браузерах</li>
-            <li>ограничения анимации внутри паттерна</li>
-        </ul>
     </div></section>
 
     <!-- Slide -->
@@ -940,7 +987,15 @@
 <pre><code>.text {
     fill: none;
     }</code></pre>
-<pre class="next"><code><span class="comment">// прозрачный текст, который можно выделить</span>
+<pre class="next"><code>
+.text {
+    fill: transparent;
+    }</code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code><span class="comment">// прозрачный текст, который можно выделить</span>
 .text {
     fill: <mark>transparent</mark>;
     }</code></pre>
@@ -1069,6 +1124,7 @@
                 <sup>41+</sup>
                 <img src="./assets/img/browsers/safari.png" alt="Safari"/>
                 <img src="./assets/img/browsers/opera.png" alt="Opera"/>
+                <sup>flag ?</sup>
                 <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
                 <img src="./assets/img/browsers/ie.png" class="no-support" alt="IE"/>
             </div>
@@ -1076,8 +1132,13 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide"><div>
+    <section class="slide bg--dark"><div>
         <h2 class="free-fly">5. SVG + HTML</h2>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <h2 class="free-fly">SVG mask</h2>
     </div></section>
 
     <!-- Slide -->
@@ -1514,27 +1575,6 @@
 
         </svg>
 
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide" style="display: none"><div>
-        <div class="slide__content">
-            <h4>Презентация в лучшем виде:</h4>
-            <ul class="list--glasses">
-                <li>
-                    <span class="browser chrome"></span> <span class="list--glasses__sign">+</span> флаг: <i>chrome://flags/#enable-experimental-web-platform-features</i>
-                </li>
-                <li>
-                    <span class="browser opera"></span> <span class="list--glasses__sign">+</span> флаг: <i>opera://flags/#enable-experimental-web-platform-features</i>
-                </li>
-            </ul>
-            <p class="tooltip--glasses">Скопируйте ссылку на флаг в адресную строку браузера, включите флаг и&nbsp;перезапустите браузер.</p>
-            <h4>Так себе вид:</h4>
-            <ul class="list--glasses">
-                <li><span class="browser safari"></span> <span class="list--glasses__sign">и</span> <span class="browser firefox"></span>
-                </li>
-            </ul>
-        </div>
     </div></section>
 
     <section class="slide bg--dark"><div>

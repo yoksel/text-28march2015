@@ -2703,10 +2703,37 @@ svg {
     <!-- Slide -->
     <section class="slide"><div>
 <pre><code>&lt;text <mark>fill="url(#gr-blue)"</mark>>текст&lt;/text></code></pre>
+
 <pre><code>.text {
     <mark>fill: url(#gr-blue);</mark>
     }</code></pre>
     </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <h4>Паттерн</h4>
+<pre><code>&lt;pattern id="pt-circle" width="30" height="30"
+    viewBox="0 0 30 30" patternUnits="userSpaceOnUse">
+        &lt;circle r="15" cx="15" cy="15" fill="yellowgreen"/>
+&lt;/pattern></code></pre>
+
+<pre><code>&lt;pattern id="pt-wood" width="300" height="300"
+     patternUnits="userSpaceOnUse">
+    &lt;image xlink:href="./assets/img/parts/wood.jpg"
+        width="300" height="300"/>
+&lt;/pattern></code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <h4>Градиент</h4>
+
+<pre><code>&lt;linearGradient id="gr-blue"
+        x1="0" y1="0" x2="100%" y2="100%">
+    &lt;stop stop-color="hsl(160, 100%, 80%)" offset="10%"/>
+    &lt;stop stop-color="hsl(250, 100%, 30%)" offset="90%"/>
+&lt;/linearGradient></code></pre>
+</div></section>
 
     <!-- Slide -->
     <section class="slide"><div>
@@ -2949,13 +2976,6 @@ svg {
 
     <!-- Slide -->
     <section class="slide"><div>
-<pre><code>&lt;pattern id="<mark>pt-circle</mark>"
-    width="300" height="300"
-    patternUnits="userSpaceOnUse">
-        &lt;circle r="150" cx="150" cy="150" fill="yellowgreen"/>
-&lt;/pattern></code></pre>
-
-
 <pre class="next"><code>&lt;g mask="url(<mark>#mask-text</mark>)">
     &lt;rect fill="url(<mark>#pt-circle</mark>)" width="100%" height="100%"/>
 &lt;/g></code></pre>

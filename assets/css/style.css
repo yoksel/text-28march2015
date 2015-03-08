@@ -517,14 +517,14 @@ svg.demo--intro {
 }
 
 .demo--background-clip {
-  background: url(https://img-fotki.yandex.ru/get/5707/yoksel.62/0_5137c_75e8acf3_L) 50% 50%;
+  background: url(../../assets/img/parts/tulips.jpeg) 50% 50%;
   color: #FFF;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .demo--background-clip-no-support {
-  background: url(https://img-fotki.yandex.ru/get/5707/yoksel.62/0_5137c_75e8acf3_L) 50% 50%;
+  background: url(../../assets/img/parts/tulips.jpeg) 50% 50%;
   color: #FFF;
 }
 

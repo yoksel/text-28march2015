@@ -754,6 +754,11 @@ svg.demo--intro {
     stroke-dashoffset: -35%;
   }
 }
+.demo--show-pattern {
+  width: 100%;
+  border: 2px solid #000;
+}
+
 .text--fill-solid {
   fill: orangered;
 }

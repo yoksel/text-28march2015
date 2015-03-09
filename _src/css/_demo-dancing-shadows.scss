@@ -1,4 +1,4 @@
-$shadow-size: 13.5vh;
+$shadow-size: 14.5vh;
 $shadow-offset: $shadow-size * 1.5;
 $shadow-colors: purple, violet, teal, orangered, yellow, crimson, yellowgreen, orange, darkturquoise, pink, steelblue,  turquoise, coral, skyblue,  darkviolet, gold, darkslateblue;
 $colors-max: length($shadow-colors);
@@ -94,7 +94,7 @@ $matrix-h: 5;
     box-shadow: shadow-matrix();
     }
   :target &:before {
-    animation: shadows-cells 2s linear infinite;
+    animation: shadows-cells 4s linear infinite;
     }
   }
 

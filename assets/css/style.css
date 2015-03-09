@@ -114,8 +114,8 @@
 
 .slide PRE MARK {
   background: gold;
-  -webkit-box-shadow: -5px 0 0 gold, 5px 0 0 gold;
-  box-shadow: -5px 0 0 gold, 5px 0 0 gold;
+  -webkit-box-shadow: -3px 0 0 gold, 3px 0 0 gold;
+  box-shadow: -3px 0 0 gold, 3px 0 0 gold;
   color: #000;
 }
 
@@ -663,8 +663,8 @@ svg.demo--intro {
 
 .text--stroke-dasharray {
   stroke: orangered;
-  stroke-width: 3;
-  stroke-dasharray: 20 10;
+  stroke-width: 4;
+  stroke-dasharray: 50 30 20 10;
 }
 
 .text--stroke-pulse {

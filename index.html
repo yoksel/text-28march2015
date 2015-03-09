@@ -123,8 +123,8 @@
 
 .slide PRE MARK {
   background: gold;
-  -webkit-box-shadow: -5px 0 0 gold, 5px 0 0 gold;
-  box-shadow: -5px 0 0 gold, 5px 0 0 gold;
+  -webkit-box-shadow: -3px 0 0 gold, 3px 0 0 gold;
+  box-shadow: -3px 0 0 gold, 3px 0 0 gold;
   color: #000;
 }
 
@@ -672,8 +672,8 @@ svg.demo--intro {
 
 .text--stroke-dasharray {
   stroke: orangered;
-  stroke-width: 3;
-  stroke-dasharray: 20 10;
+  stroke-width: 4;
+  stroke-dasharray: 50 30 20 10;
 }
 
 .text--stroke-pulse {
@@ -2810,7 +2810,7 @@ svg {
     &lt;/text>
 &lt;/svg></code></pre>
 
-        <svg viewBox="0 0 1024 280" class="demo demo--text">
+        <svg viewBox="0 0 1024 280" class="next demo demo--text">
             <text x="50%" y="50%" dy=".25em" text-anchor="middle">текст</text>
         </svg>
     </div></section>
@@ -2823,22 +2823,22 @@ svg {
     <!-- Slide -->
     <section class="slide"><div>
     <h3>Через атрибуты:</h3>
-<pre><code>&lt;text <mark>stroke="crimson"</mark> <mark>width="3"</mark>>текст&lt;/text></code></pre>
+<pre><code>&lt;text <mark>stroke</mark>="crimson" <mark>stroke-width</mark>="3">текст&lt;/text></code></pre>
 
     <h3>или в CSS:</h3>
 
 <pre><code>.text {
-    stroke: crimson;
-    stroke-width: 3;
+    <mark>stroke</mark>: crimson;
+    <mark>stroke-width</mark>: 3;
     }</code></pre>
     </div></section>
 
     <!-- Slide -->
     <section class="slide"><div>
         <svg viewBox="0 0 1024 620" class="demo demo--text">
-            <text x="50%" y="30%" dy=".2em" text-anchor="middle"
+            <text x="50%" y="28%" dy=".2em" text-anchor="middle"
                 class="text--stroke text--stroke-thick">текст</text>
-            <text x="50%" y="70%" dy=".2em" text-anchor="middle"
+            <text x="50%" y="72%" dy=".2em" text-anchor="middle"
                 class="text--stroke text--stroke-thin">текст</text>
         </svg>
     </div></section>
@@ -2860,8 +2860,8 @@ svg {
     <section class="slide"><div>
 <pre><code>.text {
     stroke: orangered;
-    stroke-width: 3;
-    <mark>stroke-dasharray: 20 10;</mark>
+    stroke-width: 4;
+    <mark>stroke-dasharray</mark>: 50 30 20 10;
     }</code></pre>
 
         <svg viewBox="0 0 1024 280" class="demo demo--text">
@@ -2934,11 +2934,11 @@ svg {
     <!-- Slide -->
     <section class="slide"><div>
     <h3>Через атрибут:</h3>
-<pre><code>&lt;text <mark>fill="url(#gr-blue)"</mark>>текст&lt;/text></code></pre>
+<pre><code>&lt;text <mark>fill</mark>="url(#gr-blue)">текст&lt;/text></code></pre>
 
     <h3>или в CSS:</h3>
 <pre><code>.text {
-    <mark>fill: url(#gr-blue);</mark>
+    <mark>fill</mark>: url(#gr-blue);
     }</code></pre>
     </div></section>
 

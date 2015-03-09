@@ -854,6 +854,7 @@ svg.demo--intro {
 }
 .demo--show-pattern {
   width: 100%;
+  height: 200px;
   border: 2px solid #000;
 }
 
@@ -1348,6 +1349,18 @@ svg.demo--intro {
   stroke: #000;
   stroke-width: 3;
   stroke-dasharray: 35 30;
+  font-size: 1.5em;
+}
+
+.text--pattern {
+  font-family: Russo One;
+  font-size: 1.57rem;
+  letter-spacing: 0;
+}
+
+.text--fill--text {
+  stroke: #000;
+  stroke-width: 5;
   font-size: 1.5em;
 }
 

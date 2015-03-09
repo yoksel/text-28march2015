@@ -863,6 +863,7 @@ svg.demo--intro {
 }
 .demo--show-pattern {
   width: 100%;
+  height: 200px;
   border: 2px solid #000;
 }
 
@@ -1357,6 +1358,18 @@ svg.demo--intro {
   stroke: #000;
   stroke-width: 3;
   stroke-dasharray: 35 30;
+  font-size: 1.5em;
+}
+
+.text--pattern {
+  font-family: Russo One;
+  font-size: 1.57rem;
+  letter-spacing: 0;
+}
+
+.text--fill--text {
+  stroke: #000;
+  stroke-width: 5;
   font-size: 1.5em;
 }
 
@@ -3078,9 +3091,42 @@ svg {
             <image xlink:href="./assets/img/parts/spots.png" width="728" height="500"/>
           </pattern>
 
-          <text x="50%" y="50%" dy=".25em" text-anchor="middle"
+          <text x="50%" y="50%" dy=".35em" text-anchor="middle"
                 fill="url(#pt-spots)" class="text--fill--spots"
                 >АБВ</text>
+        </svg>
+
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <svg viewBox="0 0 1024 620" class="demo demo--text demo--text-masks">
+
+          <pattern id="pt-text" patternunits="userSpaceOnUse" width="480" height="112" y="5">
+            <text x="0" y="0" class="text--pattern">
+              <tspan x="0" y="1em">Nam tristique vestibulum nulla nec accumsan. Nullam commodo eget dolor et ultricies.
+              </tspan>
+              <tspan x="0" y="2.1em">Nulla ligula elit, placerat a sapien vel, eleifend tincidunt nibh. Suspendisse porta fermentum dictum. Cras eget
+              </tspan>
+              <tspan x="0" y="3.2em">Maecenas tempus elit quis sapien tempus, sit amet viverra neque mattis. Quisque a tincidunt mi.
+              </tspan>
+              <tspan x="0" y="4.3em">Proin at justo eu ipsum posuere dignissim vel quis eros. Etiam at libero commodo, varius justo quis, interdum erat.
+              </tspan>
+              <tspan x="0" y="5.4em">Fusce viverra mollis est, nec euismod ante mattis ut. Aenean eu mauris viverra enim vulputate bibendum.
+              </tspan>
+              <tspan x="0" y="6.5em">Integer velit metus, cursus et commodo sit amet, gravida vitae purus. Sed scelerisque at odio non condimentum.
+              </tspan>
+              <tspan x="0" y="7.6em">Sed neque lacus, rhoncus vitae sem ut, pharetra vestibulum elit.
+              </tspan>
+              <tspan x="0" y="8.7em">Cras ultricies aliquam dolor quis ultrices. Cras eget mauris tincidunt, aliquam erat quis, faucibus augue.
+              </tspan>
+            </text>
+          </pattern>
+
+          <text x="50%" y="50%" dy=".35em" text-anchor="middle"
+                fill="url(#pt-text)" class="text--fill--text"
+                >АБВ</text>
+          <!-- <rect width="100%" height="100%" fill="url(#pt-text)"></rect> -->
         </svg>
 
     </div></section>

@@ -114,8 +114,8 @@
 
 .slide PRE MARK {
   background: gold;
-  -webkit-box-shadow: -5px 0 0 gold, 5px 0 0 gold;
-  box-shadow: -5px 0 0 gold, 5px 0 0 gold;
+  -webkit-box-shadow: -3px 0 0 gold, 3px 0 0 gold;
+  box-shadow: -3px 0 0 gold, 3px 0 0 gold;
   color: #000;
 }
 
@@ -523,6 +523,77 @@ svg.demo--intro {
   color: #FFF;
 }
 
+.font-effect {
+  font-size: 11em;
+}
+
+.font-effect-anaglyph {
+  text-shadow: -0.06em 0 red, 0.06em 0 cyan;
+}
+
+@-webkit-keyframes font-effect-fire-animation-keyframes {
+  0% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+  25% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0 -0.05em 0.17em #FE0, 0.04em -0.12em 0.22em #FC0, 0.04em -0.13em 0.27em #F90, 0.05em -0.23em 0.33em #F70, 0.07em -0.28em 0.47em #F70, 0.1em -0.3em 0.8em #F50, 0.1em -0.3em 0.9em #F40;
+  }
+  50% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+  75% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0 -0.06em 0.18em #FE0, 0.05em -0.15em 0.23em #FC0, 0.05em -0.15em 0.3em #F90, 0.07em -0.25em 0.4em #F70, 0.09em -0.3em 0.5em #F70, 0.1em -0.3em 0.9em #F50, 0.1em -0.3em 1.0em #F40;
+  }
+  100% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+}
+
+@keyframes font-effect-fire-animation-keyframes {
+  0% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+  25% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0 -0.05em 0.17em #FE0, 0.04em -0.12em 0.22em #FC0, 0.04em -0.13em 0.27em #F90, 0.05em -0.23em 0.33em #F70, 0.07em -0.28em 0.47em #F70, 0.1em -0.3em 0.8em #F50, 0.1em -0.3em 0.9em #F40;
+  }
+  50% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+  75% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0 -0.06em 0.18em #FE0, 0.05em -0.15em 0.23em #FC0, 0.05em -0.15em 0.3em #F90, 0.07em -0.25em 0.4em #F70, 0.09em -0.3em 0.5em #F70, 0.1em -0.3em 0.9em #F50, 0.1em -0.3em 1.0em #F40;
+  }
+  100% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+}
+.font-effect-fire-animation {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  color: #ffe;
+}
+:target .font-effect-fire-animation {
+  -webkit-animation-name: font-effect-fire-animation-keyframes;
+  animation-name: font-effect-fire-animation-keyframes;
+}
+
+.font-effect-outline {
+  text-shadow: 0 1px 1px #000, 0 -1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;
+  color: #fff;
+}
+
+.font-effect-shadow-multiple {
+  text-shadow: .04em .04em 0 #fff,.08em .08em 0 #aaa;
+}
+
+.font-effect-3d {
+  text-shadow: 0px 1px 0px #c7c8ca, 0px 2px 0px #b1b3b6, 0px 3px 0px #9d9fa2, 0px 4px 0px #8a8c8e, 0px 5px 0px #77787b, 0px 6px 0px #636466, 0px 7px 0px #4d4d4f, 0px 8px 7px #001135;
+  color: #fff;
+}
+
 .demo--background-clip {
   background: url(./assets/img/parts/tulips.jpeg) 50% 50%;
   color: #FFF;
@@ -592,8 +663,8 @@ svg.demo--intro {
 
 .text--stroke-dasharray {
   stroke: orangered;
-  stroke-width: 3;
-  stroke-dasharray: 20 10;
+  stroke-width: 4;
+  stroke-dasharray: 50 30 20 10;
 }
 
 .text--stroke-pulse {
@@ -783,6 +854,7 @@ svg.demo--intro {
 }
 .demo--show-pattern {
   width: 100%;
+  height: 200px;
   border: 2px solid #000;
 }
 
@@ -1280,6 +1352,18 @@ svg.demo--intro {
   font-size: 1.5em;
 }
 
+.text--pattern {
+  font-family: Russo One;
+  font-size: 1.57rem;
+  letter-spacing: 0;
+}
+
+.text--fill--text {
+  stroke: #000;
+  stroke-width: 5;
+  font-size: 1.5em;
+}
+
 .demo--dottes {
   position: absolute;
   left: 0;
@@ -1552,12 +1636,12 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
   top: 20%;
   left: 24%;
   border-radius: 50%;
-  -webkit-box-shadow: 0vh 0vh 13.5vh 13.5vh purple, 20.25vh 0vh 13.5vh 13.5vh violet, 40.5vh 0vh 13.5vh 13.5vh teal, 60.75vh 0vh 13.5vh 13.5vh orangered, 81vh 0vh 13.5vh 13.5vh yellow, 0vh 20.25vh 13.5vh 13.5vh crimson, 20.25vh 20.25vh 13.5vh 13.5vh yellowgreen, 40.5vh 20.25vh 13.5vh 13.5vh orange, 60.75vh 20.25vh 13.5vh 13.5vh darkturquoise, 81vh 20.25vh 13.5vh 13.5vh pink, 0vh 40.5vh 13.5vh 13.5vh steelblue, 20.25vh 40.5vh 13.5vh 13.5vh turquoise, 40.5vh 40.5vh 13.5vh 13.5vh coral, 60.75vh 40.5vh 13.5vh 13.5vh skyblue, 81vh 40.5vh 13.5vh 13.5vh darkviolet, 0vh 60.75vh 13.5vh 13.5vh gold, 20.25vh 60.75vh 13.5vh 13.5vh purple, 40.5vh 60.75vh 13.5vh 13.5vh violet, 60.75vh 60.75vh 13.5vh 13.5vh teal, 81vh 60.75vh 13.5vh 13.5vh orangered;
-  box-shadow: 0vh 0vh 13.5vh 13.5vh purple, 20.25vh 0vh 13.5vh 13.5vh violet, 40.5vh 0vh 13.5vh 13.5vh teal, 60.75vh 0vh 13.5vh 13.5vh orangered, 81vh 0vh 13.5vh 13.5vh yellow, 0vh 20.25vh 13.5vh 13.5vh crimson, 20.25vh 20.25vh 13.5vh 13.5vh yellowgreen, 40.5vh 20.25vh 13.5vh 13.5vh orange, 60.75vh 20.25vh 13.5vh 13.5vh darkturquoise, 81vh 20.25vh 13.5vh 13.5vh pink, 0vh 40.5vh 13.5vh 13.5vh steelblue, 20.25vh 40.5vh 13.5vh 13.5vh turquoise, 40.5vh 40.5vh 13.5vh 13.5vh coral, 60.75vh 40.5vh 13.5vh 13.5vh skyblue, 81vh 40.5vh 13.5vh 13.5vh darkviolet, 0vh 60.75vh 13.5vh 13.5vh gold, 20.25vh 60.75vh 13.5vh 13.5vh purple, 40.5vh 60.75vh 13.5vh 13.5vh violet, 60.75vh 60.75vh 13.5vh 13.5vh teal, 81vh 60.75vh 13.5vh 13.5vh orangered;
+  -webkit-box-shadow: 0vh 0vh 14.5vh 14.5vh purple, 21.75vh 0vh 14.5vh 14.5vh violet, 43.5vh 0vh 14.5vh 14.5vh teal, 65.25vh 0vh 14.5vh 14.5vh orangered, 87vh 0vh 14.5vh 14.5vh yellow, 0vh 21.75vh 14.5vh 14.5vh crimson, 21.75vh 21.75vh 14.5vh 14.5vh yellowgreen, 43.5vh 21.75vh 14.5vh 14.5vh orange, 65.25vh 21.75vh 14.5vh 14.5vh darkturquoise, 87vh 21.75vh 14.5vh 14.5vh pink, 0vh 43.5vh 14.5vh 14.5vh steelblue, 21.75vh 43.5vh 14.5vh 14.5vh turquoise, 43.5vh 43.5vh 14.5vh 14.5vh coral, 65.25vh 43.5vh 14.5vh 14.5vh skyblue, 87vh 43.5vh 14.5vh 14.5vh darkviolet, 0vh 65.25vh 14.5vh 14.5vh gold, 21.75vh 65.25vh 14.5vh 14.5vh purple, 43.5vh 65.25vh 14.5vh 14.5vh violet, 65.25vh 65.25vh 14.5vh 14.5vh teal, 87vh 65.25vh 14.5vh 14.5vh orangered;
+  box-shadow: 0vh 0vh 14.5vh 14.5vh purple, 21.75vh 0vh 14.5vh 14.5vh violet, 43.5vh 0vh 14.5vh 14.5vh teal, 65.25vh 0vh 14.5vh 14.5vh orangered, 87vh 0vh 14.5vh 14.5vh yellow, 0vh 21.75vh 14.5vh 14.5vh crimson, 21.75vh 21.75vh 14.5vh 14.5vh yellowgreen, 43.5vh 21.75vh 14.5vh 14.5vh orange, 65.25vh 21.75vh 14.5vh 14.5vh darkturquoise, 87vh 21.75vh 14.5vh 14.5vh pink, 0vh 43.5vh 14.5vh 14.5vh steelblue, 21.75vh 43.5vh 14.5vh 14.5vh turquoise, 43.5vh 43.5vh 14.5vh 14.5vh coral, 65.25vh 43.5vh 14.5vh 14.5vh skyblue, 87vh 43.5vh 14.5vh 14.5vh darkviolet, 0vh 65.25vh 14.5vh 14.5vh gold, 21.75vh 65.25vh 14.5vh 14.5vh purple, 43.5vh 65.25vh 14.5vh 14.5vh violet, 65.25vh 65.25vh 14.5vh 14.5vh teal, 87vh 65.25vh 14.5vh 14.5vh orangered;
 }
 :target .demo--dancing-shadows__title:before {
-  -webkit-animation: shadows-cells 2s linear infinite;
-  animation: shadows-cells 2s linear infinite;
+  -webkit-animation: shadows-cells 4s linear infinite;
+  animation: shadows-cells 4s linear infinite;
 }
 
 .text-items {
@@ -1587,31 +1671,31 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 
 @-webkit-keyframes shadows-cells {
   25% {
-    -webkit-box-shadow: 0vh 0vh 13.5vh 13.5vh darkturquoise, 20.25vh 0vh 13.5vh 13.5vh pink, 40.5vh 0vh 13.5vh 13.5vh steelblue, 60.75vh 0vh 13.5vh 13.5vh turquoise, 81vh 0vh 13.5vh 13.5vh coral, 0vh 20.25vh 13.5vh 13.5vh skyblue, 20.25vh 20.25vh 13.5vh 13.5vh darkviolet, 40.5vh 20.25vh 13.5vh 13.5vh gold, 60.75vh 20.25vh 13.5vh 13.5vh purple, 81vh 20.25vh 13.5vh 13.5vh violet, 0vh 40.5vh 13.5vh 13.5vh teal, 20.25vh 40.5vh 13.5vh 13.5vh orangered, 40.5vh 40.5vh 13.5vh 13.5vh yellow, 60.75vh 40.5vh 13.5vh 13.5vh crimson, 81vh 40.5vh 13.5vh 13.5vh yellowgreen, 0vh 60.75vh 13.5vh 13.5vh orange, 20.25vh 60.75vh 13.5vh 13.5vh darkturquoise, 40.5vh 60.75vh 13.5vh 13.5vh pink, 60.75vh 60.75vh 13.5vh 13.5vh steelblue, 81vh 60.75vh 13.5vh 13.5vh turquoise;
-    box-shadow: 0vh 0vh 13.5vh 13.5vh darkturquoise, 20.25vh 0vh 13.5vh 13.5vh pink, 40.5vh 0vh 13.5vh 13.5vh steelblue, 60.75vh 0vh 13.5vh 13.5vh turquoise, 81vh 0vh 13.5vh 13.5vh coral, 0vh 20.25vh 13.5vh 13.5vh skyblue, 20.25vh 20.25vh 13.5vh 13.5vh darkviolet, 40.5vh 20.25vh 13.5vh 13.5vh gold, 60.75vh 20.25vh 13.5vh 13.5vh purple, 81vh 20.25vh 13.5vh 13.5vh violet, 0vh 40.5vh 13.5vh 13.5vh teal, 20.25vh 40.5vh 13.5vh 13.5vh orangered, 40.5vh 40.5vh 13.5vh 13.5vh yellow, 60.75vh 40.5vh 13.5vh 13.5vh crimson, 81vh 40.5vh 13.5vh 13.5vh yellowgreen, 0vh 60.75vh 13.5vh 13.5vh orange, 20.25vh 60.75vh 13.5vh 13.5vh darkturquoise, 40.5vh 60.75vh 13.5vh 13.5vh pink, 60.75vh 60.75vh 13.5vh 13.5vh steelblue, 81vh 60.75vh 13.5vh 13.5vh turquoise;
+    -webkit-box-shadow: 0vh 0vh 14.5vh 14.5vh darkturquoise, 21.75vh 0vh 14.5vh 14.5vh pink, 43.5vh 0vh 14.5vh 14.5vh steelblue, 65.25vh 0vh 14.5vh 14.5vh turquoise, 87vh 0vh 14.5vh 14.5vh coral, 0vh 21.75vh 14.5vh 14.5vh skyblue, 21.75vh 21.75vh 14.5vh 14.5vh darkviolet, 43.5vh 21.75vh 14.5vh 14.5vh gold, 65.25vh 21.75vh 14.5vh 14.5vh purple, 87vh 21.75vh 14.5vh 14.5vh violet, 0vh 43.5vh 14.5vh 14.5vh teal, 21.75vh 43.5vh 14.5vh 14.5vh orangered, 43.5vh 43.5vh 14.5vh 14.5vh yellow, 65.25vh 43.5vh 14.5vh 14.5vh crimson, 87vh 43.5vh 14.5vh 14.5vh yellowgreen, 0vh 65.25vh 14.5vh 14.5vh orange, 21.75vh 65.25vh 14.5vh 14.5vh darkturquoise, 43.5vh 65.25vh 14.5vh 14.5vh pink, 65.25vh 65.25vh 14.5vh 14.5vh steelblue, 87vh 65.25vh 14.5vh 14.5vh turquoise;
+    box-shadow: 0vh 0vh 14.5vh 14.5vh darkturquoise, 21.75vh 0vh 14.5vh 14.5vh pink, 43.5vh 0vh 14.5vh 14.5vh steelblue, 65.25vh 0vh 14.5vh 14.5vh turquoise, 87vh 0vh 14.5vh 14.5vh coral, 0vh 21.75vh 14.5vh 14.5vh skyblue, 21.75vh 21.75vh 14.5vh 14.5vh darkviolet, 43.5vh 21.75vh 14.5vh 14.5vh gold, 65.25vh 21.75vh 14.5vh 14.5vh purple, 87vh 21.75vh 14.5vh 14.5vh violet, 0vh 43.5vh 14.5vh 14.5vh teal, 21.75vh 43.5vh 14.5vh 14.5vh orangered, 43.5vh 43.5vh 14.5vh 14.5vh yellow, 65.25vh 43.5vh 14.5vh 14.5vh crimson, 87vh 43.5vh 14.5vh 14.5vh yellowgreen, 0vh 65.25vh 14.5vh 14.5vh orange, 21.75vh 65.25vh 14.5vh 14.5vh darkturquoise, 43.5vh 65.25vh 14.5vh 14.5vh pink, 65.25vh 65.25vh 14.5vh 14.5vh steelblue, 87vh 65.25vh 14.5vh 14.5vh turquoise;
   }
   45% {
-    -webkit-box-shadow: 0vh 0vh 13.5vh 13.5vh yellow, 20.25vh 0vh 13.5vh 13.5vh crimson, 40.5vh 0vh 13.5vh 13.5vh yellowgreen, 60.75vh 0vh 13.5vh 13.5vh orange, 81vh 0vh 13.5vh 13.5vh darkturquoise, 0vh 20.25vh 13.5vh 13.5vh pink, 20.25vh 20.25vh 13.5vh 13.5vh steelblue, 40.5vh 20.25vh 13.5vh 13.5vh turquoise, 60.75vh 20.25vh 13.5vh 13.5vh coral, 81vh 20.25vh 13.5vh 13.5vh skyblue, 0vh 40.5vh 13.5vh 13.5vh darkviolet, 20.25vh 40.5vh 13.5vh 13.5vh gold, 40.5vh 40.5vh 13.5vh 13.5vh purple, 60.75vh 40.5vh 13.5vh 13.5vh violet, 81vh 40.5vh 13.5vh 13.5vh teal, 0vh 60.75vh 13.5vh 13.5vh orangered, 20.25vh 60.75vh 13.5vh 13.5vh yellow, 40.5vh 60.75vh 13.5vh 13.5vh crimson, 60.75vh 60.75vh 13.5vh 13.5vh yellowgreen, 81vh 60.75vh 13.5vh 13.5vh orange;
-    box-shadow: 0vh 0vh 13.5vh 13.5vh yellow, 20.25vh 0vh 13.5vh 13.5vh crimson, 40.5vh 0vh 13.5vh 13.5vh yellowgreen, 60.75vh 0vh 13.5vh 13.5vh orange, 81vh 0vh 13.5vh 13.5vh darkturquoise, 0vh 20.25vh 13.5vh 13.5vh pink, 20.25vh 20.25vh 13.5vh 13.5vh steelblue, 40.5vh 20.25vh 13.5vh 13.5vh turquoise, 60.75vh 20.25vh 13.5vh 13.5vh coral, 81vh 20.25vh 13.5vh 13.5vh skyblue, 0vh 40.5vh 13.5vh 13.5vh darkviolet, 20.25vh 40.5vh 13.5vh 13.5vh gold, 40.5vh 40.5vh 13.5vh 13.5vh purple, 60.75vh 40.5vh 13.5vh 13.5vh violet, 81vh 40.5vh 13.5vh 13.5vh teal, 0vh 60.75vh 13.5vh 13.5vh orangered, 20.25vh 60.75vh 13.5vh 13.5vh yellow, 40.5vh 60.75vh 13.5vh 13.5vh crimson, 60.75vh 60.75vh 13.5vh 13.5vh yellowgreen, 81vh 60.75vh 13.5vh 13.5vh orange;
+    -webkit-box-shadow: 0vh 0vh 14.5vh 14.5vh yellow, 21.75vh 0vh 14.5vh 14.5vh crimson, 43.5vh 0vh 14.5vh 14.5vh yellowgreen, 65.25vh 0vh 14.5vh 14.5vh orange, 87vh 0vh 14.5vh 14.5vh darkturquoise, 0vh 21.75vh 14.5vh 14.5vh pink, 21.75vh 21.75vh 14.5vh 14.5vh steelblue, 43.5vh 21.75vh 14.5vh 14.5vh turquoise, 65.25vh 21.75vh 14.5vh 14.5vh coral, 87vh 21.75vh 14.5vh 14.5vh skyblue, 0vh 43.5vh 14.5vh 14.5vh darkviolet, 21.75vh 43.5vh 14.5vh 14.5vh gold, 43.5vh 43.5vh 14.5vh 14.5vh purple, 65.25vh 43.5vh 14.5vh 14.5vh violet, 87vh 43.5vh 14.5vh 14.5vh teal, 0vh 65.25vh 14.5vh 14.5vh orangered, 21.75vh 65.25vh 14.5vh 14.5vh yellow, 43.5vh 65.25vh 14.5vh 14.5vh crimson, 65.25vh 65.25vh 14.5vh 14.5vh yellowgreen, 87vh 65.25vh 14.5vh 14.5vh orange;
+    box-shadow: 0vh 0vh 14.5vh 14.5vh yellow, 21.75vh 0vh 14.5vh 14.5vh crimson, 43.5vh 0vh 14.5vh 14.5vh yellowgreen, 65.25vh 0vh 14.5vh 14.5vh orange, 87vh 0vh 14.5vh 14.5vh darkturquoise, 0vh 21.75vh 14.5vh 14.5vh pink, 21.75vh 21.75vh 14.5vh 14.5vh steelblue, 43.5vh 21.75vh 14.5vh 14.5vh turquoise, 65.25vh 21.75vh 14.5vh 14.5vh coral, 87vh 21.75vh 14.5vh 14.5vh skyblue, 0vh 43.5vh 14.5vh 14.5vh darkviolet, 21.75vh 43.5vh 14.5vh 14.5vh gold, 43.5vh 43.5vh 14.5vh 14.5vh purple, 65.25vh 43.5vh 14.5vh 14.5vh violet, 87vh 43.5vh 14.5vh 14.5vh teal, 0vh 65.25vh 14.5vh 14.5vh orangered, 21.75vh 65.25vh 14.5vh 14.5vh yellow, 43.5vh 65.25vh 14.5vh 14.5vh crimson, 65.25vh 65.25vh 14.5vh 14.5vh yellowgreen, 87vh 65.25vh 14.5vh 14.5vh orange;
   }
   75% {
-    -webkit-box-shadow: 0vh 0vh 13.5vh 13.5vh coral, 20.25vh 0vh 13.5vh 13.5vh skyblue, 40.5vh 0vh 13.5vh 13.5vh darkviolet, 60.75vh 0vh 13.5vh 13.5vh gold, 81vh 0vh 13.5vh 13.5vh purple, 0vh 20.25vh 13.5vh 13.5vh violet, 20.25vh 20.25vh 13.5vh 13.5vh teal, 40.5vh 20.25vh 13.5vh 13.5vh orangered, 60.75vh 20.25vh 13.5vh 13.5vh yellow, 81vh 20.25vh 13.5vh 13.5vh crimson, 0vh 40.5vh 13.5vh 13.5vh yellowgreen, 20.25vh 40.5vh 13.5vh 13.5vh orange, 40.5vh 40.5vh 13.5vh 13.5vh darkturquoise, 60.75vh 40.5vh 13.5vh 13.5vh pink, 81vh 40.5vh 13.5vh 13.5vh steelblue, 0vh 60.75vh 13.5vh 13.5vh turquoise, 20.25vh 60.75vh 13.5vh 13.5vh coral, 40.5vh 60.75vh 13.5vh 13.5vh skyblue, 60.75vh 60.75vh 13.5vh 13.5vh darkviolet, 81vh 60.75vh 13.5vh 13.5vh gold;
-    box-shadow: 0vh 0vh 13.5vh 13.5vh coral, 20.25vh 0vh 13.5vh 13.5vh skyblue, 40.5vh 0vh 13.5vh 13.5vh darkviolet, 60.75vh 0vh 13.5vh 13.5vh gold, 81vh 0vh 13.5vh 13.5vh purple, 0vh 20.25vh 13.5vh 13.5vh violet, 20.25vh 20.25vh 13.5vh 13.5vh teal, 40.5vh 20.25vh 13.5vh 13.5vh orangered, 60.75vh 20.25vh 13.5vh 13.5vh yellow, 81vh 20.25vh 13.5vh 13.5vh crimson, 0vh 40.5vh 13.5vh 13.5vh yellowgreen, 20.25vh 40.5vh 13.5vh 13.5vh orange, 40.5vh 40.5vh 13.5vh 13.5vh darkturquoise, 60.75vh 40.5vh 13.5vh 13.5vh pink, 81vh 40.5vh 13.5vh 13.5vh steelblue, 0vh 60.75vh 13.5vh 13.5vh turquoise, 20.25vh 60.75vh 13.5vh 13.5vh coral, 40.5vh 60.75vh 13.5vh 13.5vh skyblue, 60.75vh 60.75vh 13.5vh 13.5vh darkviolet, 81vh 60.75vh 13.5vh 13.5vh gold;
+    -webkit-box-shadow: 0vh 0vh 14.5vh 14.5vh coral, 21.75vh 0vh 14.5vh 14.5vh skyblue, 43.5vh 0vh 14.5vh 14.5vh darkviolet, 65.25vh 0vh 14.5vh 14.5vh gold, 87vh 0vh 14.5vh 14.5vh purple, 0vh 21.75vh 14.5vh 14.5vh violet, 21.75vh 21.75vh 14.5vh 14.5vh teal, 43.5vh 21.75vh 14.5vh 14.5vh orangered, 65.25vh 21.75vh 14.5vh 14.5vh yellow, 87vh 21.75vh 14.5vh 14.5vh crimson, 0vh 43.5vh 14.5vh 14.5vh yellowgreen, 21.75vh 43.5vh 14.5vh 14.5vh orange, 43.5vh 43.5vh 14.5vh 14.5vh darkturquoise, 65.25vh 43.5vh 14.5vh 14.5vh pink, 87vh 43.5vh 14.5vh 14.5vh steelblue, 0vh 65.25vh 14.5vh 14.5vh turquoise, 21.75vh 65.25vh 14.5vh 14.5vh coral, 43.5vh 65.25vh 14.5vh 14.5vh skyblue, 65.25vh 65.25vh 14.5vh 14.5vh darkviolet, 87vh 65.25vh 14.5vh 14.5vh gold;
+    box-shadow: 0vh 0vh 14.5vh 14.5vh coral, 21.75vh 0vh 14.5vh 14.5vh skyblue, 43.5vh 0vh 14.5vh 14.5vh darkviolet, 65.25vh 0vh 14.5vh 14.5vh gold, 87vh 0vh 14.5vh 14.5vh purple, 0vh 21.75vh 14.5vh 14.5vh violet, 21.75vh 21.75vh 14.5vh 14.5vh teal, 43.5vh 21.75vh 14.5vh 14.5vh orangered, 65.25vh 21.75vh 14.5vh 14.5vh yellow, 87vh 21.75vh 14.5vh 14.5vh crimson, 0vh 43.5vh 14.5vh 14.5vh yellowgreen, 21.75vh 43.5vh 14.5vh 14.5vh orange, 43.5vh 43.5vh 14.5vh 14.5vh darkturquoise, 65.25vh 43.5vh 14.5vh 14.5vh pink, 87vh 43.5vh 14.5vh 14.5vh steelblue, 0vh 65.25vh 14.5vh 14.5vh turquoise, 21.75vh 65.25vh 14.5vh 14.5vh coral, 43.5vh 65.25vh 14.5vh 14.5vh skyblue, 65.25vh 65.25vh 14.5vh 14.5vh darkviolet, 87vh 65.25vh 14.5vh 14.5vh gold;
   }
 }
 
 @keyframes shadows-cells {
   25% {
-    -webkit-box-shadow: 0vh 0vh 13.5vh 13.5vh darkturquoise, 20.25vh 0vh 13.5vh 13.5vh pink, 40.5vh 0vh 13.5vh 13.5vh steelblue, 60.75vh 0vh 13.5vh 13.5vh turquoise, 81vh 0vh 13.5vh 13.5vh coral, 0vh 20.25vh 13.5vh 13.5vh skyblue, 20.25vh 20.25vh 13.5vh 13.5vh darkviolet, 40.5vh 20.25vh 13.5vh 13.5vh gold, 60.75vh 20.25vh 13.5vh 13.5vh purple, 81vh 20.25vh 13.5vh 13.5vh violet, 0vh 40.5vh 13.5vh 13.5vh teal, 20.25vh 40.5vh 13.5vh 13.5vh orangered, 40.5vh 40.5vh 13.5vh 13.5vh yellow, 60.75vh 40.5vh 13.5vh 13.5vh crimson, 81vh 40.5vh 13.5vh 13.5vh yellowgreen, 0vh 60.75vh 13.5vh 13.5vh orange, 20.25vh 60.75vh 13.5vh 13.5vh darkturquoise, 40.5vh 60.75vh 13.5vh 13.5vh pink, 60.75vh 60.75vh 13.5vh 13.5vh steelblue, 81vh 60.75vh 13.5vh 13.5vh turquoise;
-    box-shadow: 0vh 0vh 13.5vh 13.5vh darkturquoise, 20.25vh 0vh 13.5vh 13.5vh pink, 40.5vh 0vh 13.5vh 13.5vh steelblue, 60.75vh 0vh 13.5vh 13.5vh turquoise, 81vh 0vh 13.5vh 13.5vh coral, 0vh 20.25vh 13.5vh 13.5vh skyblue, 20.25vh 20.25vh 13.5vh 13.5vh darkviolet, 40.5vh 20.25vh 13.5vh 13.5vh gold, 60.75vh 20.25vh 13.5vh 13.5vh purple, 81vh 20.25vh 13.5vh 13.5vh violet, 0vh 40.5vh 13.5vh 13.5vh teal, 20.25vh 40.5vh 13.5vh 13.5vh orangered, 40.5vh 40.5vh 13.5vh 13.5vh yellow, 60.75vh 40.5vh 13.5vh 13.5vh crimson, 81vh 40.5vh 13.5vh 13.5vh yellowgreen, 0vh 60.75vh 13.5vh 13.5vh orange, 20.25vh 60.75vh 13.5vh 13.5vh darkturquoise, 40.5vh 60.75vh 13.5vh 13.5vh pink, 60.75vh 60.75vh 13.5vh 13.5vh steelblue, 81vh 60.75vh 13.5vh 13.5vh turquoise;
+    -webkit-box-shadow: 0vh 0vh 14.5vh 14.5vh darkturquoise, 21.75vh 0vh 14.5vh 14.5vh pink, 43.5vh 0vh 14.5vh 14.5vh steelblue, 65.25vh 0vh 14.5vh 14.5vh turquoise, 87vh 0vh 14.5vh 14.5vh coral, 0vh 21.75vh 14.5vh 14.5vh skyblue, 21.75vh 21.75vh 14.5vh 14.5vh darkviolet, 43.5vh 21.75vh 14.5vh 14.5vh gold, 65.25vh 21.75vh 14.5vh 14.5vh purple, 87vh 21.75vh 14.5vh 14.5vh violet, 0vh 43.5vh 14.5vh 14.5vh teal, 21.75vh 43.5vh 14.5vh 14.5vh orangered, 43.5vh 43.5vh 14.5vh 14.5vh yellow, 65.25vh 43.5vh 14.5vh 14.5vh crimson, 87vh 43.5vh 14.5vh 14.5vh yellowgreen, 0vh 65.25vh 14.5vh 14.5vh orange, 21.75vh 65.25vh 14.5vh 14.5vh darkturquoise, 43.5vh 65.25vh 14.5vh 14.5vh pink, 65.25vh 65.25vh 14.5vh 14.5vh steelblue, 87vh 65.25vh 14.5vh 14.5vh turquoise;
+    box-shadow: 0vh 0vh 14.5vh 14.5vh darkturquoise, 21.75vh 0vh 14.5vh 14.5vh pink, 43.5vh 0vh 14.5vh 14.5vh steelblue, 65.25vh 0vh 14.5vh 14.5vh turquoise, 87vh 0vh 14.5vh 14.5vh coral, 0vh 21.75vh 14.5vh 14.5vh skyblue, 21.75vh 21.75vh 14.5vh 14.5vh darkviolet, 43.5vh 21.75vh 14.5vh 14.5vh gold, 65.25vh 21.75vh 14.5vh 14.5vh purple, 87vh 21.75vh 14.5vh 14.5vh violet, 0vh 43.5vh 14.5vh 14.5vh teal, 21.75vh 43.5vh 14.5vh 14.5vh orangered, 43.5vh 43.5vh 14.5vh 14.5vh yellow, 65.25vh 43.5vh 14.5vh 14.5vh crimson, 87vh 43.5vh 14.5vh 14.5vh yellowgreen, 0vh 65.25vh 14.5vh 14.5vh orange, 21.75vh 65.25vh 14.5vh 14.5vh darkturquoise, 43.5vh 65.25vh 14.5vh 14.5vh pink, 65.25vh 65.25vh 14.5vh 14.5vh steelblue, 87vh 65.25vh 14.5vh 14.5vh turquoise;
   }
   45% {
-    -webkit-box-shadow: 0vh 0vh 13.5vh 13.5vh yellow, 20.25vh 0vh 13.5vh 13.5vh crimson, 40.5vh 0vh 13.5vh 13.5vh yellowgreen, 60.75vh 0vh 13.5vh 13.5vh orange, 81vh 0vh 13.5vh 13.5vh darkturquoise, 0vh 20.25vh 13.5vh 13.5vh pink, 20.25vh 20.25vh 13.5vh 13.5vh steelblue, 40.5vh 20.25vh 13.5vh 13.5vh turquoise, 60.75vh 20.25vh 13.5vh 13.5vh coral, 81vh 20.25vh 13.5vh 13.5vh skyblue, 0vh 40.5vh 13.5vh 13.5vh darkviolet, 20.25vh 40.5vh 13.5vh 13.5vh gold, 40.5vh 40.5vh 13.5vh 13.5vh purple, 60.75vh 40.5vh 13.5vh 13.5vh violet, 81vh 40.5vh 13.5vh 13.5vh teal, 0vh 60.75vh 13.5vh 13.5vh orangered, 20.25vh 60.75vh 13.5vh 13.5vh yellow, 40.5vh 60.75vh 13.5vh 13.5vh crimson, 60.75vh 60.75vh 13.5vh 13.5vh yellowgreen, 81vh 60.75vh 13.5vh 13.5vh orange;
-    box-shadow: 0vh 0vh 13.5vh 13.5vh yellow, 20.25vh 0vh 13.5vh 13.5vh crimson, 40.5vh 0vh 13.5vh 13.5vh yellowgreen, 60.75vh 0vh 13.5vh 13.5vh orange, 81vh 0vh 13.5vh 13.5vh darkturquoise, 0vh 20.25vh 13.5vh 13.5vh pink, 20.25vh 20.25vh 13.5vh 13.5vh steelblue, 40.5vh 20.25vh 13.5vh 13.5vh turquoise, 60.75vh 20.25vh 13.5vh 13.5vh coral, 81vh 20.25vh 13.5vh 13.5vh skyblue, 0vh 40.5vh 13.5vh 13.5vh darkviolet, 20.25vh 40.5vh 13.5vh 13.5vh gold, 40.5vh 40.5vh 13.5vh 13.5vh purple, 60.75vh 40.5vh 13.5vh 13.5vh violet, 81vh 40.5vh 13.5vh 13.5vh teal, 0vh 60.75vh 13.5vh 13.5vh orangered, 20.25vh 60.75vh 13.5vh 13.5vh yellow, 40.5vh 60.75vh 13.5vh 13.5vh crimson, 60.75vh 60.75vh 13.5vh 13.5vh yellowgreen, 81vh 60.75vh 13.5vh 13.5vh orange;
+    -webkit-box-shadow: 0vh 0vh 14.5vh 14.5vh yellow, 21.75vh 0vh 14.5vh 14.5vh crimson, 43.5vh 0vh 14.5vh 14.5vh yellowgreen, 65.25vh 0vh 14.5vh 14.5vh orange, 87vh 0vh 14.5vh 14.5vh darkturquoise, 0vh 21.75vh 14.5vh 14.5vh pink, 21.75vh 21.75vh 14.5vh 14.5vh steelblue, 43.5vh 21.75vh 14.5vh 14.5vh turquoise, 65.25vh 21.75vh 14.5vh 14.5vh coral, 87vh 21.75vh 14.5vh 14.5vh skyblue, 0vh 43.5vh 14.5vh 14.5vh darkviolet, 21.75vh 43.5vh 14.5vh 14.5vh gold, 43.5vh 43.5vh 14.5vh 14.5vh purple, 65.25vh 43.5vh 14.5vh 14.5vh violet, 87vh 43.5vh 14.5vh 14.5vh teal, 0vh 65.25vh 14.5vh 14.5vh orangered, 21.75vh 65.25vh 14.5vh 14.5vh yellow, 43.5vh 65.25vh 14.5vh 14.5vh crimson, 65.25vh 65.25vh 14.5vh 14.5vh yellowgreen, 87vh 65.25vh 14.5vh 14.5vh orange;
+    box-shadow: 0vh 0vh 14.5vh 14.5vh yellow, 21.75vh 0vh 14.5vh 14.5vh crimson, 43.5vh 0vh 14.5vh 14.5vh yellowgreen, 65.25vh 0vh 14.5vh 14.5vh orange, 87vh 0vh 14.5vh 14.5vh darkturquoise, 0vh 21.75vh 14.5vh 14.5vh pink, 21.75vh 21.75vh 14.5vh 14.5vh steelblue, 43.5vh 21.75vh 14.5vh 14.5vh turquoise, 65.25vh 21.75vh 14.5vh 14.5vh coral, 87vh 21.75vh 14.5vh 14.5vh skyblue, 0vh 43.5vh 14.5vh 14.5vh darkviolet, 21.75vh 43.5vh 14.5vh 14.5vh gold, 43.5vh 43.5vh 14.5vh 14.5vh purple, 65.25vh 43.5vh 14.5vh 14.5vh violet, 87vh 43.5vh 14.5vh 14.5vh teal, 0vh 65.25vh 14.5vh 14.5vh orangered, 21.75vh 65.25vh 14.5vh 14.5vh yellow, 43.5vh 65.25vh 14.5vh 14.5vh crimson, 65.25vh 65.25vh 14.5vh 14.5vh yellowgreen, 87vh 65.25vh 14.5vh 14.5vh orange;
   }
   75% {
-    -webkit-box-shadow: 0vh 0vh 13.5vh 13.5vh coral, 20.25vh 0vh 13.5vh 13.5vh skyblue, 40.5vh 0vh 13.5vh 13.5vh darkviolet, 60.75vh 0vh 13.5vh 13.5vh gold, 81vh 0vh 13.5vh 13.5vh purple, 0vh 20.25vh 13.5vh 13.5vh violet, 20.25vh 20.25vh 13.5vh 13.5vh teal, 40.5vh 20.25vh 13.5vh 13.5vh orangered, 60.75vh 20.25vh 13.5vh 13.5vh yellow, 81vh 20.25vh 13.5vh 13.5vh crimson, 0vh 40.5vh 13.5vh 13.5vh yellowgreen, 20.25vh 40.5vh 13.5vh 13.5vh orange, 40.5vh 40.5vh 13.5vh 13.5vh darkturquoise, 60.75vh 40.5vh 13.5vh 13.5vh pink, 81vh 40.5vh 13.5vh 13.5vh steelblue, 0vh 60.75vh 13.5vh 13.5vh turquoise, 20.25vh 60.75vh 13.5vh 13.5vh coral, 40.5vh 60.75vh 13.5vh 13.5vh skyblue, 60.75vh 60.75vh 13.5vh 13.5vh darkviolet, 81vh 60.75vh 13.5vh 13.5vh gold;
-    box-shadow: 0vh 0vh 13.5vh 13.5vh coral, 20.25vh 0vh 13.5vh 13.5vh skyblue, 40.5vh 0vh 13.5vh 13.5vh darkviolet, 60.75vh 0vh 13.5vh 13.5vh gold, 81vh 0vh 13.5vh 13.5vh purple, 0vh 20.25vh 13.5vh 13.5vh violet, 20.25vh 20.25vh 13.5vh 13.5vh teal, 40.5vh 20.25vh 13.5vh 13.5vh orangered, 60.75vh 20.25vh 13.5vh 13.5vh yellow, 81vh 20.25vh 13.5vh 13.5vh crimson, 0vh 40.5vh 13.5vh 13.5vh yellowgreen, 20.25vh 40.5vh 13.5vh 13.5vh orange, 40.5vh 40.5vh 13.5vh 13.5vh darkturquoise, 60.75vh 40.5vh 13.5vh 13.5vh pink, 81vh 40.5vh 13.5vh 13.5vh steelblue, 0vh 60.75vh 13.5vh 13.5vh turquoise, 20.25vh 60.75vh 13.5vh 13.5vh coral, 40.5vh 60.75vh 13.5vh 13.5vh skyblue, 60.75vh 60.75vh 13.5vh 13.5vh darkviolet, 81vh 60.75vh 13.5vh 13.5vh gold;
+    -webkit-box-shadow: 0vh 0vh 14.5vh 14.5vh coral, 21.75vh 0vh 14.5vh 14.5vh skyblue, 43.5vh 0vh 14.5vh 14.5vh darkviolet, 65.25vh 0vh 14.5vh 14.5vh gold, 87vh 0vh 14.5vh 14.5vh purple, 0vh 21.75vh 14.5vh 14.5vh violet, 21.75vh 21.75vh 14.5vh 14.5vh teal, 43.5vh 21.75vh 14.5vh 14.5vh orangered, 65.25vh 21.75vh 14.5vh 14.5vh yellow, 87vh 21.75vh 14.5vh 14.5vh crimson, 0vh 43.5vh 14.5vh 14.5vh yellowgreen, 21.75vh 43.5vh 14.5vh 14.5vh orange, 43.5vh 43.5vh 14.5vh 14.5vh darkturquoise, 65.25vh 43.5vh 14.5vh 14.5vh pink, 87vh 43.5vh 14.5vh 14.5vh steelblue, 0vh 65.25vh 14.5vh 14.5vh turquoise, 21.75vh 65.25vh 14.5vh 14.5vh coral, 43.5vh 65.25vh 14.5vh 14.5vh skyblue, 65.25vh 65.25vh 14.5vh 14.5vh darkviolet, 87vh 65.25vh 14.5vh 14.5vh gold;
+    box-shadow: 0vh 0vh 14.5vh 14.5vh coral, 21.75vh 0vh 14.5vh 14.5vh skyblue, 43.5vh 0vh 14.5vh 14.5vh darkviolet, 65.25vh 0vh 14.5vh 14.5vh gold, 87vh 0vh 14.5vh 14.5vh purple, 0vh 21.75vh 14.5vh 14.5vh violet, 21.75vh 21.75vh 14.5vh 14.5vh teal, 43.5vh 21.75vh 14.5vh 14.5vh orangered, 65.25vh 21.75vh 14.5vh 14.5vh yellow, 87vh 21.75vh 14.5vh 14.5vh crimson, 0vh 43.5vh 14.5vh 14.5vh yellowgreen, 21.75vh 43.5vh 14.5vh 14.5vh orange, 43.5vh 43.5vh 14.5vh 14.5vh darkturquoise, 65.25vh 43.5vh 14.5vh 14.5vh pink, 87vh 43.5vh 14.5vh 14.5vh steelblue, 0vh 65.25vh 14.5vh 14.5vh turquoise, 21.75vh 65.25vh 14.5vh 14.5vh coral, 43.5vh 65.25vh 14.5vh 14.5vh skyblue, 65.25vh 65.25vh 14.5vh 14.5vh darkviolet, 87vh 65.25vh 14.5vh 14.5vh gold;
   }
 }
 .text-fill-video {

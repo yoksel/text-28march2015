@@ -96,6 +96,9 @@ $browser-size: 64px;
 .chrome {
   background-position: 0 0;
   }
+.canary {
+  background: url(./assets/img/browsers/canary-64.png);
+}
 .firefox {
   background-position: 0 -#{$browser-size};
   }
@@ -130,6 +133,13 @@ $browser-size: 64px;
     content: "12, Mobile, Mini";
     }
 }
+
+.browser {
+  &:after {
+    content: attr(data-version);
+  }
+}
+
 .opera-12 {
   &:after {
     content: "12";

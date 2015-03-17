@@ -681,8 +681,12 @@ svg.demo--intro {
   stroke-width: 2;
 }
 :target .text--stroke-pulse {
-  -webkit-animation: stroke-pulse 1s infinite linear;
-  animation: stroke-pulse 1s infinite linear;
+  -webkit-animation: stroke-pulse 2s infinite;
+  animation: stroke-pulse 2s infinite;
+  -webkit-animation-name: stroke-pulse, stroke-pulse-color;
+  animation-name: stroke-pulse, stroke-pulse-color;
+  -webkit-animation-duration: 2s, 5s;
+  animation-duration: 2s, 5s;
 }
 
 @-webkit-keyframes stroke-pulse {
@@ -694,6 +698,34 @@ svg.demo--intro {
 @keyframes stroke-pulse {
   50% {
     stroke-width: 15;
+  }
+}
+@-webkit-keyframes stroke-pulse-color {
+  25% {
+    stroke: royalblue;
+  }
+  50% {
+    stroke: gold;
+  }
+  70% {
+    stroke: crimson;
+  }
+  90% {
+    stroke: teal;
+  }
+}
+@keyframes stroke-pulse-color {
+  25% {
+    stroke: royalblue;
+  }
+  50% {
+    stroke: gold;
+  }
+  70% {
+    stroke: crimson;
+  }
+  90% {
+    stroke: teal;
   }
 }
 .text--stroke-anim-pattern {

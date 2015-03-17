@@ -87,8 +87,7 @@
         <h4>Краткое содержание</h4>
         <ol>
             <li>HTML + CSS</li>
-            <li>SVG text</li>
-            <li>SVG mask</li>
+            <li>SVG</li>
             <li>Режимы наложения</li>
             <li>HTML + SVG</li>
         </ol>
@@ -357,7 +356,12 @@
 
     <!-- Slide -->
     <section class="slide bg--dark"><div>
-        <h2 class="free-fly">2. SVG text</h2>
+        <h2 class="free-fly">2. SVG</h2>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <h2 class="free-fly">SVG text</h2>
     </div></section>
 
     <!-- Slide -->
@@ -419,10 +423,10 @@
 <pre><code>.text {
     stroke: orangered;
     stroke-width: 4;
-    <mark>stroke-dasharray</mark>: 50 30 20 10;
-    }</code></pre>
+    <span class="next"><mark>stroke-dasharray</mark>: 50 30 20 10;
+    }</span></code></pre>
 
-        <svg viewBox="0 0 1024 280" class="demo demo--text">
+        <svg viewBox="0 0 1024 280" class="demo demo--text next">
             <text x="50%" y="50%" dy=".25em" text-anchor="middle"
                 class="text--stroke text--stroke-dasharray">текст</text>
         </svg>
@@ -544,7 +548,7 @@
     &lt;stop stop-color="hsl(250, 100%, 30%)" offset="90%"/>
 &lt;/linearGradient></code></pre>
 
-    <svg viewBox="0 0 1024 280" class="demo demo--text">
+    <svg viewBox="0 0 1024 280" class="demo demo--text next">
             <text x="50%" y="50%" dy=".25em" text-anchor="middle"
                 fill="url(#gr-blue)">текст</text>
         </svg>
@@ -601,10 +605,10 @@
     <section class="slide"><div>
 <pre><code>&lt;pattern id="pt-circle" width="30" height="30"
     viewBox="0 0 30 30" patternUnits="userSpaceOnUse">
-        &lt;<mark>circle</mark> r="15" cx="15" cy="15" fill="yellowgreen"/>
+        <span class="next">&lt;<mark>circle</mark> r="15" cx="15" cy="15" fill="yellowgreen"/></span>
 &lt;/pattern></code></pre>
 
-    <svg class="demo--show-pattern">
+    <svg class="demo--show-pattern next">
         <pattern id="pt-circle" width="30" height="30"
         viewBox="0 0 30 30" patternUnits="userSpaceOnUse">
             <circle r="15" cx="15" cy="15" fill="yellowgreen"/>
@@ -618,11 +622,11 @@
 
 <pre><code>&lt;pattern id="pt-wood" width="300" height="300"
      patternUnits="userSpaceOnUse">
-    &lt;<mark>image</mark> xlink:href="./assets/img/parts/wood.jpg"
-        width="300" height="300"/>
+    <span class="next">&lt;<mark>image</mark> xlink:href="./assets/img/parts/wood.jpg"
+        width="300" height="300"/></span>
 &lt;/pattern></code></pre>
 
-    <svg class="demo--show-pattern">
+    <svg class="demo--show-pattern next">
         <rect width="100%" height="100%" fill="url(#pt-wood)"/>
     </svg>
     </div></section>
@@ -812,22 +816,22 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide bg--dark"><div>
-        <h2 class="free-fly">3. SVG mask</h2>
+    <section class="slide"><div>
+        <h2 class="free-fly">SVG mask</h2>
     </div></section>
 
    <!-- Slide -->
     <section class="slide"><div>
 <pre><code>&lt;symbol id="<mark>s-text</mark>">
-    &lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
+    <span class="next">&lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
         текст
-    &lt;/text>
+    &lt;/text></span>
 &lt;/symbol></code></pre>
 
 <pre class="next"><code>&lt;mask id="mask-text"
     maskunits="userSpaceOnUse"
     maskcontentunits="userSpaceOnUse">
-        &lt;use xlink:href="<mark>#s-text</mark>" fill="#FFF"/>
+        <span class="next">&lt;use xlink:href="<mark>#s-text</mark>" fill="#FFF"/></span>
 &lt;/mask></code></pre>
     </div></section>
 
@@ -1082,6 +1086,7 @@
 <pre><code>.text {
     fill: none;
     }</code></pre>
+<h3 class="next">или</h3>
 <pre class="next"><code>
 .text {
     fill: transparent;
@@ -1143,7 +1148,7 @@
 
     <!-- Slide -->
     <section class="slide bg--dark"><div>
-        <h2 class="free-fly">4. Режимы наложения</h2>
+        <h2 class="free-fly">3. Режимы наложения</h2>
     </div></section>
 
     <!-- Slide -->
@@ -1237,7 +1242,7 @@
 
     <!-- Slide -->
     <section class="slide bg--dark"><div>
-        <h2 class="free-fly">5. SVG + HTML</h2>
+        <h2 class="free-fly">4. SVG + HTML</h2>
     </div></section>
 
     <!-- Slide -->

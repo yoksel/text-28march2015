@@ -24,7 +24,9 @@
     stroke-width: 2;
 
     :target & {
-        animation: stroke-pulse 1s infinite linear;
+        animation: stroke-pulse 2s infinite;
+        animation-name: stroke-pulse, stroke-pulse-color;
+        animation-duration: 2s, 5s;
         }
     }
 
@@ -32,6 +34,21 @@
     50% {
         stroke-width: 15;
     }
+}
+
+@keyframes stroke-pulse-color {
+  25% {
+    stroke: royalblue;
+  }
+  50% {
+    stroke: gold;
+  }
+  70% {
+    stroke: crimson;
+  }
+  90% {
+    stroke: teal;
+  }
 }
 
 .text--stroke-anim-pattern {

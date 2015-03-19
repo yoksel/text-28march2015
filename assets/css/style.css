@@ -229,6 +229,20 @@ svg {
   transform: translate(-50%, -50%);
 }
 
+.slide--vlm-code .slide__content {
+  position: absolute;
+  top: 50%;
+  /*left: 50%;*/
+  -webkit-transform: translate(0, -50%);
+  /*left: 50%;*/
+  -ms-transform: translate(0, -50%);
+  /*left: 50%;*/
+  transform: translate(0, -50%);
+}
+.slide--vlm-code PRE {
+  margin-bottom: 0;
+}
+
 .table-cell {
   display: table-cell;
   width: 864px;
@@ -393,6 +407,10 @@ PRE:before {
 
 .bg--ps-cells {
   background: url(./assets/img/parts/ps-bg.png);
+}
+
+.bg--flowers {
+  background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%;
 }
 
 .bg--blue-grad {
@@ -1756,6 +1774,19 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 svg.demo--inverted-mask {
   position: relative;
   z-index: 1;
+}
+
+svg.demo--inverted-mask-offset {
+  position: absolute;
+  width: 800px !important;
+  height: 500px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
 }
 
 .text--invmask-multytext {

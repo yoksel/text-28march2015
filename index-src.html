@@ -59,9 +59,10 @@
             <h4>Презентация в лучшем виде:</h4>
             <ul class="list--glasses">
                 <li>
-                <span class="browser safari"></span>
-                <span class="browser canary"></span>
-                <span class="browser chrome" data-version="41+"></span>
+                <span class="browser safari"></span>&nbsp;&nbsp;&nbsp;
+                <span class="browser canary"></span>&nbsp;&nbsp;&nbsp;
+                <span class="browser chrome" data-version="41+"></span>&nbsp;&nbsp;
+                <span class="browser opera" data-version="29+"></span>
                 </li>
             </ul>
             <ul class="list--glasses">
@@ -135,7 +136,8 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide slide--vlm-code"><div>
+        <div class="slide__content">
 <pre><code class="code--smaller code--condensed">@function shadows($max: 5, $color: white){
     $out: null;
 
@@ -160,6 +162,7 @@
 
     @return $out;
 }</code></pre>
+        </div>
     </div></section>
 
     <!-- Slide -->
@@ -292,7 +295,7 @@
 <pre><code>.text {
   background: url(АДРЕС КАРТИНКИ) 50% 50%;
   <span class="next">-webkit-text-fill-color: transparent;</span>
-  <span class="next">-webkit-background-clip: text;
+  <span class="next"><mark>-webkit-background-clip: text;</mark>
   }</span></code></pre>
     </div></section>
 
@@ -1240,7 +1243,7 @@
                 <sup>41+</sup>
                 <img src="./assets/img/browsers/safari.png" alt="Safari"/>
                 <img src="./assets/img/browsers/opera.png" alt="Opera"/>
-                <sup>flag ?</sup>
+                <sup>29+</sup>
                 <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
                 <img src="./assets/img/browsers/ie.png" class="no-support" alt="IE"/>
             </div>
@@ -1259,7 +1262,7 @@
 
     <!-- Slide -->
     <section class="slide slide--imgfull bg--ps-cells"><div>
-        <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">
+        <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask demo--inverted-mask-offset demo--text">
             <rect width="100%" height="100%" fill="#FFF"/>
             <text x="50%" y="50%" dy=".25em"
                 text-anchor="middle">текст</text>
@@ -1268,8 +1271,8 @@
 
     <!-- Slide -->
     <section class="slide slide--imgfull bg--ps-cells"><div>
-        <div class="demo-border">
-            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">
+        <div class="">
+            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask-offset demo--text">
                 <symbol id="s-text--invmask">
                     <text x="50%" y="50%" dy=".25em"
                         text-anchor="middle">текст</text>
@@ -1282,6 +1285,19 @@
                     <use xlink:href="#s-text--invmask"/>
                 </mask>
 
+                <rect mask="url(#mask-text-revert)"
+                    width="100%" height="100%"
+                    fill="#000"/>
+                <use xlink:href="#s-text--invmask" class="u-text--transp"/>
+
+            </svg>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--imgfull bg--flowers"><div>
+        <div class="">
+            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask-offset demo--text">
                 <rect mask="url(#mask-text-revert)"
                     width="100%" height="100%"
                     fill="#000"/>

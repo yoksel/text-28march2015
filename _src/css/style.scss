@@ -131,6 +131,17 @@ svg {
         transform: translate(-50%, -50%);
         }
     }
+.slide--vlm-code {
+    .slide__content {
+        position: absolute;
+        top: 50%;
+        /*left: 50%;*/
+        transform: translate(0, -50%);
+        }
+    PRE {
+        margin-bottom: 0;
+        }
+    }
 
 .table-cell {
     display: table-cell;
@@ -294,7 +305,9 @@ $svg-code-color: hsl(190, 70%, 75%);
 .bg--ps-cells {
     background: url(./assets/img/parts/ps-bg.png);
     }
-
+.bg--flowers {
+    background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%;
+    }
 .bg--blue-grad {
     background: radial-gradient(
         hsl(200,100,40),

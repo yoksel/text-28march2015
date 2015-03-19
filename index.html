@@ -238,6 +238,20 @@ svg {
   transform: translate(-50%, -50%);
 }
 
+.slide--vlm-code .slide__content {
+  position: absolute;
+  top: 50%;
+  /*left: 50%;*/
+  -webkit-transform: translate(0, -50%);
+  /*left: 50%;*/
+  -ms-transform: translate(0, -50%);
+  /*left: 50%;*/
+  transform: translate(0, -50%);
+}
+.slide--vlm-code PRE {
+  margin-bottom: 0;
+}
+
 .table-cell {
   display: table-cell;
   width: 864px;
@@ -402,6 +416,10 @@ PRE:before {
 
 .bg--ps-cells {
   background: url(./assets/img/parts/ps-bg.png);
+}
+
+.bg--flowers {
+  background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%;
 }
 
 .bg--blue-grad {
@@ -1767,6 +1785,19 @@ svg.demo--inverted-mask {
   z-index: 1;
 }
 
+svg.demo--inverted-mask-offset {
+  position: absolute;
+  width: 800px !important;
+  height: 500px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
+}
+
 .text--invmask-multytext {
   font-size: 1.8em;
   font-family: Impact;
@@ -2566,9 +2597,10 @@ svg {
             <h4>Презентация в лучшем виде:</h4>
             <ul class="list--glasses">
                 <li>
-                <span class="browser safari"></span>
-                <span class="browser canary"></span>
-                <span class="browser chrome" data-version="41+"></span>
+                <span class="browser safari"></span>&nbsp;&nbsp;&nbsp;
+                <span class="browser canary"></span>&nbsp;&nbsp;&nbsp;
+                <span class="browser chrome" data-version="41+"></span>&nbsp;&nbsp;
+                <span class="browser opera" data-version="29+"></span>
                 </li>
             </ul>
             <ul class="list--glasses">
@@ -2642,7 +2674,8 @@ svg {
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide slide--vlm-code"><div>
+        <div class="slide__content">
 <pre><code class="code--smaller code--condensed">@function shadows($max: 5, $color: white){
     $out: null;
 
@@ -2667,6 +2700,7 @@ svg {
 
     @return $out;
 }</code></pre>
+        </div>
     </div></section>
 
     <!-- Slide -->
@@ -2799,7 +2833,7 @@ svg {
 <pre><code>.text {
   background: url(АДРЕС КАРТИНКИ) 50% 50%;
   <span class="next">-webkit-text-fill-color: transparent;</span>
-  <span class="next">-webkit-background-clip: text;
+  <span class="next"><mark>-webkit-background-clip: text;</mark>
   }</span></code></pre>
     </div></section>
 
@@ -3747,7 +3781,7 @@ svg {
                 <sup>41+</sup>
                 <img src="./assets/img/browsers/safari.png" alt="Safari"/>
                 <img src="./assets/img/browsers/opera.png" alt="Opera"/>
-                <sup>flag ?</sup>
+                <sup>29+</sup>
                 <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
                 <img src="./assets/img/browsers/ie.png" class="no-support" alt="IE"/>
             </div>
@@ -3766,7 +3800,7 @@ svg {
 
     <!-- Slide -->
     <section class="slide slide--imgfull bg--ps-cells"><div>
-        <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">
+        <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask demo--inverted-mask-offset demo--text">
             <rect width="100%" height="100%" fill="#FFF"/>
             <text x="50%" y="50%" dy=".25em"
                 text-anchor="middle">текст</text>
@@ -3775,8 +3809,8 @@ svg {
 
     <!-- Slide -->
     <section class="slide slide--imgfull bg--ps-cells"><div>
-        <div class="demo-border">
-            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--text">
+        <div class="">
+            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask-offset demo--text">
                 <symbol id="s-text--invmask">
                     <text x="50%" y="50%" dy=".25em"
                         text-anchor="middle">текст</text>
@@ -3789,6 +3823,19 @@ svg {
                     <use xlink:href="#s-text--invmask"/>
                 </mask>
 
+                <rect mask="url(#mask-text-revert)"
+                    width="100%" height="100%"
+                    fill="#000"/>
+                <use xlink:href="#s-text--invmask" class="u-text--transp"/>
+
+            </svg>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide slide--imgfull bg--flowers"><div>
+        <div class="">
+            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask-offset demo--text">
                 <rect mask="url(#mask-text-revert)"
                     width="100%" height="100%"
                     fill="#000"/>

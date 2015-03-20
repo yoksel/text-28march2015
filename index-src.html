@@ -186,8 +186,7 @@
     <!-- Slide -->
     <section class="slide"><div>
         <h3>Google Fonts Effects</h3>
-        <a href="https://developers.google.com/fonts/docs/getting_started#Effects">developers.google.com/fonts/docs/getting_started#Effects</a>
-        <br><br>
+        <br/>
 
         <pre class="next"><code>http://fonts.googleapis.com/css?family=Rancho&<mark>effect=3d</mark></code></pre>
 
@@ -228,7 +227,11 @@
         </div>
     </div></section>
 
-
+    <!-- Slide -->
+    <section class="slide"><div>
+        <a href="https://developers.google.com/fonts/docs/getting_started#Effects">developers.google.com/fonts/docs/getting_started#Effects</a>
+        <img src="./assets/img/google-fonts.png" alt="Google Fonts Effects" style="margin-top: 25px;"/>
+    </div></section>
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
@@ -294,15 +297,51 @@
     <section class="slide"><div>
 <pre><code>.text {
   background: url(АДРЕС КАРТИНКИ) 50% 50%;
-  <span class="next">-webkit-text-fill-color: transparent;</span>
-  <span class="next"><mark>-webkit-background-clip: text;</mark>
+
+
   }</span></code></pre>
     </div></section>
 
     <!-- Slide -->
     <section class="slide bg--dark slide--vlm"><div>
         <div class="slide__content">
-            <div class="demo demo--text demo--background-clip">
+            <div class="demo demo--text demo--background-clip demo--background-clip-step1">
+                текст
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>.text {
+  background: url(АДРЕС КАРТИНКИ) 50% 50%;
+  -webkit-text-fill-color: transparent;
+
+  }</span></code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide bg--dark slide--vlm"><div>
+        <div class="slide__content">
+            <div class="demo demo--text demo--background-clip demo--background-clip-step2">
+                текст
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+<pre><code>.text {
+  background: url(АДРЕС КАРТИНКИ) 50% 50%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  }</code></pre>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide bg--dark slide--vlm"><div>
+        <div class="slide__content">
+            <div class="demo demo--text demo--background-clip demo--background-clip-step3">
                 текст
             </div>
         </div>
@@ -606,15 +645,17 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-<pre><code>&lt;pattern id="pt-circle" width="30" height="30"
-    viewBox="0 0 30 30" patternUnits="userSpaceOnUse">
-        <span class="next">&lt;<mark>circle</mark> r="15" cx="15" cy="15" fill="yellowgreen"/></span>
+<pre><code>&lt;pattern id="pt-circle" width="50" height="50"
+    viewBox="0 0 50 50" patternUnits="userSpaceOnUse">
+    <span class="next">&lt;<mark>circle</mark> r="18" cx="25" cy="25"
+      fill="yellowgreen" stroke="green" stroke-width="7"/></span>
 &lt;/pattern></code></pre>
 
     <svg class="demo--show-pattern next">
-        <pattern id="pt-circle" width="30" height="30"
-        viewBox="0 0 30 30" patternUnits="userSpaceOnUse">
-            <circle r="15" cx="15" cy="15" fill="yellowgreen"/>
+        <pattern id="pt-circle" width="50" height="50"
+        viewBox="0 0 50 50" patternUnits="userSpaceOnUse">
+            <circle r="18" cx="25" cy="25"
+                fill="yellowgreen" stroke="green" stroke-width="7"/>
         </pattern>
         <rect width="100%" height="100%" fill="url(#pt-circle)"/>
     </svg>
@@ -624,8 +665,8 @@
     <section class="slide"><div>
 
 <pre><code>&lt;pattern id="pt-wood" width="300" height="300"
-     patternUnits="userSpaceOnUse">
-    <span class="next">&lt;<mark>image</mark> xlink:href="./assets/img/parts/wood.jpg"
+    patternUnits="userSpaceOnUse">
+    <span class="next">&lt;<mark>image</mark> xlink:href="wood.jpg"
         width="300" height="300"/></span>
 &lt;/pattern></code></pre>
 
@@ -825,16 +866,13 @@
 
    <!-- Slide -->
     <section class="slide"><div>
-<pre><code>&lt;symbol id="<mark>s-text</mark>">
-    <span class="next">&lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
-        текст
-    &lt;/text></span>
-&lt;/symbol></code></pre>
-
-<pre class="next"><code>&lt;mask id="mask-text"
+<pre><code>&lt;mask id="mask-text"
     maskunits="userSpaceOnUse"
     maskcontentunits="userSpaceOnUse">
-        <span class="next">&lt;use xlink:href="<mark>#s-text</mark>" fill="#FFF"/></span>
+        <span class="next">&lt;text x="50%" y="50%" dy=".2em" text-anchor="middle"
+            fill="#FFF">
+            текст
+        &lt;/text></span>
 &lt;/mask></code></pre>
     </div></section>
 
@@ -1089,7 +1127,7 @@
 <pre><code>.text {
     fill: none;
     }</code></pre>
-<h3 class="next">или</h3>
+
 <pre class="next"><code>
 .text {
     fill: transparent;
@@ -1098,7 +1136,10 @@
 
     <!-- Slide -->
     <section class="slide"><div>
-<pre><code><span class="comment">// прозрачный текст, который можно выделить</span>
+<pre class="comment"><code>.text {
+    fill: none;
+    }</code></pre>
+<pre><code><span class="comment">/* прозрачный текст, который можно выделить */</span>
 .text {
     fill: <mark>transparent</mark>;
     }</code></pre>
@@ -1166,11 +1207,11 @@
         <div class="slide__content">
             <div class="demo--bbmode-list">
                     <div class="item-bbmode"></div><!--
-                 --><div class="item-bbmode"></div><!--
-                 --><div class="item-bbmode"></div><!--
-                 --><div class="item-bbmode"></div><!--
-                 --><div class="item-bbmode"></div><!--
-                 --><div class="item-bbmode"></div>
+                 --><div class="item-bbmode next"></div><!--
+                 --><div class="item-bbmode next"></div><!--
+                 --><div class="item-bbmode next"></div><!--
+                 --><div class="item-bbmode next"></div><!--
+                 --><div class="item-bbmode next"></div>
             </div>
         </div>
     </div></section>

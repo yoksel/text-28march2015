@@ -1,13 +1,17 @@
 .demo--background-clip {
   background: url(./assets/img/parts/tulips.jpeg) 50% 50%;
-  color: #FFF;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  /*color: #FFF;*/
   }
-
+  .demo--background-clip-step2 {
+    -webkit-text-fill-color: transparent;
+    }
+  .demo--background-clip-step3 {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    }
   .demo--background-clip-no-support {
       background: url(./assets/img/parts/tulips.jpeg) 50% 50%;
-      color: #FFF;
+      /*color: #FFF;*/
       }
 
 .demo--background-clip-fade {

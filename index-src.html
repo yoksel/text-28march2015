@@ -67,10 +67,10 @@
             </ul>
             <ul class="list--glasses">
                 <li>
-                    <span class="browser chrome"></span> <span class="list--glasses__sign">+</span> флаг: <i>chrome://flags/#enable-experimental-web-platform-features</i>
+                    <span class="browser chrome" data-version="&darr;41"></span> <span class="list--glasses__sign">+</span> флаг: <i>chrome://flags/#enable-experimental-web-platform-features</i>
                 </li>
                 <li>
-                    <span class="browser opera"></span> <span class="list--glasses__sign">+</span> флаг: <i>opera://flags/#enable-experimental-web-platform-features</i>
+                    <span class="browser opera" data-version="&darr;29"></span> <span class="list--glasses__sign">+</span> флаг: <i>opera://flags/#enable-experimental-web-platform-features</i>
                 </li>
             </ul>
             <p class="tooltip--glasses">Скопируйте ссылку на флаг в адресную строку браузера, включите флаг и&nbsp;перезапустите браузер.</p>
@@ -121,16 +121,20 @@
 
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
-<pre><code class="code--condensed">text-shadow: 0 0 green, 0 0 green,
-             0 0 green, 0 0 green,
-            -1px -1px green,  1px -1px green,
-             1px  1px green, -1px  1px green,
-            -2px -2px green,  2px -2px green,
-             2px  2px green, -2px  2px green,
-            -3px -3px green,  3px -3px green,
-             3px  3px green, -3px  3px green,
-            -4px -4px green,  4px -4px green,
-             4px  4px green, -4px  4px green;
+<pre><code class="code--condensed">text-shadow: -1px -1px green,  1px -1px green,
+              1px  1px green, -1px  1px green,
+             -2px -2px green,  2px -2px green,
+              2px  2px green, -2px  2px green,
+             -3px -3px green,  3px -3px green,
+              3px  3px green, -3px  3px green,
+             -4px -4px green,  4px -4px green,
+              4px  4px green, -4px  4px green,
+             -5px -5px green,  5px -5px green,
+              5px  5px green, -5px  5px green,
+             -6px -6px green,  6px -6px green,
+              6px  6px green, -6px  6px green,
+             -7px -7px green,  7px -7px green,
+              7px  7px green, -7px  7px green;
 
 </code></pre>
     </div></section>
@@ -142,23 +146,22 @@
     $out: null;
 
     @for $i from 0 through $max {
-        $pos: 0;
-        $pos-n: 0;
 
         @if ($i > 0) {
           $pos: #{$i}px;
           $pos-n: -$pos;
+
+          $shadow-t-l: $pos-n $pos-n $color;
+          $out: append( $out, $shadow-t-l, comma );
+          $shadow-t-r: $pos $pos-n $color;
+          $out: append( $out, $shadow-t-r, comma );
+          $shadow-b-r: $pos $pos $color;
+          $out: append( $out, $shadow-b-r, comma );
+          $shadow-b-l: $pos-n $pos $color;
+          $out: append( $out, $shadow-b-l, comma );
         }
 
-        $shadow-t-l: $pos-n $pos-n $color;
-        $out: append( $out, $shadow-t-l, comma );
-        $shadow-t-r: $pos $pos-n $color;
-        $out: append( $out, $shadow-t-r, comma );
-        $shadow-b-r: $pos $pos $color;
-        $out: append( $out, $shadow-b-r, comma );
-        $shadow-b-l: $pos-n $pos $color;
-        $out: append( $out, $shadow-b-l, comma );
-        }
+    }
 
     @return $out;
 }</code></pre>
@@ -303,7 +306,7 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide bg--dark slide--vlm"><div>
+    <section class="slide bg--ps-cells slide--vlm"><div>
         <div class="slide__content">
             <div class="demo demo--text demo--background-clip demo--background-clip-step1">
                 текст
@@ -321,7 +324,7 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide bg--dark slide--vlm"><div>
+    <section class="slide bg--ps-cells slide--vlm"><div>
         <div class="slide__content">
             <div class="demo demo--text demo--background-clip demo--background-clip-step2">
                 текст
@@ -339,7 +342,7 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide bg--dark slide--vlm"><div>
+    <section class="slide bg--ps-cells slide--vlm"><div>
         <div class="slide__content">
             <div class="demo demo--text demo--background-clip demo--background-clip-step3">
                 текст
@@ -348,7 +351,7 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide bg--dark slide--vlm"><div>
+    <section class="slide bg--ps-cells slide--vlm"><div>
         <div class="slide__content">
             <div class="demo demo--text demo--background-clip-no-support">
                 текст
@@ -357,7 +360,7 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide bg--dark slide--vlm"><div>
+    <section class="slide bg--ps-cells slide--vlm"><div>
         <div class="slide__content">
             <div class="demo demo--text demo--background-clip-fade">
                 текст текст текст текст текст
@@ -375,6 +378,15 @@
     <section class="slide bg--dark slide--vlm"><div>
         <div class="slide__content">
             <div class="demo demo--text demo--background-clip-animation">
+                текст
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide bg--dark slide--vlm"><div>
+        <div class="slide__content">
+            <div class="demo demo--text demo--background-clip-animation demo--background-clip-animation-color">
                 текст
             </div>
         </div>

@@ -34,23 +34,22 @@ $transp: rgba(255,255,255,0);
     $out: null;
 
     @for $i from 0 through $max {
-        $pos: 0;
-        $pos-n: 0;
 
         @if ($i > 0) {
           $pos: #{$i}px;
           $pos-n: -$pos;
+
+            $shadow-t-l: $pos-n $pos-n $color;
+            $out: append( $out, $shadow-t-l, comma );
+            $shadow-t-r: $pos $pos-n $color;
+            $out: append( $out, $shadow-t-r, comma );
+            $shadow-b-r: $pos $pos $color;
+            $out: append( $out, $shadow-b-r, comma );
+            $shadow-b-l: $pos-n $pos $color;
+            $out: append( $out, $shadow-b-l, comma );
         }
 
-        $shadow-t-l: $pos-n $pos-n $color;
-        $out: append( $out, $shadow-t-l, comma );
-        $shadow-t-r: $pos $pos-n $color;
-        $out: append( $out, $shadow-t-r, comma );
-        $shadow-b-r: $pos $pos $color;
-        $out: append( $out, $shadow-b-r, comma );
-        $shadow-b-l: $pos-n $pos $color;
-        $out: append( $out, $shadow-b-l, comma );
-        }
+    }
 
     @return $out;
 }

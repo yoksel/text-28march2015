@@ -617,6 +617,10 @@ svg.demo--intro {
   /*color: #FFF;*/
 }
 
+.demo--background-clip-step0 {
+  background-image: none;
+}
+
 .demo--background-clip-step2 {
   -webkit-text-fill-color: transparent;
 }
@@ -668,12 +672,13 @@ svg.demo--intro {
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 20%, currentColor 20%, currentColor 30%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 40%, currentColor 40%, currentColor 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 60%, currentColor 60%, currentColor 70%, rgba(255, 255, 255, 0) 70%);
   background-color: transparent;
   -webkit-text-stroke: 5px currentColor;
+  color: teal;
 }
 :target .demo--background-clip-animation-color {
-  -webkit-animation-name: move-bg, bg-currentColor;
-  animation-name: move-bg, bg-currentColor;
-  -webkit-animation-duration: 3s, 7s;
-  animation-duration: 3s, 7s;
+  -webkit-animation-name: bg-currentColor;
+  animation-name: bg-currentColor;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
 }
 
 @-webkit-keyframes move-bg {

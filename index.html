@@ -626,6 +626,10 @@ svg.demo--intro {
   /*color: #FFF;*/
 }
 
+.demo--background-clip-step0 {
+  background-image: none;
+}
+
 .demo--background-clip-step2 {
   -webkit-text-fill-color: transparent;
 }
@@ -677,12 +681,13 @@ svg.demo--intro {
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 20%, currentColor 20%, currentColor 30%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 40%, currentColor 40%, currentColor 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 60%, currentColor 60%, currentColor 70%, rgba(255, 255, 255, 0) 70%);
   background-color: transparent;
   -webkit-text-stroke: 5px currentColor;
+  color: teal;
 }
 :target .demo--background-clip-animation-color {
-  -webkit-animation-name: move-bg, bg-currentColor;
-  animation-name: move-bg, bg-currentColor;
-  -webkit-animation-duration: 3s, 7s;
-  animation-duration: 3s, 7s;
+  -webkit-animation-name: bg-currentColor;
+  animation-name: bg-currentColor;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
 }
 
 @-webkit-keyframes move-bg {
@@ -2879,9 +2884,18 @@ svg {
     </div></section>
 
     <!-- Slide -->
+    <section class="slide bg--ps-cells slide--vlm"><div>
+        <div class="slide__content">
+            <div class="demo demo--text demo--background-clip demo--background-clip-step0">
+                текст
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Slide -->
     <section class="slide"><div>
 <pre><code>.text {
-  background: url(АДРЕС КАРТИНКИ) 50% 50%;
+  background: url(tulips.jpg) 50% 50%;
 
 
   }</span></code></pre>
@@ -2899,7 +2913,7 @@ svg {
     <!-- Slide -->
     <section class="slide"><div>
 <pre><code>.text {
-  background: url(АДРЕС КАРТИНКИ) 50% 50%;
+  background: url(tulips.jpg) 50% 50%;
   -webkit-text-fill-color: transparent;
 
   }</span></code></pre>
@@ -2917,7 +2931,7 @@ svg {
     <!-- Slide -->
     <section class="slide"><div>
 <pre><code>.text {
-  background: url(АДРЕС КАРТИНКИ) 50% 50%;
+  background: url(tulips.jpg) 50% 50%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   }</code></pre>
@@ -3004,8 +3018,8 @@ svg {
     <section class="slide"><div>
 <pre><code>&lt;svg viewBox="0 0 1024 620">
     <span class="next">&lt;text x="50%" y="50%" dy=".2em" text-anchor="middle">
-            <mark class="next">текст</mark>
-        &lt;/text></span>
+        <mark class="next">текст</mark>
+    &lt;/text></span>
 &lt;/svg></code></pre>
 
         <svg viewBox="0 0 1024 280" class="next demo demo--text">
@@ -3046,6 +3060,30 @@ svg {
         <svg viewBox="0 0 1024 620" class="demo demo--text">
             <text x="50%" y="50%" dy=".2em" text-anchor="middle"
                 class="text--stroke text--stroke-pulse">текст</text>
+        </svg>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide bg--dark"><div>
+        <svg viewBox="0 0 1024 620" class="demo demo--text">
+            <pattern id="p-lines"
+                       viewBox="0 0 100 100"
+                       patternUnits="userSpaceOnUse"
+                       width="100" height="100">
+                <path d="M 0,0 0,100" class="p-line"/>
+                <path d="M 10,0 10,100" class="p-line"/>
+                <path d="M 20,0 20,100" class="p-line"/>
+                <path d="M 30,0 30,100" class="p-line"/>
+                <path d="M 40,0 40,100" class="p-line"/>
+                <path d="M 50,0 50,100" class="p-line"/>
+                <path d="M 60,0 60,100" class="p-line"/>
+                <path d="M 70,0 70,100" class="p-line"/>
+                <path d="M 80,0 80,100" class="p-line"/>
+                <path d="M 90,0 90,100" class="p-line"/>
+                <path d="M 100,0 100,100" class="p-line"/>
+              </pattern>
+            <text x="50%" y="50%" dy=".25em" text-anchor="middle" stroke="url(#p-lines)"
+                class="text--stroke text--stroke-anim-pattern">текст</text>
         </svg>
     </div></section>
 
@@ -3097,30 +3135,6 @@ svg {
                 class="text--stroke text--stroke-aunt-walk">текст</text>
             <text x="50%" y="50%" dy=".25em" text-anchor="middle"
                 class="text--stroke text--stroke-aunt-walk">текст</text>
-        </svg>
-    </div></section>
-
-    <!-- Slide -->
-    <section class="slide bg--dark"><div>
-        <svg viewBox="0 0 1024 620" class="demo demo--text">
-            <pattern id="p-lines"
-                       viewBox="0 0 100 100"
-                       patternUnits="userSpaceOnUse"
-                       width="100" height="100">
-                <path d="M 0,0 0,100" class="p-line"/>
-                <path d="M 10,0 10,100" class="p-line"/>
-                <path d="M 20,0 20,100" class="p-line"/>
-                <path d="M 30,0 30,100" class="p-line"/>
-                <path d="M 40,0 40,100" class="p-line"/>
-                <path d="M 50,0 50,100" class="p-line"/>
-                <path d="M 60,0 60,100" class="p-line"/>
-                <path d="M 70,0 70,100" class="p-line"/>
-                <path d="M 80,0 80,100" class="p-line"/>
-                <path d="M 90,0 90,100" class="p-line"/>
-                <path d="M 100,0 100,100" class="p-line"/>
-              </pattern>
-            <text x="50%" y="50%" dy=".25em" text-anchor="middle" stroke="url(#p-lines)"
-                class="text--stroke text--stroke-anim-pattern">текст</text>
         </svg>
     </div></section>
 

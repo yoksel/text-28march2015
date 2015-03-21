@@ -2,6 +2,9 @@
   background: url(./assets/img/parts/tulips.jpeg) 50% 50%;
   /*color: #FFF;*/
   }
+  .demo--background-clip-step0 {
+    background-image: none;
+    }
   .demo--background-clip-step2 {
     -webkit-text-fill-color: transparent;
     }
@@ -71,9 +74,11 @@ $stripe-color: transparentize(steelblue, .3);
     );
   background-color: transparent;
   -webkit-text-stroke: 5px currentColor;
+  color: teal;
+
   :target & {
-    animation-name: move-bg, bg-currentColor;
-    animation-duration: 3s, 7s;
+    animation-name: bg-currentColor;
+    animation-duration: 7s;
     }
   }
 

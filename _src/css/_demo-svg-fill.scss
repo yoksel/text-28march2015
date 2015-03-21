@@ -66,16 +66,16 @@ $anim-cells-step: $anim-cells-time/$anim-cells-max;
 .g-anim-cells rect {
 
     fill: yellowgreen;
-
+    animation: anim-cells $anim-cells-time infinite linear;
+    animation-play-state: paused;
     :target & {
-        animation: anim-cells $anim-cells-time infinite linear;
+        animation-play-state: running;
         }
 
     @for $item from 1 through $anim-cells-max {
         $fill-color: nth($anim-cells-colors, $item);
 
         &:nth-child(#{$item}) {
-          fill: $fill-color;
           animation-delay: -$anim-cells-step*$item;
           }
     }
@@ -127,11 +127,13 @@ $anim-spots-step: $anim-spots-time/$anim-spots-max;
     stroke: chartreuse;
     stroke-width: 1;
     stroke-dasharray: 1000;
+    animation: anim-spots $anim-spots-time infinite linear;
+    animation-name: anim-spots, anim-spots-stroke;
+    animation-duration: $anim-spots-time, $anim-spots-time/10;
+    animation-play-state: paused;
 
     :target & {
-        animation: anim-spots $anim-spots-time infinite linear;
-        animation-name: anim-spots, anim-spots-stroke;
-        animation-duration: $anim-spots-time, $anim-spots-time/10;
+        animation-play-state: running;
         }
 
     @for $item from 1 through $anim-spots-max {

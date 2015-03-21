@@ -36,6 +36,17 @@ svg {
     .svg--ovh {
         overflow: hidden;
         }
+.demo--offset {
+    position: absolute !important;
+    width: 800px !important;
+    height: 500px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    box-shadow: 40px 40px 20px rgba(0,0,0,.5);
+    }
 
 .hidden-svg-defs {
     position: absolute;

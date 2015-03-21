@@ -21,17 +21,6 @@ svg.demo--inverted-mask {
     position: relative;
     z-index: 1;
     }
-  svg.demo--inverted-mask-offset {
-    position: absolute;
-    width: 800px !important;
-    height: 500px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    box-shadow: 40px 40px 20px rgba(0,0,0,.5);
-    }
 .text--invmask-multytext {
     font-size: 1.8em;
     font-family: Impact;

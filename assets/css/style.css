@@ -91,6 +91,10 @@
   color: #AAA;
 }
 
+.comment--bright {
+  background: yellowgreen;
+}
+
 .pos-abs {
   position: absolute;
   top: 0;
@@ -128,6 +132,19 @@ svg {
 
 .svg--ovh {
   overflow: hidden;
+}
+
+.demo--offset {
+  position: absolute !important;
+  width: 800px !important;
+  height: 500px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hidden-svg-defs {
@@ -1008,83 +1025,72 @@ svg.demo--intro {
 
 .g-anim-cells rect {
   fill: yellowgreen;
-}
-:target .g-anim-cells rect {
   -webkit-animation: anim-cells 20s infinite linear;
   animation: anim-cells 20s infinite linear;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+:target .g-anim-cells rect {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
 }
 .g-anim-cells rect:nth-child(1) {
-  fill: yellowgreen;
   -webkit-animation-delay: -1.33333s;
   animation-delay: -1.33333s;
 }
 .g-anim-cells rect:nth-child(2) {
-  fill: deeppink;
   -webkit-animation-delay: -2.66667s;
   animation-delay: -2.66667s;
 }
 .g-anim-cells rect:nth-child(3) {
-  fill: royalblue;
   -webkit-animation-delay: -4s;
   animation-delay: -4s;
 }
 .g-anim-cells rect:nth-child(4) {
-  fill: gold;
   -webkit-animation-delay: -5.33333s;
   animation-delay: -5.33333s;
 }
 .g-anim-cells rect:nth-child(5) {
-  fill: orangered;
   -webkit-animation-delay: -6.66667s;
   animation-delay: -6.66667s;
 }
 .g-anim-cells rect:nth-child(6) {
-  fill: yellow;
   -webkit-animation-delay: -8s;
   animation-delay: -8s;
 }
 .g-anim-cells rect:nth-child(7) {
-  fill: lightseagreen;
   -webkit-animation-delay: -9.33333s;
   animation-delay: -9.33333s;
 }
 .g-anim-cells rect:nth-child(8) {
-  fill: orange;
   -webkit-animation-delay: -10.66667s;
   animation-delay: -10.66667s;
 }
 .g-anim-cells rect:nth-child(9) {
-  fill: darkviolet;
   -webkit-animation-delay: -12s;
   animation-delay: -12s;
 }
 .g-anim-cells rect:nth-child(10) {
-  fill: skyblue;
   -webkit-animation-delay: -13.33333s;
   animation-delay: -13.33333s;
 }
 .g-anim-cells rect:nth-child(11) {
-  fill: magenta;
   -webkit-animation-delay: -14.66667s;
   animation-delay: -14.66667s;
 }
 .g-anim-cells rect:nth-child(12) {
-  fill: mediumslateblue;
   -webkit-animation-delay: -16s;
   animation-delay: -16s;
 }
 .g-anim-cells rect:nth-child(13) {
-  fill: lightgreen;
   -webkit-animation-delay: -17.33333s;
   animation-delay: -17.33333s;
 }
 .g-anim-cells rect:nth-child(14) {
-  fill: tomato;
   -webkit-animation-delay: -18.66667s;
   animation-delay: -18.66667s;
 }
 .g-anim-cells rect:nth-child(15) {
-  fill: chartreuse;
   -webkit-animation-delay: -20s;
   animation-delay: -20s;
 }
@@ -1195,14 +1201,18 @@ svg.demo--intro {
   stroke: chartreuse;
   stroke-width: 1;
   stroke-dasharray: 1000;
-}
-:target .g-anim-spots circle {
   -webkit-animation: anim-spots 20s infinite linear;
   animation: anim-spots 20s infinite linear;
   -webkit-animation-name: anim-spots, anim-spots-stroke;
   animation-name: anim-spots, anim-spots-stroke;
   -webkit-animation-duration: 20s, 2s;
   animation-duration: 20s, 2s;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+:target .g-anim-spots circle {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
 }
 .g-anim-spots circle:nth-child(1) {
   fill: yellowgreen;
@@ -1685,11 +1695,14 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 }
 
 .demo--bbmode-text {
-  background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;
+  /*background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;*/
 }
 .demo--bbmode-text .text {
+  height: 500px;
+  line-height: 500px;
   background: #FFF;
-  mix-blend-mode: lighten;
+  text-align: center;
+  font-size: .85em;
 }
 .demo--bbmode-text:before {
   content: "";
@@ -1700,6 +1713,10 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
   bottom: 0;
   left: 0;
   border: 3px solid #FFF;
+}
+
+.demo--bbmode-text-step1 {
+  mix-blend-mode: lighten;
 }
 
 .demo--dancing-shadows__title {
@@ -1823,19 +1840,6 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 svg.demo--inverted-mask {
   position: relative;
   z-index: 1;
-}
-
-svg.demo--inverted-mask-offset {
-  position: absolute;
-  width: 800px !important;
-  height: 500px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  -webkit-box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
-  box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
 }
 
 .text--invmask-multytext {

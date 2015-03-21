@@ -898,9 +898,9 @@
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--imgfull"><div>
+    <section class="slide slide--imgfull bg--ps-cells"><div>
         <div class="slide__content">
-            <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-showmask">
+            <svg viewBox="0 0 1024 640" class="demo demo--text demo--text-showmask demo--offset">
                 <symbol id="s-text">
                     <text x="50%" y="50%" dy=".2em"
                         text-anchor="middle">текст</text>
@@ -1146,12 +1146,11 @@
     <!-- Slide -->
     <section class="slide"><div>
 <pre><code>.text {
-    fill: none;
+    fill: <mark>none</mark>;
     }</code></pre>
-
-<pre class="next"><code>
-.text {
-    fill: transparent;
+<h4>&nbsp;</h4>
+<pre class="next"><code>.text {
+    fill: <mark>transparent</mark>;
     }</code></pre>
     </div></section>
 
@@ -1160,8 +1159,8 @@
 <pre class="comment"><code>.text {
     fill: none;
     }</code></pre>
-<pre><code><span class="comment">/* прозрачный текст, который можно выделить */</span>
-.text {
+<h4>Прозрачный текст, который можно выделить:</h4>
+<pre><code>.text {
     fill: <mark>transparent</mark>;
     }</code></pre>
     </div></section>
@@ -1253,9 +1252,9 @@
 
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide bg--flowers"><div>
         <div class="slide__content">
-            <div class="demo demo--text">
+            <div class="demo demo--text demo--offset demo--bbmode-text  demo--bbmode-text-step0">
                 <div class="text">текст</div>
             </div>
         </div>
@@ -1264,14 +1263,18 @@
     <!-- Slide -->
     <section class="slide slide--vlm"><div>
 <pre><code>.text {
-    mix-blend-mode: lighten;
+    mix-blend-mode: <mark>lighten</mark>;
     }</code></pre>
     </div></section>
 
     <!-- Slide -->
-    <section class="slide slide--vlm"><div>
+    <section class="slide bg--flowers"><div>
         <div class="slide__content">
-            <div class="demo demo--text demo--bbmode-text">
+            <div class="demo
+                        demo--text
+                        demo--offset
+                        demo--bbmode-text
+                        demo--bbmode-text-step1">
                 <div class="text">текст</div>
             </div>
         </div>
@@ -1324,7 +1327,7 @@
 
     <!-- Slide -->
     <section class="slide slide--imgfull bg--ps-cells"><div>
-        <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask demo--inverted-mask-offset demo--text">
+        <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask demo--offset demo--text">
             <rect width="100%" height="100%" fill="#FFF"/>
             <text x="50%" y="50%" dy=".25em"
                 text-anchor="middle">текст</text>
@@ -1334,7 +1337,7 @@
     <!-- Slide -->
     <section class="slide slide--imgfull bg--ps-cells"><div>
         <div class="">
-            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask-offset demo--text">
+            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--offset demo--text">
                 <symbol id="s-text--invmask">
                     <text x="50%" y="50%" dy=".25em"
                         text-anchor="middle">текст</text>
@@ -1359,7 +1362,7 @@
     <!-- Slide -->
     <section class="slide slide--imgfull bg--flowers"><div>
         <div class="">
-            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--inverted-mask-offset demo--text">
+            <svg viewBox="0 0 1024 640" class="demo demo--inverted-mask demo--offset demo--text">
                 <rect mask="url(#mask-text-revert)"
                     width="100%" height="100%"
                     fill="#000"/>

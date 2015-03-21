@@ -79,10 +79,13 @@
         }
 
 .demo--bbmode-text {
-    background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;
+    /*background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;*/
     .text {
+        height: 500px;
+        line-height: 500px;
         background: #FFF;
-        mix-blend-mode: lighten;
+        text-align: center;
+        font-size: .85em;
         }
     &:before {
         content: "";
@@ -95,3 +98,6 @@
         border: 3px solid #FFF;
         }
     }
+    .demo--bbmode-text-step1 {
+        mix-blend-mode: lighten;
+        }

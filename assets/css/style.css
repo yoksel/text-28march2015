@@ -91,6 +91,10 @@
   color: #AAA;
 }
 
+.comment--bright {
+  background: yellowgreen;
+}
+
 .pos-abs {
   position: absolute;
   top: 0;
@@ -128,6 +132,19 @@ svg {
 
 .svg--ovh {
   overflow: hidden;
+}
+
+.demo--offset {
+  position: absolute !important;
+  width: 800px !important;
+  height: 500px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hidden-svg-defs {
@@ -488,12 +505,12 @@ svg.demo--intro {
 }
 
 .demo--shadowstroke {
-  text-shadow: 0 0 green, 0 0 green, 0 0 green, 0 0 green, -1px -1px green, 1px -1px green, 1px 1px green, -1px 1px green, -2px -2px green, 2px -2px green, 2px 2px green, -2px 2px green, -3px -3px green, 3px -3px green, 3px 3px green, -3px 3px green, -4px -4px green, 4px -4px green, 4px 4px green, -4px 4px green, -5px -5px green, 5px -5px green, 5px 5px green, -5px 5px green;
+  text-shadow: -1px -1px green, 1px -1px green, 1px 1px green, -1px 1px green, -2px -2px green, 2px -2px green, 2px 2px green, -2px 2px green, -3px -3px green, 3px -3px green, 3px 3px green, -3px 3px green, -4px -4px green, 4px -4px green, 4px 4px green, -4px 4px green, -5px -5px green, 5px -5px green, 5px 5px green, -5px 5px green, -6px -6px green, 6px -6px green, 6px 6px green, -6px 6px green, -7px -7px green, 7px -7px green, 7px 7px green, -7px 7px green;
   color: #FFF;
 }
 
 .demo--doubleshadow {
-  text-shadow: 0 0 white, 0 0 white, 0 0 white, 0 0 white, -1px -1px white, 1px -1px white, 1px 1px white, -1px 1px white, -2px -2px white, 2px -2px white, 2px 2px white, -2px 2px white, -3px -3px white, 3px -3px white, 3px 3px white, -3px 3px white, -4px -4px white, 4px -4px white, 4px 4px white, -4px 4px white, 0 0 orangered, 0 0 orangered, 0 0 orangered, 0 0 orangered, -1px -1px orangered, 1px -1px orangered, 1px 1px orangered, -1px 1px orangered, -2px -2px orangered, 2px -2px orangered, 2px 2px orangered, -2px 2px orangered, -3px -3px orangered, 3px -3px orangered, 3px 3px orangered, -3px 3px orangered, -4px -4px orangered, 4px -4px orangered, 4px 4px orangered, -4px 4px orangered, -5px -5px orangered, 5px -5px orangered, 5px 5px orangered, -5px 5px orangered, -6px -6px orangered, 6px -6px orangered, 6px 6px orangered, -6px 6px orangered, -7px -7px orangered, 7px -7px orangered, 7px 7px orangered, -7px 7px orangered;
+  text-shadow: -1px -1px white, 1px -1px white, 1px 1px white, -1px 1px white, -2px -2px white, 2px -2px white, 2px 2px white, -2px 2px white, -3px -3px white, 3px -3px white, 3px 3px white, -3px 3px white, -4px -4px white, 4px -4px white, 4px 4px white, -4px 4px white, -1px -1px orangered, 1px -1px orangered, 1px 1px orangered, -1px 1px orangered, -2px -2px orangered, 2px -2px orangered, 2px 2px orangered, -2px 2px orangered, -3px -3px orangered, 3px -3px orangered, 3px 3px orangered, -3px 3px orangered, -4px -4px orangered, 4px -4px orangered, 4px 4px orangered, -4px 4px orangered, -5px -5px orangered, 5px -5px orangered, 5px 5px orangered, -5px 5px orangered, -6px -6px orangered, 6px -6px orangered, 6px 6px orangered, -6px 6px orangered, -7px -7px orangered, 7px -7px orangered, 7px 7px orangered, -7px 7px orangered;
   color: steelblue;
 }
 
@@ -617,6 +634,10 @@ svg.demo--intro {
   /*color: #FFF;*/
 }
 
+.demo--background-clip-step0 {
+  background-image: none;
+}
+
 .demo--background-clip-step2 {
   -webkit-text-fill-color: transparent;
 }
@@ -633,12 +654,13 @@ svg.demo--intro {
 
 .demo--background-clip-fade {
   width: 800px;
-  background: -webkit-linear-gradient(black, royalblue, yellow, red, darkviolet, black) no-repeat;
+  background: -webkit-linear-gradient(transparent, royalblue, yellow, red, darkviolet, transparent) no-repeat;
   background-position: 50% 50%;
-  -webkit-background-size: 100% 90%;
-  background-size: 100% 90%;
-  font-size: 5em;
-  line-height: .9;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  font-size: 5.5em;
+  letter-spacing: 0;
+  line-height: .85;
   text-align: center;
   color: #FFF;
   -webkit-text-fill-color: transparent;
@@ -646,9 +668,10 @@ svg.demo--intro {
 }
 
 .demo--background-clip-animation {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(70, 130, 180, 0.7))), linear-gradient(90deg, rgba(255, 255, 255, 0) 60%, rgba(70, 130, 180, 0.7) 60%);
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(70, 130, 180, 0.7) 60%), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 60%, rgba(70, 130, 180, 0.7) 60%);
-  background: linear-gradient(rgba(255, 255, 255, 0) 60%, rgba(70, 130, 180, 0.7) 60%), linear-gradient(90deg, rgba(255, 255, 255, 0) 60%, rgba(70, 130, 180, 0.7) 60%);
+  color: rgba(70, 130, 180, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(currentColor)), linear-gradient(90deg, rgba(255, 255, 255, 0) 60%, currentColor 60%);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 60%, currentColor 60%), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 60%, currentColor 60%);
+  background: linear-gradient(rgba(255, 255, 255, 0) 60%, currentColor 60%), linear-gradient(90deg, rgba(255, 255, 255, 0) 60%, currentColor 60%);
   background-color: white;
   background-position: 50% 0;
   -webkit-background-size: 0.2em 0.2em;
@@ -661,6 +684,20 @@ svg.demo--intro {
   animation: move-bg 2s infinite linear;
 }
 
+.demo--background-clip-animation-color {
+  background-image: -webkit-radial-gradient(center, circle, rgba(255, 255, 255, 0) 20%, currentColor 20%, currentColor 30%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 40%, currentColor 40%, currentColor 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 60%, currentColor 60%, currentColor 70%, rgba(255, 255, 255, 0) 70%);
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 20%, currentColor 20%, currentColor 30%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 40%, currentColor 40%, currentColor 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 60%, currentColor 60%, currentColor 70%, rgba(255, 255, 255, 0) 70%);
+  background-color: transparent;
+  -webkit-text-stroke: 5px currentColor;
+  color: teal;
+}
+:target .demo--background-clip-animation-color {
+  -webkit-animation-name: bg-currentColor;
+  animation-name: bg-currentColor;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+}
+
 @-webkit-keyframes move-bg {
   100% {
     background-position: 50% -0.2em;
@@ -670,6 +707,28 @@ svg.demo--intro {
 @keyframes move-bg {
   100% {
     background-position: 50% -0.2em;
+  }
+}
+@-webkit-keyframes bg-currentColor {
+  25% {
+    color: #00ff80;
+  }
+  50% {
+    color: #ff8000;
+  }
+  75% {
+    color: magenta;
+  }
+}
+@keyframes bg-currentColor {
+  25% {
+    color: #00ff80;
+  }
+  50% {
+    color: #ff8000;
+  }
+  75% {
+    color: magenta;
   }
 }
 .text--stroke {
@@ -966,83 +1025,72 @@ svg.demo--intro {
 
 .g-anim-cells rect {
   fill: yellowgreen;
-}
-:target .g-anim-cells rect {
   -webkit-animation: anim-cells 20s infinite linear;
   animation: anim-cells 20s infinite linear;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+:target .g-anim-cells rect {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
 }
 .g-anim-cells rect:nth-child(1) {
-  fill: yellowgreen;
   -webkit-animation-delay: -1.33333s;
   animation-delay: -1.33333s;
 }
 .g-anim-cells rect:nth-child(2) {
-  fill: deeppink;
   -webkit-animation-delay: -2.66667s;
   animation-delay: -2.66667s;
 }
 .g-anim-cells rect:nth-child(3) {
-  fill: royalblue;
   -webkit-animation-delay: -4s;
   animation-delay: -4s;
 }
 .g-anim-cells rect:nth-child(4) {
-  fill: gold;
   -webkit-animation-delay: -5.33333s;
   animation-delay: -5.33333s;
 }
 .g-anim-cells rect:nth-child(5) {
-  fill: orangered;
   -webkit-animation-delay: -6.66667s;
   animation-delay: -6.66667s;
 }
 .g-anim-cells rect:nth-child(6) {
-  fill: yellow;
   -webkit-animation-delay: -8s;
   animation-delay: -8s;
 }
 .g-anim-cells rect:nth-child(7) {
-  fill: lightseagreen;
   -webkit-animation-delay: -9.33333s;
   animation-delay: -9.33333s;
 }
 .g-anim-cells rect:nth-child(8) {
-  fill: orange;
   -webkit-animation-delay: -10.66667s;
   animation-delay: -10.66667s;
 }
 .g-anim-cells rect:nth-child(9) {
-  fill: darkviolet;
   -webkit-animation-delay: -12s;
   animation-delay: -12s;
 }
 .g-anim-cells rect:nth-child(10) {
-  fill: skyblue;
   -webkit-animation-delay: -13.33333s;
   animation-delay: -13.33333s;
 }
 .g-anim-cells rect:nth-child(11) {
-  fill: magenta;
   -webkit-animation-delay: -14.66667s;
   animation-delay: -14.66667s;
 }
 .g-anim-cells rect:nth-child(12) {
-  fill: mediumslateblue;
   -webkit-animation-delay: -16s;
   animation-delay: -16s;
 }
 .g-anim-cells rect:nth-child(13) {
-  fill: lightgreen;
   -webkit-animation-delay: -17.33333s;
   animation-delay: -17.33333s;
 }
 .g-anim-cells rect:nth-child(14) {
-  fill: tomato;
   -webkit-animation-delay: -18.66667s;
   animation-delay: -18.66667s;
 }
 .g-anim-cells rect:nth-child(15) {
-  fill: chartreuse;
   -webkit-animation-delay: -20s;
   animation-delay: -20s;
 }
@@ -1153,14 +1201,18 @@ svg.demo--intro {
   stroke: chartreuse;
   stroke-width: 1;
   stroke-dasharray: 1000;
-}
-:target .g-anim-spots circle {
   -webkit-animation: anim-spots 20s infinite linear;
   animation: anim-spots 20s infinite linear;
   -webkit-animation-name: anim-spots, anim-spots-stroke;
   animation-name: anim-spots, anim-spots-stroke;
   -webkit-animation-duration: 20s, 2s;
   animation-duration: 20s, 2s;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+:target .g-anim-spots circle {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
 }
 .g-anim-spots circle:nth-child(1) {
   fill: yellowgreen;
@@ -1643,11 +1695,14 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 }
 
 .demo--bbmode-text {
-  background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;
+  /*background: url(./assets/img/parts/violet-hyacinths.jpeg) 50% 50%/cover;*/
 }
 .demo--bbmode-text .text {
+  height: 500px;
+  line-height: 500px;
   background: #FFF;
-  mix-blend-mode: lighten;
+  text-align: center;
+  font-size: .85em;
 }
 .demo--bbmode-text:before {
   content: "";
@@ -1658,6 +1713,10 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
   bottom: 0;
   left: 0;
   border: 3px solid #FFF;
+}
+
+.demo--bbmode-text-step1 {
+  mix-blend-mode: lighten;
 }
 
 .demo--dancing-shadows__title {
@@ -1781,19 +1840,6 @@ svg.demo--text-psycho .g-circles circle:nth-child(7) {
 svg.demo--inverted-mask {
   position: relative;
   z-index: 1;
-}
-
-svg.demo--inverted-mask-offset {
-  position: absolute;
-  width: 800px !important;
-  height: 500px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  -webkit-box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
-  box-shadow: 40px 40px 20px rgba(0, 0, 0, 0.5);
 }
 
 .text--invmask-multytext {

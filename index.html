@@ -1463,6 +1463,10 @@ svg.demo--intro {
     stroke-width: 18;
   }
 }
+.text--fill--wood {
+  font-size: 1.5em;
+}
+
 .text--fill--spots {
   stroke: #000;
   stroke-width: 3;
@@ -2503,11 +2507,16 @@ svg {
   margin: 0 0 1rem 0 !important;
 }
 
+.list--glasses-best {
+  margin: 0 0 2.5rem 0 !important;
+}
+
 .tooltip--glasses {
   display: inline-block;
   width: 800px;
   margin: 0 0 2rem 0 !important;
   font-size: .7em;
+  line-height: 1;
   font-style: italic;
   color: #999;
 }
@@ -2648,7 +2657,7 @@ svg {
     <section class="slide"><div>
         <div class="slide__content">
             <h4>Презентация в лучшем виде:</h4>
-            <ul class="list--glasses">
+            <ul class="list--glasses list--glasses-best">
                 <li>
                 <span class="browser safari"></span>&nbsp;&nbsp;&nbsp;
                 <span class="browser canary"></span>&nbsp;&nbsp;&nbsp;
@@ -2658,10 +2667,10 @@ svg {
             </ul>
             <ul class="list--glasses">
                 <li>
-                    <span class="browser chrome" data-version="&darr;41"></span> <span class="list--glasses__sign">+</span> флаг: <i>chrome://flags/#enable-experimental-web-platform-features</i>
+                    <span class="browser chrome" data-version="< 41"></span> <span class="list--glasses__sign">+</span> флаг: <i>chrome://flags/#enable-experimental-web-platform-features</i>
                 </li>
                 <li>
-                    <span class="browser opera" data-version="&darr;29"></span> <span class="list--glasses__sign">+</span> флаг: <i>opera://flags/#enable-experimental-web-platform-features</i>
+                    <span class="browser opera" data-version="< 29"></span> <span class="list--glasses__sign">+</span> флаг: <i>opera://flags/#enable-experimental-web-platform-features</i>
                 </li>
             </ul>
             <p class="tooltip--glasses">Скопируйте ссылку на флаг в адресную строку браузера, включите флаг и&nbsp;перезапустите браузер.</p>
@@ -3180,10 +3189,10 @@ svg {
             <text x="50%" y="16%" dy=".25em" text-anchor="middle"
                 class="text--fill text--fill-solid">текст</text>
             <text x="50%" y="50%" dy=".25em" text-anchor="middle"
-                class="text--fill text--fill-gradient"
+                class="next text--fill text--fill-gradient"
                 fill="url(#gr-blue)">текст</text>
             <text x="50%" y="86%" dy=".25em" text-anchor="middle"
-                class="text--fill text--fill-pattern"
+                class="next text--fill text--fill-pattern"
                 fill="url(#pt-grass)">текст</text>
         </svg>
     </div></section>
@@ -3285,6 +3294,17 @@ svg {
     <svg class="demo--show-pattern next">
         <rect width="100%" height="100%" fill="url(#pt-wood)"/>
     </svg>
+    </div></section>
+
+    <!-- Slide -->
+    <section class="slide"><div>
+        <svg viewBox="0 0 1024 620" class="demo demo--text demo--text-masks">
+
+          <text x="50%" y="50%" dy=".35em" text-anchor="middle"
+                fill="url(#pt-wood)" class="text--fill--wood"
+                >АБВ</text>
+        </svg>
+
     </div></section>
 
     <!-- Slide -->

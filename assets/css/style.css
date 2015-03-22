@@ -1454,6 +1454,10 @@ svg.demo--intro {
     stroke-width: 18;
   }
 }
+.text--fill--wood {
+  font-size: 1.5em;
+}
+
 .text--fill--spots {
   stroke: #000;
   stroke-width: 3;
@@ -2494,11 +2498,16 @@ svg {
   margin: 0 0 1rem 0 !important;
 }
 
+.list--glasses-best {
+  margin: 0 0 2.5rem 0 !important;
+}
+
 .tooltip--glasses {
   display: inline-block;
   width: 800px;
   margin: 0 0 2rem 0 !important;
   font-size: .7em;
+  line-height: 1;
   font-style: italic;
   color: #999;
 }

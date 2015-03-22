@@ -175,12 +175,16 @@ $browser-size: 64px;
 .list--glasses {
   margin: 0 0 1rem 0 !important;
   }
+  .list--glasses-best {
+    margin: 0 0 2.5rem 0 !important;
+    }
 
 .tooltip--glasses {
   display: inline-block;
   width: 800px;
   margin: 0 0 2rem 0 !important;
   font-size: .7em;
+  line-height: 1;
   font-style: italic;
   color: #999;
   }

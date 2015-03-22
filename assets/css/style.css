@@ -694,8 +694,8 @@ svg.demo--intro {
 :target .demo--background-clip-animation-color {
   -webkit-animation-name: bg-currentColor;
   animation-name: bg-currentColor;
-  -webkit-animation-duration: 7s;
-  animation-duration: 7s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
 }
 
 @-webkit-keyframes move-bg {

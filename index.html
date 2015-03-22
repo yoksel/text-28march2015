@@ -1573,18 +1573,24 @@ svg.demo--text-psycho .text-stroke-3 {
   stroke: aqua;
   stroke-dashoffset: 48;
 }
-svg.demo--text-psycho .animated-circles g:nth-child(odd) .u-circle {
-  -webkit-animation-direction: reverse;
-  animation-direction: reverse;
-}
 svg.demo--text-psycho .u-circle {
   -webkit-transform-origin: 100px 100px;
   -ms-transform-origin: 100px 100px;
   transform-origin: 100px 100px;
-}
-:target svg.demo--text-psycho .u-circle {
   -webkit-animation: rotate-psycho 10s linear infinite;
   animation: rotate-psycho 10s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+:target svg.demo--text-psycho .u-circle {
+  /*animation: rotate-psycho 10s linear infinite;*/
+  -webkit-animation-play-state: running;
+  /*animation: rotate-psycho 10s linear infinite;*/
+  animation-play-state: running;
+}
+svg.demo--text-psycho .animated-circles-inner g:nth-of-type(odd) .u-circle {
+  -webkit-animation-direction: reverse !important;
+  animation-direction: reverse !important;
 }
 svg.demo--text-psycho .g-circles circle:nth-child(1) {
   stroke: greenyellow;
@@ -3684,7 +3690,7 @@ svg {
           <g
             mask="url(#mask-text-psycho)"
             class="animated-circles">
-            <g transform="translate(137, 0)">
+            <g transform="translate(137, 0)" class="animated-circles-inner">
                 <g transform="translate(-105, 105) scale(2.5)">
                   <use xlink:href="#s-circle" class="u-circle"></use>
                 </g>

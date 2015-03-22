@@ -64,17 +64,20 @@ svg.demo--text-psycho {
     }
 
   .animated-circles {
-    g:nth-child(odd) .u-circle {
-      animation-direction: reverse;
-      }
     }
   .u-circle {
     transform-origin: 100px 100px;
+    animation: rotate-psycho 10s linear infinite;
+    animation-play-state: paused;
 
     :target & {
-      animation: rotate-psycho 10s linear infinite;
+      /*animation: rotate-psycho 10s linear infinite;*/
+      animation-play-state: running;
       }
     }
+    .animated-circles-inner g:nth-of-type(odd) .u-circle {
+      animation-direction: reverse !important;
+      }
 
   .g-circles {
     $circles-max: 7;

@@ -516,36 +516,30 @@ svg.demo--intro {
 
 .demo--chasing-shadows {
   text-shadow: 0 0 40px transparent;
-  color: crimson;
+  color: teal;
 }
 
 :target .demo--chasing-shadows {
   color: transparent;
-  -webkit-animation: chasing-shadow 3s infinite ease-in;
-  animation: chasing-shadow 3s infinite ease-in;
+  -webkit-animation: chasing-shadow 3.5s infinite ease-in;
+  animation: chasing-shadow 3.5s infinite ease-in;
 }
 
 @-webkit-keyframes chasing-shadow {
   10% {
-    text-shadow: 0 0 0 black;
+    text-shadow: 0 0 0 teal;
   }
-  50% {
-    text-shadow: 0 0 0 crimson;
-  }
-  90% {
-    text-shadow: 0 30px 50px transparent;
+  80% {
+    text-shadow: 0 30px 150px black;
   }
 }
 
 @keyframes chasing-shadow {
   10% {
-    text-shadow: 0 0 0 black;
+    text-shadow: 0 0 0 teal;
   }
-  50% {
-    text-shadow: 0 0 0 crimson;
-  }
-  90% {
-    text-shadow: 0 30px 50px transparent;
+  80% {
+    text-shadow: 0 30px 150px black;
   }
 }
 .demo--multiple-shadows {
@@ -639,12 +633,12 @@ svg.demo--intro {
 }
 
 .demo--background-clip-step2 {
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .demo--background-clip-step3 {
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .demo--background-clip-no-support {

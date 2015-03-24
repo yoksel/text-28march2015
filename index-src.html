@@ -59,10 +59,10 @@
             <h4>Презентация в лучшем виде:</h4>
             <ul class="list--glasses list--glasses-best">
                 <li>
-                <span class="browser safari"></span>&nbsp;&nbsp;&nbsp;
                 <span class="browser canary"></span>&nbsp;&nbsp;&nbsp;
                 <span class="browser chrome" data-version="41+"></span>&nbsp;&nbsp;
-                <span class="browser opera" data-version="29+"></span>
+                <span class="browser opera" data-version="29+"></span>&nbsp;&nbsp;&nbsp;
+                <span class="browser safari"></span>
                 </li>
             </ul>
             <ul class="list--glasses">
@@ -327,7 +327,7 @@
     <section class="slide"><div>
 <pre><code>.text {
   background: url(tulips.jpg) 50% 50%;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 
   }</span></code></pre>
     </div></section>
@@ -345,8 +345,8 @@
     <section class="slide"><div>
 <pre><code>.text {
   background: url(tulips.jpg) 50% 50%;
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }</code></pre>
     </div></section>
 

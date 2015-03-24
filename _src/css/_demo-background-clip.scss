@@ -6,11 +6,11 @@
     background-image: none;
     }
   .demo--background-clip-step2 {
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     }
   .demo--background-clip-step3 {
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     }
   .demo--background-clip-no-support {
       background: url(./assets/img/parts/tulips.jpeg) 50% 50%;

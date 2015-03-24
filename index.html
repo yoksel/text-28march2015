@@ -525,36 +525,30 @@ svg.demo--intro {
 
 .demo--chasing-shadows {
   text-shadow: 0 0 40px transparent;
-  color: crimson;
+  color: teal;
 }
 
 :target .demo--chasing-shadows {
   color: transparent;
-  -webkit-animation: chasing-shadow 3s infinite ease-in;
-  animation: chasing-shadow 3s infinite ease-in;
+  -webkit-animation: chasing-shadow 3.5s infinite ease-in;
+  animation: chasing-shadow 3.5s infinite ease-in;
 }
 
 @-webkit-keyframes chasing-shadow {
   10% {
-    text-shadow: 0 0 0 black;
+    text-shadow: 0 0 0 teal;
   }
-  50% {
-    text-shadow: 0 0 0 crimson;
-  }
-  90% {
-    text-shadow: 0 30px 50px transparent;
+  80% {
+    text-shadow: 0 30px 150px black;
   }
 }
 
 @keyframes chasing-shadow {
   10% {
-    text-shadow: 0 0 0 black;
+    text-shadow: 0 0 0 teal;
   }
-  50% {
-    text-shadow: 0 0 0 crimson;
-  }
-  90% {
-    text-shadow: 0 30px 50px transparent;
+  80% {
+    text-shadow: 0 30px 150px black;
   }
 }
 .demo--multiple-shadows {
@@ -648,12 +642,12 @@ svg.demo--intro {
 }
 
 .demo--background-clip-step2 {
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .demo--background-clip-step3 {
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .demo--background-clip-no-support {
@@ -2665,10 +2659,10 @@ svg {
             <h4>Презентация в лучшем виде:</h4>
             <ul class="list--glasses list--glasses-best">
                 <li>
-                <span class="browser safari"></span>&nbsp;&nbsp;&nbsp;
                 <span class="browser canary"></span>&nbsp;&nbsp;&nbsp;
                 <span class="browser chrome" data-version="41+"></span>&nbsp;&nbsp;
-                <span class="browser opera" data-version="29+"></span>
+                <span class="browser opera" data-version="29+"></span>&nbsp;&nbsp;&nbsp;
+                <span class="browser safari"></span>
                 </li>
             </ul>
             <ul class="list--glasses">
@@ -2933,7 +2927,7 @@ svg {
     <section class="slide"><div>
 <pre><code>.text {
   background: url(tulips.jpg) 50% 50%;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 
   }</span></code></pre>
     </div></section>
@@ -2951,8 +2945,8 @@ svg {
     <section class="slide"><div>
 <pre><code>.text {
   background: url(tulips.jpg) 50% 50%;
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }</code></pre>
     </div></section>
 

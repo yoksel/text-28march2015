@@ -2457,6 +2457,10 @@ svg {
   content: "12, Mobile, Mini";
 }
 
+.opera-beta {
+  background: url(./assets/img/browsers/opera-beta-64.png);
+}
+
 .browser:after {
   content: attr(data-version);
 }

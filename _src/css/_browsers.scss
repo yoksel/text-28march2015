@@ -98,7 +98,7 @@ $browser-size: 64px;
   }
 .canary {
   background: url(./assets/img/browsers/canary-64.png);
-}
+  }
 .firefox {
   background-position: 0 -#{$browser-size};
   }
@@ -133,6 +133,10 @@ $browser-size: 64px;
     content: "12, Mobile, Mini";
     }
 }
+
+.opera-beta {
+  background: url(./assets/img/browsers/opera-beta-64.png);
+  }
 
 .browser {
   &:after {

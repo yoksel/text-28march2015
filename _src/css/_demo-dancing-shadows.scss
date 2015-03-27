@@ -1,6 +1,6 @@
 $shadow-size: 14.5vh;
-$shadow-offset: $shadow-size * 1.5;
-$shadow-colors: purple, violet, teal, orangered, yellow, crimson, yellowgreen, orange, darkturquoise, pink, steelblue,  turquoise, coral, skyblue,  darkviolet, gold, darkslateblue;
+$shadow-offset: $shadow-size * 1.2;
+$shadow-colors: purple, teal, orangered, yellow, crimson, yellowgreen, orange, darkturquoise, deeppink, steelblue,  darkturquoise, tomato, darkviolet, gold, darkslateblue;
 $colors-max: length($shadow-colors);
 
 $shadows-steps: 4;
@@ -101,7 +101,7 @@ $matrix-h: 5;
 .text-items {
   display: block;
   position: absolute;
-  top: 48%;
+  top: 45%;
   right: 0;
   left: 0;
   width: 3.3em;

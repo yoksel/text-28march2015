@@ -23,10 +23,25 @@
     height: 200px;
     margin: 0 1em;
     }
+  SPAN {
+    display: inline-block;
+    position: relative;
+    &:after {
+      content: attr(data-bubble);
+      position: absolute;
+      top: -5px;
+      left: 190px;
+      line-height: 1;
+      font-size: 1.2em;
+      white-space: nowrap;
+      }
+    }
   SUP {
+    border: 1px solid gold;
     position: absolute;
     top: 10px;
-    margin-left: -60px;
+    /*right: 0;
+    margin-left: -60px;*/
     font-size: 1.2em;
     white-space: nowrap;
     }
@@ -140,7 +155,7 @@ $browser-size: 64px;
 
 .browser {
   &:after {
-    content: attr(data-version);
+    content: attr(data-bubble);
   }
 }
 

@@ -60,17 +60,17 @@
             <ul class="list--glasses list--glasses-best">
                 <li>
                 <span class="browser canary"></span>&nbsp;&nbsp;&nbsp;
-                <span class="browser chrome" data-version="41+"></span>&nbsp;&nbsp;
-                <span class="browser opera-beta" data-version="29+"></span>&nbsp;&nbsp;&nbsp;
+                <span class="browser chrome" data-bubble="41+"></span>&nbsp;&nbsp;
+                <span class="browser opera-beta" data-bubble="29+"></span>&nbsp;&nbsp;&nbsp;
                 <span class="browser safari"></span>
                 </li>
             </ul>
             <ul class="list--glasses">
                 <li>
-                    <span class="browser chrome" data-version="< 41"></span> <span class="list--glasses__sign">+</span> флаг: <i>chrome://flags/#enable-experimental-web-platform-features</i>
+                    <span class="browser chrome" data-bubble="< 41"></span> <span class="list--glasses__sign">+</span> флаг: <i>chrome://flags/#enable-experimental-web-platform-features</i>
                 </li>
                 <li>
-                    <span class="browser opera" data-version="< 29"></span> <span class="list--glasses__sign">+</span> флаг: <i>opera://flags/#enable-experimental-web-platform-features</i>
+                    <span class="browser opera" data-bubble="< 29"></span> <span class="list--glasses__sign">+</span> флаг: <i>opera://flags/#enable-experimental-web-platform-features</i>
                 </li>
             </ul>
             <p class="tooltip--glasses">Скопируйте ссылку на флаг в адресную строку браузера, включите флаг и&nbsp;перезапустите браузер.</p>
@@ -244,7 +244,7 @@
                 <img src="./assets/img/browsers/safari.png" alt="Safari"/>
                 <img src="./assets/img/browsers/opera.png" alt="Opera"/>
                 <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
-                <img src="./assets/img/browsers/ie.png" alt="IE"/>
+                <span data-bubble="10+"><img src="./assets/img/browsers/ie.png" alt="IE"/></span>
             </div>
         </div>
     </div></section>
@@ -274,12 +274,9 @@
     <section class="slide slide--vlm"><div>
         <div class="slide__content">
             <div class="browsers--biglist">
-                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
-                <sup>-webkit-</sup>
-                <img src="./assets/img/browsers/safari.png" alt="Safari"/>
-                <sup>-webkit-</sup>
-                <img src="./assets/img/browsers/opera.png" alt="Opera"/>
-                <sup>-webkit-</sup>
+                <span data-bubble="-webkit-"><img src="./assets/img/browsers/chrome.png" alt="Chrome"/></span>
+                <span data-bubble="-webkit-"><img src="./assets/img/browsers/safari.png" alt="Safari"/></span>
+                <span data-bubble="-webkit-"><img src="./assets/img/browsers/opera.png" alt="Opera"/></span>
                 <img src="./assets/img/browsers/firefox.png" alt="Firefox" class="no-support"/>
                 <img src="./assets/img/browsers/ie.png" alt="IE" class="no-support"/>
             </div>
@@ -405,12 +402,9 @@
     <section class="slide slide--vlm"><div>
         <div class="slide__content">
             <div class="browsers--biglist">
-                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
-                <sup>-webkit-</sup>
-                <img src="./assets/img/browsers/safari.png" alt="Safari"/>
-                <sup>-webkit-</sup>
-                <img src="./assets/img/browsers/opera.png" alt="Opera"/>
-                <sup>-webkit-</sup>
+                <span data-bubble="-webkit-"><img src="./assets/img/browsers/chrome.png" alt="Chrome"/></span>
+                <span data-bubble="-webkit-"><img src="./assets/img/browsers/safari.png" alt="Safari"/></span>
+                <span data-bubble="-webkit-"><img src="./assets/img/browsers/opera.png" alt="Opera"/></span>
                 <img src="./assets/img/browsers/firefox.png" alt="Firefox" class="no-support"/>
                 <img src="./assets/img/browsers/ie.png" alt="IE" class="no-support"/>
             </div>
@@ -435,7 +429,7 @@
     &lt;/text></span>
 &lt;/svg></code></pre>
 
-        <svg viewBox="0 0 1024 280" class="next demo demo--text">
+        <svg viewBox="0 0 1024 280" class="next demo demo--text demo--small-height">
             <text x="50%" y="50%" dy=".25em" text-anchor="middle">текст</text>
         </svg>
     </div></section>
@@ -513,7 +507,7 @@
     <span class="next"><mark>stroke-dasharray</mark>: 50 30 20 10;
     }</span></code></pre>
 
-        <svg viewBox="0 0 1024 280" class="demo demo--text next">
+        <svg viewBox="0 0 1024 280" class="demo demo--text next demo--small-height">
             <text x="50%" y="50%" dy=".25em" text-anchor="middle"
                 class="text--stroke text--stroke-dasharray">текст</text>
         </svg>
@@ -611,7 +605,7 @@
     &lt;stop stop-color="hsl(250, 100%, 30%)" offset="90%"/></span>
 &lt;/linearGradient></code></pre>
 
-    <svg viewBox="0 0 1024 280" class="demo demo--text next">
+    <svg viewBox="0 0 1024 280" class="demo demo--text next demo--small-height">
             <text x="50%" y="50%" dy=".25em" text-anchor="middle"
                 fill="url(#gr-blue)">текст</text>
         </svg>
@@ -948,7 +942,7 @@
     &lt;rect fill="url(#pt-wood)" width="100%" height="100%"/>
 &lt;/g></code></pre>
 
-    <svg viewBox="0 0 1024 320" class="demo demo--text">
+    <svg viewBox="0 0 1024 280" class="demo demo--text demo--small-height">
         <mask id="mask-text"
             maskunits="userSpaceOnUse"
             maskcontentunits="userSpaceOnUse">
@@ -1315,11 +1309,9 @@
     <section class="slide slide--vlm"><div>
         <div class="slide__content">
             <div class="browsers--biglist">
-                <img src="./assets/img/browsers/chrome.png" alt="Chrome"/>
-                <sup>41+</sup>
+                <span data-bubble="41+"><img src="./assets/img/browsers/chrome.png" alt="Chrome"/></span>
                 <img src="./assets/img/browsers/safari.png" alt="Safari"/>
-                <img src="./assets/img/browsers/opera-beta.png" alt="Opera"/>
-                <sup>29+</sup>
+                <span data-bubble="29+"><img src="./assets/img/browsers/opera-beta.png" alt="Opera"/></span>
                 <img src="./assets/img/browsers/firefox.png" alt="Firefox"/>
                 <img src="./assets/img/browsers/ie.png" class="no-support" alt="IE"/>
             </div>
